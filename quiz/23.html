@@ -1,0 +1,280 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Ernährung</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h1>Die Deutschen und ihre Ernährung</h1>
+      <p>
+        Bei den Deutschen wächst das Bewusstsein für ihre gesunde Ernährung. Das geht aus einer kürzlich veröffentlichten Studie hervor, bei der 1000 Erwachsene in Deutschland zu Ehren Essverhalten befragt wurden. In dieser Untersuchung antworteten 45% der Befragten auf die Frage, worauf es ihnen bei ihrer Ernährung ankommt, dass sie vor allem gesund Essen möchten. Damit steht laut der Studie erstmal das Kriterium gesund vor lecker. in der vorhergehenden Umfrage war das Kriterium lecker dem Befragten noch am wichtigsten. Dennoch bleibt der Geschmack ein wichtiges Kriterium: für immerhin 41% aller Befragten kommt es beim Essen auf den Genuss an. Im Vergleich zur Voruntersuchung sind die beiden Kriterien " Hauptsache schnell 'und die Hauptsache günstig' weniger wichtig geworden: Die deutschen nehmen sich demnach etwas mehr Zeit für ihre Ernährung und sind auch eher bereit, mehr Geld für gute Lebensmittel auszugeben.
+        Allerdings hat auch das Kriterium Kalorienarm an Bedeutung verloren. Nur mehr 5% gegenüber 9 % in der Voruntersuchung denken bei der Wahl von Lebensmitteln an die schlanke Linie. Dazu passt, dass knapp die Hälfte der Befragten selbst angibt, Übergewicht zu haben, bezeichnen sich sogar als stark Übergewicht Gesundheitspsychologen hören das darauf zurück, dass häufig die Zahl für den Einkauf und die Zubereitung von frischen Lebensmitteln fehlt die Menschen griffen dann aus Bequemlichkeit zu Fertiggerichten oder Snacks die häufig zu viel Fett, Salz oder Zuckerenthalten. Dabei ließen sich durch die Ernährung viele Risikofaktoren reduzieren, betonten den Experimenten.
+        An mangelndem Wissen scheint das nicht zu liegen nur ein Viertel der Befragten gab an nicht genug über gesunde Ernährung zu wissen. Dennoch forderte einige Fachleute bessere Verbraucher Informationen. Sie warfen der Bundesregierung vor, es fehle offensichtlich an dem politischen Willen, sich mit der Branche anzulegen. Die gesunde Wahl wird unnötig schwer gemacht. Ein Großteil der Erfrischungsgetränke sei überzuckert die Kennzeichnung von Fett Zucker und Salz sei eine Zumutung und selbst Süßigkeiten wurden.
+        wie gesunde Produkte beworben "Das ist kein Bildungsproblem, sondern ein Problem des Angebotes, dass die Lebensmittel Wirtschaft uns vorgesetzt wird.
+        Deshalb sehen diese Fachleute die Industrie und Politik in der Pflicht" wenn ich Licht und Lupe brauche um diese Liste lesen zu können läuft etwas falsch bringt einer von ihnen die Kritik auf den Punkt. Ihr Argument lautet das Problem ist nicht ob vegetarische Produkte Wurst oder Frikadelle heißen dürfen sondern ob der Verbraucher weiß, was an Zutat Stoffen in seiner vermeintlich gesunden alternative steckt. die Studienergebnisse zeigen, dass es im Umgang mit Lebensmittel erhebliche unterschiedliche zwischen den Altersgruppen gibt. So herrscht bei jüngeren eine vergleichsweise starke Wegwerfmentalität. Bei 14% der 18- bis 25-Jährigen landet häufig oder sogar sehr häufig Essen im Müll nur jeden zweiten aus dieser Altersgruppe passiert das selten oder nie. Bei den älteren ab Mitte 60 entsorgen dagegen 86% selten oder nie Lebensmittel in den Müll Insgesamt Werft mehr als jeder dritte Deutsche regelmäßig Lebensmittel weg. auch der Fleischkonsum unterscheidet sich je nach Altersgruppe: Unter den 18- bis 39-jährigen ist der Anteil Jener die auf Fleisch verzichten höher auf als in der Gesamt Bevölkerung. 3 % und Terrinen bezeichnen sich als Vegetarier und 2 % aus Veganer. In Deutschland bezeichnen sich 13% der Menschen Angst Flexitarier. Flexitarier kaufen meist selbst weder Fleisch noch Wurst, lehnen ist aber auch nicht vollständig auf, wenn es ihnen angeboten wird.
+        Bioprodukte spielen mittlerweile eine große Rolle. Von den Befragten gaben 40% an bevorzugt Lebensmittel mit Bio-Siegel zu kaufen vor einigen Jahren gab nur ein Drittel der Befragten an, im Geschäft zu biologisch hergestellten Lebensmitteln zu greifen.        
+      </p>
+    </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1.  Die meisten Befragten finden, dass das Essen</h3>
+          <label><input type="radio" name="q1" value="a"> früher besser war.</label>
+          <label><input type="radio" name="q1" value="b"> gesund sein sollte.</label>
+          <label><input type="radio" name="q1" value="c"> vor allem gut schmecken muss.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Das Kriterium kalorienarm</h3>
+          <label><input type="radio" name="q2" value="a"> ist für dle Hälfte der Befragten wichtig.</label>
+          <label><input type="radio" name="q2" value="b"> steht bei Übergewichtigen an erster Stelle.</label>
+          <label><input type="radio" name="q2" value="c"> war früher wichtiger.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Experten glauben, dass Menschen ungesund essen, weil </h3>
+            <label><input type="radio" name="q3" value="a"> ihnen Fett und Zucker gut schmecken.</label>
+            <label><input type="radio" name="q3" value="b"> sie sich nicht genug informieren.</label>
+            <label><input type="radio" name="q3" value="c"> zu viele ungesunde Lebensmittel auf dem Markt sind .</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Das Wegwerfen von Lebensmitteln </h3>
+            <label><input type="radio" name="q4" value="a"> findet ein Drittel der Befragten In Ordnung.</label>
+            <label><input type="radio" name="q4" value="b"> lehnen jüngere Menschen vollkommen ab.</label>
+            <label><input type="radio" name="q4" value="c"> passiert bei älteren Menschen fast nie.</label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.  Der Fleischkonsum </h3>
+            <label><input type="radio" name="q5" value="a"> ist nicht in allen Altersgruppen gleich.</label>
+            <label><input type="radio" name="q5" value="b"> kommt für dreizehn Prozent der Jugendlichen nicht in Frage.</label>
+            <label><input type="radio" name="q5" value="c"> nimmt mit dem Alter zu.</label>
+          </div>  
+
+        <!-- Weitere Fragen... -->
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index2.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "b",
+        q2: "c",
+        q3: "c",
+        q4: "c",
+        q5: "a"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+
+</body>

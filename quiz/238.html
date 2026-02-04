@@ -1,0 +1,264 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Viktor teil: 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h1>Neue Berufe</h1>
+      <h3>Raumberater für harmonisches Wohnen<br> 
+          Räume nach der chinesischen Lehre Feng – Shui zu gestalten, damit sich die Menschen wohl Fühlen – das ist der Beruf von Iris Eigenmann</h3>
+      <p>Seit knapp einem Jahr bin ich nun selbstständig und bin voller Energie. So stehe ich jeden Tag mit einem Lächeln auf und gehe abends wieder mit einem Lächeln ins Bett. Die diplomierte Raumberaterin Iris Eigenmann ist von ihrem Beruf sichtlich begeistert. Da viele mit dem Wort Fengshui nichts anfangen können, bezeichnet sie sich selbst als Raumberaterin für harmonisches Wohnungen aber auch Büros und andere Arbeitsplätze so einzurichten, dass sich Menschen in diesen Räumen wohl fühlen können.</p>
+      <p>Ursprünglich ist Frau Eigenmann gelernte Hochbauzeichnerin und hat Jahrelang Bauprojekte geleitet. Diese Erfahrungen mit Architektur und Wohnbau helfen ihr nun sehr bei ihrer Tätigkeit als Raumberaterin. Ihre Arbeit besteht darin, den optimalen Energiefluss eines Wohn- oder Arbeitsumfeldes zu finden. Sie macht individuelle Vorschläge für die Raumanordnung, die Farbwahl der Wände oder für die Verwendung von Baumaterialien. Ich habe alle Ideen zuerst bei mir zu Hause ausprobiert und war selbst überrascht von der positiven Wirkung, erzählt sie begeistert.</p>
+      <p>Eine Raumberaterin arbeitet in der Regel folgendermaßen: Zuerst besprechen die Leute mit Frau Eigenmann, warum sie sich in ihrer Wohnung nicht wohl fühlen und wie sie ihren Wohnraum verbessen möchten. Dann bittet die Beraterin ihre Kunden, ihr einen genauen Plan der Wohnung zu schicken, auf dem sie die Möbelaufstellung und die genaue Ausrichtung des Hauses sehen kann. Daraufhin macht Frau Eigenmann einen detaillierten Wohnungsplan mit ausführlichen Erklärungen, wie man die Räume optimal einrichtet, um sich darin zufrieden zu fühlen. Für die Erstellung eines solchen Planes benötigt sie nach eigener Aussage je nach Größe der Wohnung oder des Gebäudes zwischen einem halben und einem ganzen Tag.</p>
+      <p>Anschließend geht Iris Eigenmann zu den Leuten nach Hause, um die Situation vor Ort zu analysieren und Verbesserungsmöglichkeiten aufzuzeigen.</p>
+      <p>Auch immer mehr Firmen suchen Rat bei einer Raumberaterin meistens dann, wenn das Unternehmen nicht mehr so erfolgreich arbeitet. Iris Eigenmann versucht dann, das Arbeitsumfeld so zu verändern, dass sich Kunden und Angestellte wohler fühlen. Das führt in den meisten Fällen dazu, dass auch die Geschäfte wieder besser gehen. Der Preis für die Raumberatung wird je nach Aufwand mit dem Kunden gemeinsam bestimmt. Das Geld aber ist für Frau Eigenmann weniger wichtig als die Möglichkeit, den Menschen zu helfen und ihre positiven Erfahrungen weiterzugeben.</p>
+      <p>Das persönliche Ziel der Feng-Shui-Raumberaterin für die Zukunft ist es, vermehrt auch im sozialen Bereich zu wirken – zum Beispiel in Krankenhäusern oder Altersheimen. Sie meint, dass mit einfachen Maßnahmen dort die Lebensqualität der Menschen erheblich verbessert werden könnte.</p>
+      </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1. Iris Eigenmann   </h3>
+          <label><input type="radio" name="q1" value="a"> berät Kunden beim Aufstellen von Möbeln in Wohnungen und Büros.</label>
+          <label><input type="radio" name="q1" value="b"> hilft Menschen bei der richtigen Berufswahl.</label>
+          <label><input type="radio" name="q1" value="c"> zeichnet Pläne für eine Große Baufirma.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Als Raumberaterin kümmert sich Iris Eigenmann darum, </h3>
+          <label><input type="radio" name="q2" value="a"> dass sich Menschen in Wohn – und Arbeitsräumen wohler fühlen.</label>
+          <label><input type="radio" name="q2" value="b"> chinesische Möbelin Europa zu verkaufen.</label>
+          <label><input type="radio" name="q2" value="c"> Materialien für neue Bauprojekte zu entwickeln.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Die Leute, die sich beraten lassen wollen,  </h3>
+            <label><input type="radio" name="q3" value="a"> besprechen mit Frau Eigenmann zuerst ihre Wünsche.</label>
+            <label><input type="radio" name="q3" value="b"> laden Frau Eigenmann zuerst in ihre Wohnung ein.</label>
+            <label><input type="radio" name="q3" value="c"> schicken Frau Eigenmann zuerst einen Plan der Wohnung.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Die Firmenkunden von Frau Eigenmann  </h3>
+            <label><input type="radio" name="q4" value="a"> bezahlen besonders wenig für die Beratung.</label>
+            <label><input type="radio" name="q4" value="b"> sind meist erfolgreiche Unternehmen.</label>
+            <label><input type="radio" name="q4" value="c"> wollen auch ihre wirtschaftliche Lage verbessern.</label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.   Frau Eigenmann möchte in Zukunft </h3>
+            <label><input type="radio" name="q5" value="a"> als Krankenschwester arbeiten.</label>
+            <label><input type="radio" name="q5" value="b"> mit ihre Arbeit das Leben alter und kranker Menschen verbessern.</label>
+            <label><input type="radio" name="q5" value="c"> viel Geld verdienen.</label>
+          </div>  
+
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index1.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "a",
+        q2: "c",
+        q3: "b",
+        q4: "c",
+        q5: "b"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+        
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+  
+
+
+
+</body>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - Privacy Policy | OuardiDev</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            background: #f7fafc;
+            color: #2d3748;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-btn {
+            background: #667eea;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #764ba2;
+            transform: translateX(5px);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #4a5568;
+            font-size: 1.4em;
+            margin: 25px 0 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #f0f4ff;
+            padding: 20px;
+            border-right: 4px solid #667eea;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: #e2e8f0;
+            color: #4a5568;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .lang-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .lang-btn:hover {
+            border-color: #667eea;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3748;
+            color: #cbd5e0;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .copyright {
+            font-size: 0.9em;
+        }
+
+        .developer-credit {
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: #a0aec0;
+        }
+
+        .developer-credit a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content-card {
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* German Section */
+        .german-section {
+            border-top: 3px solid #e2e8f0;
+            padding-top: 40px;
+            margin-top: 60px;
+        }
+
+        [dir="ltr"] h2,
+        [dir="ltr"] h3 {
+            text-align: left;
+        }
+
+        [dir="ltr"] p {
+            text-align: left;
+        }
+
+        [dir="ltr"] ul,
+        [dir="ltr"] ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        [dir="ltr"] .highlight {
+            border-right: none;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>سياسة الخصوصية</h1>
+        <p>Privacy Policy</p>
+        <p style="font-size: 0.9em; margin-top: 10px;">آخر تحديث: فبراير 2025 | Last Updated: February 2025</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="back-btn">← العودة للرئيسية</a>
+            <div class="language-toggle">
+                <a href="#arabic" class="lang-btn active">العربية</a>
+                <a href="#german" class="lang-btn">Deutsch</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Arabic Section -->
+        <div class="content-card" id="arabic">
+            <div class="section">
+                <h2>مقدمة</h2>
+                <p>
+                    نحن في <strong>OuardiDev</strong> نلتزم بحماية خصوصيتك وبياناتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا وحمايتنا للمعلومات التي تقدمها عند استخدام موقعنا الإلكتروني ومنصة الاختبارات الخاصة بنا.
+                </p>
+                <div class="highlight">
+                    <strong>مهم:</strong> باستخدامك لهذا الموقع، فإنك توافق على جمع واستخدام المعلومات وفقاً لسياسة الخصوصية هذه.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>المعلومات التي نجمعها</h2>
+                
+                <h3>1. المعلومات الشخصية</h3>
+                <p>قد نقوم بجمع المعلومات التالية:</p>
+                <ul>
+                    <li>الاسم الكامل</li>
+                    <li>عنوان البريد الإلكتروني</li>
+                    <li>رقم الهاتف (إذا تم تقديمه)</li>
+                    <li>معلومات التسجيل والحساب</li>
+                    <li>المستوى اللغوي (B1, B2، إلخ)</li>
+                </ul>
+
+                <h3>2. معلومات الاستخدام</h3>
+                <ul>
+                    <li>نتائج الاختبارات والتقييمات</li>
+                    <li>التقدم الدراسي</li>
+                    <li>تاريخ النشاط على المنصة</li>
+                    <li>عنوان IP والمعلومات التقنية للجهاز</li>
+                    <li>معلومات المتصفح ونظام التشغيل</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>كيفية استخدام معلوماتك</h2>
+                <p>نستخدم المعلومات التي نجمعها للأغراض التالية:</p>
+                <ol>
+                    <li><strong>تقديم الخدمات:</strong> لتمكينك من إجراء الاختبارات وتتبع تقدمك</li>
+                    <li><strong>تحسين المنصة:</strong> لتطوير وتحسين محتوى الاختبارات والخدمات</li>
+                    <li><strong>التواصل:</strong> لإرسال تحديثات ومعلومات مهمة حول حسابك</li>
+                    <li><strong>الدعم الفني:</strong> للرد على استفساراتك وحل المشكلات</li>
+                    <li><strong>الأمان:</strong> لحماية المنصة من الاستخدام غير المشروع</li>
+                    <li><strong>التحليلات:</strong> لفهم كيفية استخدام الموقع وتحسين تجربة المستخدم</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>حماية البيانات</h2>
+                <p>نتخذ إجراءات أمنية صارمة لحماية معلوماتك الشخصية:</p>
+                <ul>
+                    <li>تشفير البيانات أثناء النقل والتخزين</li>
+                    <li>استخدام خوادم آمنة ومحمية</li>
+                    <li>تقييد الوصول إلى البيانات للموظفين المصرح لهم فقط</li>
+                    <li>مراجعة أمنية منتظمة للأنظمة</li>
+                    <li>نسخ احتياطي منتظم للبيانات</li>
+                </ul>
+                <div class="highlight">
+                    <strong>ملاحظة:</strong> على الرغم من جميع الإجراءات الأمنية، لا يمكن ضمان أمان البيانات بنسبة 100٪ عبر الإنترنت.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>مشاركة المعلومات</h2>
+                <p>نحن لا نبيع أو نؤجر معلوماتك الشخصية لأطراف ثالثة. قد نشارك معلوماتك فقط في الحالات التالية:</p>
+                <ul>
+                    <li><strong>مقدمو الخدمات:</strong> شركات تساعدنا في تشغيل المنصة (الاستضافة، البريد الإلكتروني)</li>
+                    <li><strong>المتطلبات القانونية:</strong> عندما يتطلب القانون ذلك أو للحماية من الاحتيال</li>
+                    <li><strong>بموافقتك:</strong> عندما توافق صراحة على مشاركة معلوماتك</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>ملفات تعريف الارتباط (Cookies)</h2>
+                <p>نستخدم ملفات تعريف الارتباط لتحسين تجربتك على الموقع:</p>
+                <ul>
+                    <li><strong>ملفات ضرورية:</strong> للحفاظ على جلستك وتسجيل دخولك</li>
+                    <li><strong>ملفات التحليل:</strong> لفهم كيفية استخدام الموقع</li>
+                    <li><strong>ملفات التفضيلات:</strong> لحفظ إعداداتك وتفضيلاتك</li>
+                </ul>
+                <p>يمكنك التحكم في ملفات تعريف الارتباط من خلال إعدادات المتصفح الخاص بك.</p>
+            </div>
+
+            <div class="section">
+                <h2>حقوقك</h2>
+                <p>لديك الحقوق التالية فيما يتعلق ببياناتك الشخصية:</p>
+                <ul>
+                    <li><strong>الوصول:</strong> طلب نسخة من بياناتك الشخصية</li>
+                    <li><strong>التصحيح:</strong> طلب تصحيح أي معلومات غير صحيحة</li>
+                    <li><strong>الحذف:</strong> طلب حذف بياناتك الشخصية</li>
+                    <li><strong>الاعتراض:</strong> الاعتراض على معالجة بياناتك</li>
+                    <li><strong>نقل البيانات:</strong> الحصول على نسخة من بياناتك بتنسيق قابل للاستخدام</li>
+                    <li><strong>سحب الموافقة:</strong> سحب موافقتك في أي وقت</li>
+                </ul>
+                <p>لممارسة أي من هذه الحقوق، يرجى الاتصال بنا على المعلومات الموضحة أدناه.</p>
+            </div>
+
+            <div class="section">
+                <h2>الاحتفاظ بالبيانات</h2>
+                <p>
+                    نحتفظ بمعلوماتك الشخصية طالما كان حسابك نشطاً أو حسب الحاجة لتقديم الخدمات. 
+                    بعد حذف الحساب، قد نحتفظ ببعض المعلومات للأغراض القانونية أو الأرشيفية لمدة تصل إلى 3 سنوات.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>خصوصية الأطفال</h2>
+                <p>
+                    منصتنا مخصصة للأشخاص الذين تبلغ أعمارهم 16 عاماً فما فوق. نحن لا نجمع عن قصد معلومات شخصية من الأطفال دون سن 16 عاماً. 
+                    إذا كنت ولي أمر وتعتقد أن طفلك قدم معلومات شخصية، يرجى الاتصال بنا.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>التحديثات على سياسة الخصوصية</h2>
+                <p>
+                    قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة مع تاريخ "آخر تحديث" المحدث. 
+                    نشجعك على مراجعة هذه السياسة بشكل دوري للبقاء على اطلاع بكيفية حماية معلوماتك.
+                </p>
+            </div>
+
+            <div class="contact-info">
+                <h3>اتصل بنا</h3>
+                <p>إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية هذه، يرجى الاتصال بنا:</p>
+                <p>
+                    <strong>الشركة:</strong> OuardiDev<br>
+                    <strong>البريد الإلكتروني:</strong> <a href="mailto:contact@ouardidev.com">contact@ouardidev.com</a><br>
+                    <strong>تيليجرام:</strong> <a href="#">@OuardiDev</a><br>
+                    <strong>واتساب:</strong> <a href="#">+212-XXX-XXXXXX</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- German Section -->
+        <div class="content-card german-section" id="german" dir="ltr">
+            <div class="section">
+                <h2>Datenschutzerklärung (German Version)</h2>
+                <p>
+                    Bei <strong>OuardiDev</strong> verpflichten wir uns zum Schutz Ihrer Privatsphäre und Ihrer persönlichen Daten. 
+                    Diese Datenschutzerklärung erläutert, wie wir Informationen sammeln, verwenden und schützen, die Sie bei der 
+                    Nutzung unserer Website und Testplattform bereitstellen.
+                </p>
+                <div class="highlight">
+                    <strong>Wichtig:</strong> Durch die Nutzung dieser Website stimmen Sie der Erfassung und Verwendung von 
+                    Informationen gemäß dieser Datenschutzerklärung zu.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Erfasste Informationen</h2>
+                
+                <h3>1. Personenbezogene Daten</h3>
+                <p>Wir können folgende Informationen erfassen:</p>
+                <ul>
+                    <li>Vollständiger Name</li>
+                    <li>E-Mail-Adresse</li>
+                    <li>Telefonnummer (falls angegeben)</li>
+                    <li>Registrierungs- und Kontoinformationen</li>
+                    <li>Sprachniveau (B1, B2, usw.)</li>
+                </ul>
+
+                <h3>2. Nutzungsinformationen</h3>
+                <ul>
+                    <li>Testergebnisse und Bewertungen</li>
+                    <li>Lernfortschritt</li>
+                    <li>Aktivitätsverlauf auf der Plattform</li>
+                    <li>IP-Adresse und technische Geräteinformationen</li>
+                    <li>Browser- und Betriebssysteminformationen</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Verwendung Ihrer Informationen</h2>
+                <p>Wir verwenden die gesammelten Informationen für folgende Zwecke:</p>
+                <ol>
+                    <li><strong>Bereitstellung von Diensten:</strong> Ermöglichung der Durchführung von Tests und Verfolgung Ihres Fortschritts</li>
+                    <li><strong>Verbesserung der Plattform:</strong> Entwicklung und Verbesserung von Testinhalten und Diensten</li>
+                    <li><strong>Kommunikation:</strong> Versand von Updates und wichtigen Informationen zu Ihrem Konto</li>
+                    <li><strong>Technischer Support:</strong> Beantwortung von Anfragen und Lösung von Problemen</li>
+                    <li><strong>Sicherheit:</strong> Schutz der Plattform vor unberechtigter Nutzung</li>
+                    <li><strong>Analysen:</strong> Verständnis der Website-Nutzung und Verbesserung der Benutzererfahrung</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>Datensicherheit</h2>
+                <p>Wir ergreifen strenge Sicherheitsmaßnahmen zum Schutz Ihrer persönlichen Informationen:</p>
+                <ul>
+                    <li>Verschlüsselung der Daten bei Übertragung und Speicherung</li>
+                    <li>Nutzung sicherer und geschützter Server</li>
+                    <li>Zugriffsbeschränkung auf Daten nur für autorisiertes Personal</li>
+                    <li>Regelmäßige Sicherheitsüberprüfungen der Systeme</li>
+                    <li>Regelmäßige Datensicherungen</li>
+                </ul>
+                <div class="highlight">
+                    <strong>Hinweis:</strong> Trotz aller Sicherheitsmaßnahmen kann die Datensicherheit im Internet nicht zu 100% garantiert werden.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Weitergabe von Informationen</h2>
+                <p>Wir verkaufen oder vermieten Ihre persönlichen Daten nicht an Dritte. Wir können Ihre Informationen nur in folgenden Fällen teilen:</p>
+                <ul>
+                    <li><strong>Dienstleister:</strong> Unternehmen, die uns beim Betrieb der Plattform unterstützen (Hosting, E-Mail)</li>
+                    <li><strong>Gesetzliche Anforderungen:</strong> Wenn dies gesetzlich vorgeschrieben ist oder zum Schutz vor Betrug</li>
+                    <li><strong>Mit Ihrer Zustimmung:</strong> Wenn Sie ausdrücklich der Weitergabe Ihrer Informationen zustimmen</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Cookies</h2>
+                <p>Wir verwenden Cookies, um Ihre Erfahrung auf der Website zu verbessern:</p>
+                <ul>
+                    <li><strong>Notwendige Cookies:</strong> Zur Aufrechterhaltung Ihrer Sitzung und Anmeldung</li>
+                    <li><strong>Analyse-Cookies:</strong> Zum Verständnis der Website-Nutzung</li>
+                    <li><strong>Präferenz-Cookies:</strong> Zum Speichern Ihrer Einstellungen und Präferenzen</li>
+                </ul>
+                <p>Sie können Cookies über Ihre Browsereinstellungen steuern.</p>
+            </div>
+
+            <div class="section">
+                <h2>Ihre Rechte (DSGVO)</h2>
+                <p>Sie haben folgende Rechte in Bezug auf Ihre persönlichen Daten:</p>
+                <ul>
+                    <li><strong>Zugriff:</strong> Anforderung einer Kopie Ihrer persönlichen Daten</li>
+                    <li><strong>Berichtigung:</strong> Anforderung der Korrektur falscher Informationen</li>
+                    <li><strong>Löschung:</strong> Anforderung der Löschung Ihrer persönlichen Daten</li>
+                    <li><strong>Widerspruch:</strong> Widerspruch gegen die Verarbeitung Ihrer Daten</li>
+                    <li><strong>Datenübertragbarkeit:</strong> Erhalt einer Kopie Ihrer Daten in einem verwendbaren Format</li>
+                    <li><strong>Widerruf der Einwilligung:</strong> Widerruf Ihrer Einwilligung jederzeit</li>
+                </ul>
+                <p>Um eines dieser Rechte auszuüben, kontaktieren Sie uns bitte unter den unten angegebenen Informationen.</p>
+            </div>
+
+            <div class="section">
+                <h2>Datenspeicherung</h2>
+                <p>
+                    Wir bewahren Ihre persönlichen Informationen auf, solange Ihr Konto aktiv ist oder soweit erforderlich, 
+                    um Dienste bereitzustellen. Nach der Kontolöschung können wir einige Informationen für rechtliche oder 
+                    Archivierungszwecke bis zu 3 Jahre aufbewahren.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Datenschutz für Kinder</h2>
+                <p>
+                    Unsere Plattform richtet sich an Personen ab 16 Jahren. Wir erfassen wissentlich keine persönlichen 
+                    Informationen von Kindern unter 16 Jahren. Wenn Sie ein Elternteil sind und glauben, dass Ihr Kind 
+                    persönliche Informationen bereitgestellt hat, kontaktieren Sie uns bitte.
+                </p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Kontaktieren Sie uns</h3>
+                <p>Bei Fragen zu dieser Datenschutzerklärung kontaktieren Sie uns bitte:</p>
+                <p>
+                    <strong>Unternehmen:</strong> OuardiDev<br>
+                    <strong>E-Mail:</strong> <a href="mailto:contact@ouardidev.com">contact@ouardidev.com</a><br>
+                    <strong>Telegram:</strong> <a href="https://t.me/+Ol_rmVMqm-xmMzNk">@OuardiDev</a><br>
+                <!--    <strong>WhatsApp:</strong> <a href="#">+212-XXX-XXXXXX</a>-->
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                © 2025 جميع الحقوق محفوظة | OuardiDev | Alle Rechte vorbehalten
+            </div>
+            <div class="developer-credit">
+                تم التطوير بواسطة | Entwickelt von <a href="telc.free.nf">OuardiDev</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for language toggle
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const target = this.getAttribute('href');
+                document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

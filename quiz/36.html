@@ -1,0 +1,419 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Autorinnen und Autoren</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #e9eaec;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1400px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .letter {
+      flex: 2;
+      padding: 30px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .blank {
+      background-color: #3f6ccf;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      min-width: 24px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .choices {
+  flex: 1.5;
+  background-color: #f2f3f7;
+  padding: 30px 20px;
+  overflow-y: auto;
+  max-height: 90vh; /* Adjust height as needed */
+}
+
+    .question-block {
+      margin-bottom: 20px;
+    }
+
+    .row-container {
+      background-color: #e0e4f3;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .option {
+      background-color: white;
+      padding: 6px 14px;
+      font-size: 14px;
+      border-radius: 18px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: 0.2s ease;
+      user-select: none;
+      text-align: center;
+      flex: 1;
+    }
+
+    .option:hover {
+      background-color: #e6ebf9;
+    }
+
+    .option.selected {
+      background-color: #d0defc;
+      border-color: #3f6ccf;
+      font-weight: bold;
+    }
+
+    .option.correct {
+      background-color: #c8f7c5;
+      border-color: #34a853;
+    }
+
+    .option.incorrect {
+      background-color: #fbd5d5;
+      border-color: #e53935;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+#checkBtn,
+#homeBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  min-width: 200px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Primary button style */
+#checkBtn {
+  background-color: #3f6ccf;
+  color: white;
+}
+
+#checkBtn:hover {
+  background-color: #2f56b3;
+}
+
+/* Secondary button style */
+#homeBtn {
+  background-color: #6c757d;
+  color: white;
+  display: inline-block;
+  line-height: 1.6;
+}
+
+#homeBtn:hover {
+  background-color: #5a6268;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="letter">
+    <p>Liebe Autorinnen und Autoren,</p>
+    <p>
+        weihnachten ist nicht mehr weit, und bevor wir uns alle in die wohlverdienten Feiertage verabschieden, möchte ich euch noch einmal an den Redaktionsschluss für unsere Vereinszeitung erinnern, den wir für den 10. Januar festgelegt haben. <span class="blank" id="blank1">1</span> ihr alle wisst, kann Claudia, unsere fleißige Layouterin, sich erst dann an die Arbeit machen, wenn alle Texte und Bilder <span class="blank" id="blank2">2</span>. Die fertige Datei muss bis spätestens 22. Januar in der Druckerei sein, damit das Heft pünktlich zum 1. Februar fertig sein kann. Ein gutes Layout ist auch <span class="blank" id="blank3">3</span> Interesse der Autorinnen und Autoren. Ist es schlecht, schenkt man dem Artikel automatisch weniger Beachtung. Liefert also bitte eure Beiträge rechtzeitig <span class="blank" id="blank4">4</span>. Für die Bildbearbeitung ist wie immer Florian zuständig. Bitte die Bilder im TIF- oder im JPG-Format liefern und bitte den Bildnachweis anführen, wenn die Bilder nicht von euch selbst stammen. Für eure eigenen Bilder liegt das Copyright natürlich <span class="blank" id="blank5">5</span> euch. Leider sind die Verkaufszahlen unserer Vereinszeitung im letzten Jahr <span class="blank" id="blank6">6</span> zurückgegangen. Deshalb möchten wir euch alle noch einmal herzlich <span class="blank" id="blank7">7</span> bitten, nur Themen zu wählen, die unsere Vereinsmitglieder betreffen und sie auch wirklich <span class="blank" id="blank8">8</span>. Das heißt nicht, <span class="blank" id="blank9">9</span> man große Themen wie Politik oder Gesellschaft nicht behandeln kann, aber sie sollten leserfreundlich verpackt sein. Wir verstehen uns ausdrücklich <span class="blank" id="blank10">10</span> unabhängige Zeitung und möchten uns keinen Maulkorb umhängen lassen. Trotzdem sollten die Beiträge im Rahmen sachlicher Meinungsäußerungen bleiben. In diesem Sinne freut sich die Redaktion auf zahlreiche Artikel!
+    </p>
+    <p>Beste Grüße und viel Erfolg</p>
+    <p>Eure Redaktion</p>
+  </div>
+
+  <div class="choices">
+    <!-- Repeat for all 10 questions -->
+    <!-- Here's how one looks. Copy/paste for others -->
+
+    <div class="question-block" data-blank="1">
+      <div><strong>1.</strong></div>
+      <div class="row-container">
+        <div class="options">
+          <label class="option"><input type="radio" name="q1" value="wie">wie</label>
+          <label class="option"><input type="radio" name="q1" value="was">was</label>
+          <label class="option"><input type="radio" name="q1" value="wann">wann</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block" data-blank="2">
+      <div><strong>2.</strong></div>
+      <div class="row-container">
+        <div class="options">
+          <label class="option"><input type="radio" name="q2" value="vorliegen">vorliegen</label>
+          <label class="option"><input type="radio" name="q2" value="unterligegen">unterligegen</label>
+          <label class="option"><input type="radio" name="q2" value="liegen lassen">liegen lassen</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block" data-blank="3">
+        <div><strong>3.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q3" value="von">von</label>
+            <label class="option"><input type="radio" name="q3" value="ohne">ohne</label>
+            <label class="option"><input type="radio" name="q3" value="im">im</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="4">
+        <div><strong>4.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q4" value="zu">zu</label>
+            <label class="option"><input type="radio" name="q4" value="ein">ein</label>
+            <label class="option"><input type="radio" name="q4" value="ab">ab</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="5">
+        <div><strong>5.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q5" value="mit">mit</label>
+            <label class="option"><input type="radio" name="q5" value="für">für</label>
+            <label class="option"><input type="radio" name="q5" value="bei">bei</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="6">
+        <div><strong>6.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q6" value="unerschütterlich">unerschütterlich</label>
+            <label class="option"><input type="radio" name="q6" value="stark">stark</label>
+            <label class="option"><input type="radio" name="q6" value="fest">fest</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="7">
+        <div><strong>7.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q7" value="deswegen">deswegen</label>
+            <label class="option"><input type="radio" name="q7" value="darum">darum</label>
+            <label class="option"><input type="radio" name="q7" value="dafür">dafür</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="8">
+        <div><strong>8.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q8" value="besprechen">besprechen</label>
+            <label class="option"><input type="radio" name="q8" value="aussprechen">aussprechen</label>
+            <label class="option"><input type="radio" name="q8" value="ansprechen">ansprechen</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="9">
+        <div><strong>9.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q9" value="ob">ob</label>
+            <label class="option"><input type="radio" name="q9" value="dass">dass</label>
+            <label class="option"><input type="radio" name="q9" value="damit">damit</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="10">
+        <div><strong>10.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q10" value="sowie">sowie</label>
+            <label class="option"><input type="radio" name="q10" value="als ob">als ob</label>
+            <label class="option"><input type="radio" name="q10" value="als">als</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button id="checkBtn">Antworten prüfen</button>
+        <a href="../index2.html" id="homeBtn">Zurück zur Startseite</a>
+      </div>
+      
+  </div>
+</div>
+
+
+<script>
+  const correctAnswers = {
+    1: "wie",
+    2: "vorliegen",
+    3: "im",
+    4: "ab",
+    5: "bei",
+    6: "stark",
+    7: "darum",
+    8: "ansprechen",
+    9: "dass",
+    10: "als"
+  };
+
+  document.querySelectorAll('.option input[type="radio"]').forEach(input => {
+    input.addEventListener('change', (e) => {
+      const label = e.target.closest('label');
+      const block = e.target.closest('.question-block');
+      const blankId = block.getAttribute('data-blank');
+      const blank = document.getElementById('blank' + blankId);
+
+      block.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+      label.classList.add('selected');
+      blank.textContent = e.target.value;
+    });
+  });
+
+  document.getElementById("checkBtn").addEventListener("click", () => {
+    document.querySelectorAll('.question-block').forEach(block => {
+      const blankId = block.getAttribute('data-blank');
+      const selectedInput = block.querySelector('input[type="radio"]:checked');
+      const options = block.querySelectorAll('.option');
+
+      options.forEach(opt => opt.classList.remove('correct', 'incorrect'));
+
+      if (selectedInput) {
+        const value = selectedInput.value;
+        const label = selectedInput.closest('.option');
+
+        if (value === correctAnswers[blankId]) {
+          label.classList.add('correct');
+        } else {
+          label.classList.add('incorrect');
+
+          // Show correct answer
+          options.forEach(opt => {
+            if (opt.textContent.trim() === correctAnswers[blankId]) {
+              opt.classList.add('correct');
+            }
+          });
+        }
+      }
+    });
+  });
+</script>
+<script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+</body>

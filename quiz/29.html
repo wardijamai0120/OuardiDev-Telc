@@ -1,0 +1,286 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Großraumbüros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h2>Müdigkeit und juckende Augen - Arbeit in Großraumbüros.</h2>
+      <p>
+      Dieser Artikel entsteht unter katastrophalen Bedingungen. Links vom Autor, keinen halben Meter entfernt, diskutieren die Onlineredakteure gerade über portugiesische Bankgeschäfte. Von rechts eilt nun der befreundete Kollege heran: “Sag mal, hast du eine Ahnung, ob das Bayern-Spiel heute Abend live im Fernsehen übertragen wird?” Und da, die Chefin, ganz aufgeregt winkt sie herüber: “Wann wir denn die Geschichte endlich fertig? Die hätte vor einer halben Stunde ins Korrektorat gemusst. Beeil dich bitte!” Was wir Arbeitenden im Großraumbüro immer schon ahnten, haben Schweizer Forscher nun erstmals auf breiter wissenschaftlicher Basis nachgewiesen: Großraum ist schlecht. Zumindest für diejenigen, die im Großraum arbeiten müssen. Mag sein, dass die Chefs in ihren Einzelbüros da anderer Meinung sind. Gut 1200 Beschäftigte aus unterschiedlichsten Berufen hat die Hochschule in Luzern befragt. Die Ergebnisse der Erhebung sind eindeutig. Beispiel Lärm: In Büros mit mehr als 16 Mitarbeitern fühlen sich 80% der Befragten regelmäßig durch Gespräche oder Telefonate gestört - in Zweierbüros sind es nicht mal 30%. Auch was die alltäglichen Büro Probleme betrifft, ist der Großraum von Nachteil. Einerlei, wonach die Forscher nun fragten, ob nach Müdigkeit, Schweregefühl im Kopf, juckende Augen oder verstopfte Nase - immer litten Mitarbeiter im Großraumbüro am stärksten. Wundert da, dass vier von zehn Großraumbeschäftigten mit ihrer „Bürosituation im Allgemeinen“ sehr oder gar außerordentlich unzufrieden sind? Zum Vergleich: Acht von zehn Arbeitnehmern mit Einzelbüro geben an, sie seien ziemlich, sehr oder - fast 50% - außerordentlich zufrieden.
+      “ Einzelbüros für alle” müsste die Lösung lauten, doch der Trend geht in die andere Richtung: Offene Raumstrukturen nehmen zu. Kritiker dieser Entwicklung sehen dahinter vor allem einen Grund: Arbeitgeber wollen die Mieten und Heizkosten niedrig halten. Aber zumindest ein Argument dürfte auch die Arbeitgeber interessieren: Der Schweizer Studie zufolge ist die Zahl der Krankheitstage bei Beschäftigten in Großraumbüros deutlich höher als bei anderen.
+      </p>
+
+      <h2>Die deutsche Sehnsucht nach dem Einzelbüro.</h2>
+      <p>
+        Mein Schreibtisch. Mein Computer. Mein Büro. Das Einzelzimmer war fester Bestandteil der deutschen Bürokultur. Aber auch heute haben es noch viele und wer keines hat, träumt zumindest davon. Diese Sehnsucht ist typisch deutsch. “Verglichen mit den Beschäftigten in anderen Ländern, sitzen wir sehr bequem. Auch wenn alle Mitarbeiter die gleiche Möblierung haben, sitzen wir alle doch an unseren eigenen Schreibtischen, benutzen unsere eigenen Aktienschränke und möchten am liebsten die Tür zu machen können“, sagt Robert Menke von der Immobilienberatung Kuschmann &amp; Wakefield. Die hat eine Studie veröffentlicht, wonach deutsche Angestellte im internationalen Vergleich den meisten Platz haben: durchschnittlich 30 Quadratmeter Mietfläche pro Kopf.
+        Damit ist natürlich nicht nur das Schreibtisch-Areal gemeint, auch der Flur oder Küchenzeilen sind - falls vorhanden - eingerechnet. Doch umso erstaunlicher sind die Quadratmeterzahlen am anderen Ende der Statistik: In einigen osteuropäischen Ländern, aber auch in Schottland kommt jeder Beschäftigte gerade mal auf 10 Quadratmeter, selbst in Österreich sind es nur zwölf.
+        Im angelsächsischen Raum gibt es viel mehr Großraumbüros als bei uns. In London, wo Büroraum weltweit mit am teuersten ist, ist etwa eine Zusammenarbeit auf eine Fläche von 600 Quadratmetern und mehr ganz normal. normal. “ Häufig teilen sich sogar mehrere Mitarbeiter einen Arbeitsplatz. Statt eines festen Schreibtisches verfügt dann jeder über einen Rollcontainer. Der wird immer dorthin mitgenommen, wo gerade ein Arbeitsplatz frei ist. Das geht in der Regel über alle Hierarchiestufen”, sagt Menke.
+        Robert Menke erkennt auch in Deutschland “in einigen Bereichen eine Amerikanisierung des Büroraumes” . Banken und Unternehmer im Telekommunikationssektor wären da vorne dabei. Doch das sind noch Ausnahmen. Nach wie vor arbeiten die meisten Angestellten entweder in kleinen Gruppen in etwas größeren Büros oder in “Einzelzellen” wie Büros für eine Person in der Sprache der Immobilienmakler heißen. Laut der Studie überlegen zwar 40% der befragten Unternehmer, ihre Großraumflächen zu erweitern oder die Arbeitsplätze flexibel zu gestalten, aber “richtige Großraumbüros gibt es eher selten”, sagt Menke.        
+      </p>
+    </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1.  Eine Studie aus der Schweiz</h3>
+          <label><input type="radio" name="q1" value="a"> belegt, dass die Mitarbeiter sich über Lärm im Großraumbüro beklagen.</label>
+          <label><input type="radio" name="q1" value="b"> brachte keine eindeutigen Ergebnisse zur Zufriedenheit mit unterschiedlichen Büroformen.</label>
+          <label><input type="radio" name="q1" value="c"> zeigt, dass Mitarbeiter in Großraumbüros seltener krank sind als andere.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Großraumbüros</h3>
+          <label><input type="radio" name="q2" value="a"> reduzieren den Krankenstand.</label>
+          <label><input type="radio" name="q2" value="b"> sind kostengünstiger zu beheize.</label>
+          <label><input type="radio" name="q2" value="c"> werden immer seltener.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Die deutschen Angestellten </h3>
+            <label><input type="radio" name="q3" value="a"> bevorzugen Einzelbüros.</label>
+            <label><input type="radio" name="q3" value="b"> genießen eine individuell ausgewählte Büromöblierung.</label>
+            <label><input type="radio" name="q3" value="c"> leiden unter zu engen Einzelbüros.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Die Arbeitsplatzfläche </h3>
+            <label><input type="radio" name="q4" value="a"> ist in Londoner Großraumbüros für den Chef größer als für andere Mitarbeiter.</label>
+            <label><input type="radio" name="q4" value="b"> schließt die gemeinsam genutzten Flächen aus.</label>
+            <label><input type="radio" name="q4" value="c"> wird in London oft unter mehreren Mitarbeitern aufgeteilt.</label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.  Großraumbüros </h3>
+            <label><input type="radio" name="q5" value="a"> gibt es vor allem in Banken und Telekommunikationsunternehmen.</label>
+            <label><input type="radio" name="q5" value="b"> werden bald in 40% der deutschen Firmen eingeführt.</label>
+            <label><input type="radio" name="q5" value="c"> werden meist in Einzelzellen unterteilt.</label>
+          </div>  
+
+        <!-- Weitere Fragen... -->
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index2.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "a",
+        q2: "b",
+        q3: "a",
+        q4: "c",
+        q5: "a",
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+  
+
+
+</body>

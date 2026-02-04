@@ -1,0 +1,281 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Babys</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h1>Wie Babys lernen</h1>
+      <p>
+        Bereits mit sechs Monaten können Babys zwischen möglichen und unmöglichen Ereignissen unterscheiden und denken über Ursache und Folge nach. Unglaubliche Ergebnisse sind das, bedenkt man, dass ein Säugling vor 50 Jahren noch als leeres Blatt gesehen wurde. Man glaubte, dass ein Säugling äußere Einflüsse nur bedingt wahrnehmen oder Empfindungen wie Schmerz nicht spüren kann. Inzwischen hat die Kleinstkind Forschung eine ganz andere Meinung und weiß: Babys bedienen sich sehr vieler komplizierter Forschungsmethoden. Sie lernen nicht nur, indem sie tun, was sie bei ihren Eltern sehen, sondern sie lernen mit Versuchen die Welt kennen. Eine der Fragen, die Babyforscher dabei beschäftigt, lautet: Wie viel Klugheit ist angeboren, wie viel erlernt? Lässt sich die Intelligenz also entwickeln? Wenn ja, welche Umwelt macht Babys intelligent?
+        </p><h3>Was die Forscher heute glauben</h3>
+        Rund 50 Prozent unseres geistigen Könnens wurde von unseren Eltern vererbt, das heißt, die Hälfte unserer Intelligenz ist uns schon bei der Geburt mitgegeben. Die andere Hälfte wird durch Schule, Ausbildung, Freunde, Mutter, Vater, Geschwister, Großeltern, kurz: die Umwelt bestimmt. Aber dieses Verhältnis von Erbgut auf der einen und Umwelt auf der anderen Seite verändert sich im Lauf des Lebens. Bei Kleinkindern zum Beispiel sind die Umwelteinflüsse von größerer Bedeutung als im späteren Leben. Der US-Forscher Robert Plomin meint, dass die Umwelt in diesem Alter mit etwa 80 Prozent einen sehr hohen Stellenwert einnimmt. Mit zunehmendem Alter wird das Erbgut stärker sichtbar. Im Erwachsenenalter ist der Einfluss der Gene auf die Intelligenz mit etwa 60 Prozent deutlich größer als der der Umwelt. Um das Lernen zu lernen, brauchen kleine Kinder weder spezielle Programme noch intelligentes Spielzeug - sondern Menschen. Gut ist nach Meinung der Forscher zum Beispiel eine Familie, in der vorgelesen und gemeinsam gespielt wird.
+        <h3>Unsere Kinder werden immer klüger</h3>
+        Drei- bis Siebenjährige in Deutschland können heute mehr als noch vor 25 Jahren. Alle 10 Jahre nimmt die Intelligenz um rund 3 Prozent zu. Liegt das vielleicht daran, dass heute schon Kleinkinder vor Wissensvideos sitzen, dass Einjährige mit sprechenden Handys herumrennen und dass bei vielen noch vor dem Schulbeginn ein Lerncomputer auf dem Geburtstagstisch steht? Die Wissenschaftler glauben das nicht: “Intelligenz ist nicht gleich Wissen”, sagt Professor Ralph Dawirs, Neurobiologe an der Uniklinik Erlangen. Es gehe nicht darum, Wissen anzusammeln. “Verstehen heißt Verbindungen herstellen und auswählen”. Im Gehirn macht das der Stirnlappen. Das Stirnhirn ist bei der Geburt zwar organisch da, hat seine volle Funktion aber noch nicht erreicht. “Es braucht geistige Nahrung, Futter”, sagte Dawirs. Deshalb geht es im Kleinkindalter erst einmal darum, dass möglichst viele dem jeweiligen Entwicklungsstand angemessene Impulse verarbeitet werden. Eine Spielzeugente, die man anfassen kann und über die die Mutter vielleicht sagt: “Ja, das ist eine Ente. Schau, sie kann in der Badewanne schwimmen”, ist also ungleich mehr wert als die Spielzeugente, die auf einen Bildschirm erscheint.
+        Sind Lerncomputer, Handy und Videos deshalb Teufelswerk? “Wenn man sie nur wenig benutzt, schaden sie nicht“, sagt Entwicklungsforscherin Pauen, “die Frage ist nur, ob sie nützen”. Die beste Unterstützung der Entwicklung sei immer noch menschliche Begleitung: “Man tut einem Baby keinen Gefallen damit, wenn man es mit einem Spielzeug alleine lässt. Besser ist, es beim Lernen beobachten, so wenig wie möglich stören, aber zu Hilfe zu kommen, wenn etwas nicht klappt“, so ihr Tipp für Eltern. Es ist besser, Kinder im Dreck spielen zu lassen und mit ihnen in die Natur zu gehen. Dort lernen sie viel mehr als mit dem besten Computerspiel.        
+      <p></p>
+    </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1. Man glaubte früher, dass Babys</h3>
+          <label><input type="radio" name="q1" value="a"> kaum auf ihre Umwelt reagieren.</label>
+          <label><input type="radio" name="q1" value="b"> nur nachmachen, was ihre Eltern tun.</label>
+          <label><input type="radio" name="q1" value="c"> sehr kompliziert denken.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Die Umwelt ist für die Entwicklung der Intelligenz</h3>
+          <label><input type="radio" name="q2" value="a"> im Erwachsenenalter besonders wichtig.</label>
+          <label><input type="radio" name="q2" value="b"> im Kleinkindalter besonders wichtig.</label>
+          <label><input type="radio" name="q2" value="c"> in jedem Alter gleich wichtig.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Bessere Entwicklungschancen haben Kinder, je</h3>
+            <label><input type="radio" name="q3" value="a"> früher sie den Umgang mit Computer erlernen.</label>
+            <label><input type="radio" name="q3" value="b"> mehr altersgerechte Erfahrungen sie machen können.</label>
+            <label><input type="radio" name="q3" value="c"> öfter sie beim Spielen auf sich gestellt sind.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Fernsehen und Computer sind </h3>
+            <label><input type="radio" name="q4" value="a"> für die geistige Entwicklung eher ungeeignet.</label>
+            <label><input type="radio" name="q4" value="b"> geistige Nahrung für das Gehirn.</label>
+            <label><input type="radio" name="q4" value="c"> sehr gute Hilfsmittel für das Lernen.</label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.  Kontakt mit Menschen </h3>
+            <label><input type="radio" name="q5" value="a"> fördert die Intelligenz des Babys am besten.</label>
+            <label><input type="radio" name="q5" value="b"> ist weniger wichtig als Erfahrungen in der freien Natur.</label>
+            <label><input type="radio" name="q5" value="c"> wird unwichtig, wenn es gutes Spielzeug gibt.</label>
+          </div>  
+
+        <!-- Weitere Fragen... -->
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index2.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "a",
+        q2: "b",
+        q3: "b",
+        q4: "a",
+        q5: "a"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+        
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+  
+
+
+</body>

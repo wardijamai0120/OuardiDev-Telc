@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="de">
+<script defer src="/_vercel/insights/script.js"></script>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telc - Prüfung B1</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+/* الأزرار العلوية */
+.header-buttons {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 1000;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-button {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  border: none;
+}
+
+.logout-button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  border: none;
+}
+
+/* المحتوى */
+.main-content {
+  max-width: 1400px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+}
+
+/* حاويات الاختبارات */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* العناوين */
+.container h1 {
+  color: #667eea;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+/* شبكة الأزرار */
+.quiz-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* أزرار الاختبارات */
+a.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+  min-height: 65px;
+  text-align: center;
+}
+
+a.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+a.button:hover::before {
+  left: 100%;
+}
+
+a.button:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+/* صندوق التحذير */
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+  color: white;
+  padding: 18px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(238, 90, 111, 0.4);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 9999;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* استجابة للموبايل */
+@media (max-width: 768px) {
+  .header-buttons {
+    padding: 0 15px;
+    top: 15px;
+  }
+  
+  .nav-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .main-content {
+    margin-top: 90px;
+  }
+  
+  .container {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+  
+  .container h1 {
+    font-size: 26px;
+  }
+  
+  .quiz-buttons {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+  }
+  
+  a.button {
+    font-size: 14px;
+    padding: 16px 18px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header-buttons">
+  <a href="index.html" class="nav-button home-button">🏠 Homepage</a>
+  <a href="index.html" class="nav-button logout-button">🚪 Abmelden</a>
+</div>
+
+<div id="warningBox">
+  ⚠️ Inaktivität erkannt. Abmeldung in <span id="countdown">30</span>s
+</div>
+
+<div class="main-content">
+<div class="header-buttons">
+  <a href="home.html" class="nav-button home-button">Homepage</a>
+  <a href="index.html" class="nav-button logout-button">Abmelden</a>
+</div>
+
+
+  <div class="container" style="animation-delay: 0.1s">
+    <h1>Lesen Teil 1</h1>
+    <div class="quiz-buttons">
+      <a href="quiz/204.html" class="button">PETRA/JENNIFER</a>
+      <a href="quiz/206.html" class="button">EVA/IRIS</a>
+      <a href="quiz/215.html" class="button">SOPHIE/ANDREAS2</a>
+      <a href="quiz/219.html" class="button">NADJA/CLAUDIA</a>
+      <a href="quiz/221.html" class="button">NICOLE</a>
+      <a href="quiz/223.html" class="button">ANDREAS</a>
+      <a href="quiz/226.html" class="button">ANNIKA1</a>
+      <a href="quiz/227.html" class="button">ANNIKA2/SONJA<br>
+        CORINA</a>
+      <a href="quiz/228.html" class="button">CAROLINA/ALICIA</a>
+      <a href="quiz/230.html" class="button">VERA</a>
+      <a href="quiz/232.html" class="button">THOMAS</a>
+      <a href="quiz/234.html" class="button">TAMARA/JAKOB<br>
+        PAUL</a>
+      <a href="quiz/235.html" class="button">JAN</a>
+      <a href="quiz/237.html" class="button">VIKTOR</a>
+      <a href="quiz/240.html" class="button">ALEX &amp; CORA</a>
+      <a href="quiz/242.html" class="button">RITA</a>
+      <a href="quiz/244.html" class="button">MIROSLAV</a>
+      <a href="quiz/246.html" class="button">KARLA</a>
+      <a href="quiz/247.html" class="button">MORITZ</a>
+    </div>
+  </div>
+
+  <div class="container" style="animation-delay: 0.1s">
+    <h1>Lesen Teil 2</h1>
+    <div class="quiz-buttons">
+      <a href="quiz/205.html" class="button">Petra &amp; ALICIA</a>
+      <a href="quiz/207.html" class="button">EVA1</a>
+      <a href="quiz/208.html" class="button">IRIS</a>
+      <a href="quiz/216.html" class="button">SOPHIE</a>
+      <a href="quiz/220.html" class="button">NADJA &amp; CLAUDIA</a>
+      <a href="quiz/222.html" class="button">NICOLE</a>
+      <a href="quiz/224.html" class="button">ANDREAS</a>
+      <a href="quiz/225.html" class="button">ANDREAS2 &amp; CORINA<br>
+        ANNIKA(1&amp;2)</a>
+      <a href="quiz/229.html" class="button">CAROLINA/VERA</a>
+      <a href="quiz/231.html" class="button">JENNIFER &amp; TAMARA<br>
+        JAKOB/PAUL</a>
+      <a href="quiz/233.html" class="button">THOMAS</a>
+      <a href="quiz/236.html" class="button">JAN</a>
+      <a href="quiz/238.html" class="button">VIKTOR</a>
+      <a href="quiz/239.html" class="button">SONJA</a>
+      <a href="quiz/241.html" class="button">ALEX &amp; CORA</a>
+      <a href="quiz/243.html" class="button">RITA</a>
+      <a href="quiz/245.html" class="button">MIROSLAV &amp; KARLA</a>
+      <a href="quiz/248.html" class="button">MORITZ</a>
+      <a href="quiz/249.html" class="button">MARA</a>
+    </div>
+  </div>
+
+  <div class="container" style="animation-delay: 0.1s">
+    <h1>Lesen Teil 3</h1>
+    <div class="quiz-buttons">
+      <a href="quiz/201.html" class="button">Petra</a>
+      <a href="quiz/203.html" class="button">EVA1</a>
+      <a href="quiz/202.html" class="button">IRIS</a>
+      <a href="quiz/217.html" class="button">SOPHIE</a>
+      <a href="quiz/218.html" class="button">NADJA &amp; CLAUDIA</a>
+      <a href="quiz/286.html" class="button">ANDREAS1</a>
+      <a href="quiz/287.html" class="button">ANDREAS2</a>
+      <a href="quiz/288.html" class="button">CAROLINA</a>
+    </div>
+  </div>
+
+  <div class="container" style="animation-delay: 0.1s">
+    <h1>Sprachbausteine Teil 1</h1>
+    <div class="quiz-buttons">
+      <a href="quiz/209.html" class="button">PETRA/NADJA2<br>
+        CLAUDIA</a>
+      <a href="quiz/211.html" class="button">EVA</a>
+      <a href="quiz/213.html" class="button">IRIS</a>
+      <a href="quiz/250.html" class="button">SOPHIE</a>
+      <a href="quiz/251.html" class="button">NICOLE</a>
+      <a href="quiz/254.html" class="button">ANDREAS</a>
+      <a href="quiz/257.html" class="button">ANDREAS2/VIKTOR<br>
+        SONJA</a>
+      <a href="quiz/259.html" class="button">ANNIKA1</a>
+      <a href="quiz/261.html" class="button">ANNIKA2/JAN<br>
+        CORINA</a>
+      <a href="quiz/262.html" class="button">CAROLINA/RITA</a>
+      <a href="quiz/264.html" class="button">VERA/PAUL</a>
+      <a href="quiz/266.html" class="button">THOMAS/ANNA</a>
+      <a href="quiz/268.html" class="button">JENNIFER</a>
+      <a href="quiz/269.html" class="button">TAMARA/JAKOB</a>
+      <a href="quiz/273.html" class="button">ALEX &amp; CORA</a>
+      <a href="quiz/278.html" class="button">MIROSLAV</a>
+      <a href="quiz/280.html" class="button">KARLA</a>
+      <a href="quiz/282.html" class="button">MORITZ</a>
+      <a href="quiz/283.html" class="button">ALICIA</a>
+    </div>
+  </div>
+  
+  <div class="container" style="animation-delay: 0.1s">
+    <h1>Sprachbausteine Teil 2</h1>
+    <div class="quiz-buttons">
+      <a href="quiz/210.html" class="button">PETRA/ALICIA</a>
+      <a href="quiz/212.html" class="button">EVA</a>
+      <a href="quiz/214.html" class="button">IRIS</a>
+      <a href="quiz/253.html" class="button">SOPHIE</a>
+      <a href="quiz/252.html" class="button">NICOLE</a>
+      <a href="quiz/255.html" class="button">NADJA/CLAUDIA</a>
+      <a href="quiz/256.html" class="button">ANDREAS</a>
+      <a href="quiz/258.html" class="button">ANDREAS2/JAN</a>
+      <a href="quiz/260.html" class="button">ANNIKA1&amp;2</a>
+      <a href="quiz/263.html" class="button">CAROLINA/CORINA</a>
+      <a href="quiz/265.html" class="button">VERA</a>
+      <a href="quiz/267.html" class="button">THOMAS/ANNA<br>
+        JENNIFER</a>
+      <a href="quiz/270.html" class="button">TAMARA/JAKOB<br>
+        SONJA</a>
+      <a href="quiz/272.html" class="button">VIKTOR</a>
+      <a href="quiz/274.html" class="button">ALEX &amp; CORA</a>
+      <a href="quiz/276.html" class="button">PAUL</a>
+      <a href="quiz/277.html" class="button">RITA</a>
+      <a href="quiz/279.html" class="button">MIROSLAV</a>
+      <a href="quiz/281.html" class="button">KARLA/MORITZ</a>
+      <a href="quiz/284.html" class="button">JAKOB2</a>
+      
+    </div>
+  </div>
+
+  <div class="container" style="animation-delay: 0.1s">
+    <h1>Hören</h1>
+    <div class="quiz-buttons">
+      <a href="quiz/271.html" class="button">Teil 1</a>
+      <a href="quiz/285.html" class="button">Teil 2</a>
+      <a href="quiz/275.html" class="button">Teil 3</a>
+    </div>
+  </div>
+
+  
+</div>
+
+<script>
+// نظام مراقبة النشاط
+const INACTIVITY_LIMIT = 10 * 60 * 1000; // 10 دقائق
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 ثانية
+
+const warningBox = document.getElementById('warningBox');
+const countdownEl = document.getElementById('countdown');
+
+let pingTimeout, logoutTimer, warningTimer, countdownTimer;
+let lastPing = Date.now();
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 30000) return;
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none";
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // عرض التحذير قبل 30 ثانية من تسجيل الخروج
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // تسجيل خروج تلقائي
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// الأحداث
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+</body>
+</html>

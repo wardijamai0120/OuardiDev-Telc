@@ -1,0 +1,281 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Reitergruppe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h1>Korbjagd zu Pferde</h1>
+      <p>
+        Wer sich unter dem zweimal pro Woche stattfindenden Training auf dem Wiesbadener Hofgut Adamstal eine Art "Kuschelrunde" vorgestellt hatte, der wird schnell eines Besseren belehrt, und der neugierige Betrachter fühlt sich eher auf einen Fußballplatz als in eine Reithalle versetzt. Die festliegenden Spielzüge, die es einzustudieren gilt, sind Bestandteil einer Sportart, die hierzulande allenfalls eine Randerscheinung ist: Horse-Ball.
+        “Es kommen immer mehr Aktive dazu”, versichert jedoch Hans-Jürgen Faust (59), Hausherr auf Hofgut Adamstal und Präsident des Deutschen Horse-Ball-Verbandes. Irgendwo in Hagen, Düsseldorf, München oder Heidelberg soll es noch ein paar vereinzelte Akteure geben, das eigentliche Geschehen aber spielt sich hier ab, wo einer der wohl kleinsten Sportverbände Deutschlands vor 15 Jahren aus der Taufe gehoben wurde und wo die erste Mannschaft der Reitergruppe Wiesbaden (RGW) identisch ist mit der National-Auswahl. Aber diesen Sport betreiben nicht nur Erwachsene: Die jüngsten Spieler sind nicht älter als acht. Horse-Ball ist -vereinfacht gesagt - eine Art Basketball zu Pferde.
+        An den beiden Enden des zirka 25 mal 70 Meter großen Spielfeldes sind die Korbringe nicht waagerecht, sondern senkrecht ausgerichtet und mit Fangnetzen versehen, in denen die Bälle nach einem gelungenen Spielzug landen. Keine leichte Aufgabe, wie die bereits erwähnten ersten Trainingseindrücke zeigen, aber Übung macht eben auch hier den Meister. Zumindest auf nationaler, sprich: Wiesbadener Ebene. Darüber hinaus gilt es, immer wieder Lehrgeld zu zahlen, vor allem bei Gastspielen im Heimatland Frankreich, wo Horse-Ball vor rund 25 Jahren erfunden wurde und einen viel höheren Stellenwert als hierzulande genießt. Sogar eine eigene Profiliga gibt es bei unseren südwestlichen Nachbarn, die bei den Mitte August anstehenden Europameisterschaften einmal mehr nicht nur Gastgeber, sondern auch wieder Anwärter auf den Titel sind.
+        Wer es übrigens selbst einmal ausprobieren möchte: Im kommenden Monat bieten die Wiesbaden Buffalos für maximal zwölf Teilnehmer einen Einstiegs-Lehrgang an. Dabei mitzubringen sind reiterliche Grundkenntnisse und ein so genannter Dreipunkt- Helm. Alles andere wird - inklusive Vierbeiner - bei Bedarf gestellt. “Natürlich können auch eigene Pferde mitgebracht werden”, sagt Faust.
+        Die Tiere müssen "sozialverträglich" sein, erläutert der 59-Jährige, und das nicht nur im Umgang mit dem Reiter, sondern vor allem untereinander. “Im richtigen Wettkampf kann es auch schon mal zu Zusammenstößen kommen”, weiß Faust, für den Horse-Ball zu einem ganz persönlichen "Steckenpferd" geworden ist, dass in der vielfältigen Angebotspalette des riesigen Hofguts eine Art Sonderstatus einnimmt. Damit es trotz unvermeidlichen Körperkontakts kaum einmal zu ernsthaften Verletzungen kommt, tragen nicht nur die Pferde vorgeschriebene Bandagen an den Beinen, sondern auch für die Reiter gibt es eine spezielle Vorrichtung: Ein Gurt, der unter dem Bauch der Tiere die beiden Steigbügel miteinander verbindet, gewährt selbst dann noch sicheren Halt, wenn sich der Spieler aus vollem Galopp heraus aus dem Sattel fallen lässt, um den Ball vom Boden aufnehmen zu können. Um die Handhabung dabei ein wenig zu vereinfachen, ist das runde Leder mit Fangriemen versehen, die ein sicheres Zugreifen auch mit einer Hand ermöglichen.
+        Aber noch eine Besonderheit weist Horse-Ball auf: Es ist die einzige Pferdesportart, bei der der gebraucht einer Gerte (das ist ein kleiner Stock, mit dem das Pferd leicht geschlagen wird) ausdrücklich verboten ist, wie Faust betont. Damit tritt er auch etwaigen Befürchtungen entgegen, dass es zu Tierquälerei kommen könnte. Der Chef des Hofgut Adamstal: “Das Gegenteil ist der Fall. Die Tiere können beim Horse-Ball ihre natürlichen Verhaltensweisen ausleben und haben sogar Spaß dabei". Zumindest mehr als der eine oder andere Reiter, wie es angesichts des strengen Trainings den Eindruck macht.
+      </p>
+    </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1.  Aktive der Wiesbadener Reitergruppe</h3>
+          <label><input type="radio" name="q1" value="a"> bilden die deutsche Nationalmannschaft.</label>
+          <label><input type="radio" name="q1" value="b"> spielen schon als Achtjährige in der deutschen Nationalmannschaft mit.</label>
+          <label><input type="radio" name="q1" value="c"> unterstützen die deutsche Nationalmannschaft.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Die Basketball-Körbe </h3>
+          <label><input type="radio" name="q2" value="a"> hängen wie beim normalen Basketball.</label>
+          <label><input type="radio" name="q2" value="b"> sind mit dem Netz nach oben aufgehängt.</label>
+          <label><input type="radio" name="q2" value="c"> sind so gedreht, dass ihre Öffnungen nach der Seite zeigen.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Wer an einem Horse-Ball-Lehrgang teilnimmt, </h3>
+            <label><input type="radio" name="q3" value="a"> braucht ein eigenes Pferd.</label>
+            <label><input type="radio" name="q3" value="b"> kann sein eigenes Pferd einsetzen.</label>
+            <label><input type="radio" name="q3" value="c"> muss sein Pferd jedes Mal mitbringen.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Beim Horse-Ball-Spiel </h3>
+            <label><input type="radio" name="q4" value="a"> wird ein Fußball verwendet. </label>
+            <label><input type="radio" name="q4" value="b"> darf der Ball in die Hand genommen werden. </label>
+            <label><input type="radio" name="q4" value="c"> darf der Ball nicht auf den Boden fallen. </label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.  Das Training ist so streng, dass   </h3>
+            <label><input type="radio" name="q5" value="a"> die Reiter oft mehr Stress zu empfinden scheinen als die Tiere.</label>
+            <label><input type="radio" name="q5" value="b"> die Tiere ihre naturgegebenen Anlagen nicht ausleben können.</label>
+            <label><input type="radio" name="q5" value="c"> es Pferden und Reitern oft kein Vergnügen macht.</label>
+          </div>  
+
+        <!-- Weitere Fragen... -->
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index2.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "a",
+        q2: "c",
+        q3: "b",
+        q4: "b",
+        q5: "a"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+  
+
+
+</body>

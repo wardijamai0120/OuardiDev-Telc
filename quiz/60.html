@@ -1,0 +1,278 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Gesundes Essen</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h1>Gesundes Essen</h1>
+      <p>
+        Für Kinder sind regelmäßige Mahlzeiten wichtig, um volle Konzentrations- und Leistungsfähigkeit zu gewährleisten. Um gut in den Tag zu kommen, sollte jedes Schulkind mit einem ausgewogenen Frühstück starten. Aber eine Umfrage kam zu erschreckenden Ergebnissen: Jedes siebte Kind isst morgens nichts, bevor es in die Schule geht. Die Gründe dafür sind vielfältig: Jeder vierte Befragte gab an, dass sein Kind morgens keinen Appetit habe. Und sogar jede dritte Mutter und jeder dritte Vater sagten, dass morgens keine Zeit für Frühstück sei. Für eine gesunde Morgenmahlzeit sollte man jedoch immer Zeit freischaufeln, rät Ernährungswissenschaftlerin Alexandra Krotz. 
+        Mit leerem Magen können Körper und Geist keine Leistung erbringen. Die Folge: Die Kinder sind reizbar, nervös und können sich nicht richtig konzentrieren. Und das ist schon auf dem Schulweg wichtig: Kinder bewegen sich sicherer, wenn sie rechtzeitig aufgestanden sind und entspannt gefrühstückt haben. Zu einem gesunden Frühstück eignen sich an den besten Vollkornbroten mit fettarmer Wurst oder Käse, aber auch Müslis mit Milch oder Joghurt, Nüssen und frisches Obst. Wer morgens keinen Hunger hat, sollte wenigstens eine Kleinigkeit zu sich nehmen - etwa eine Banane essen und dazu einen Kakao trinken - und das ausgiebige Frühstück dann etwas später nachholen. In einigen Schulen wird gemeinsam gefrühstückt. Hier gilt es, je nach Vereinbarung mit Erziehern und Lehrern, ein leckeres Frühstück zusammenzustellen. Wer seinen Kindern ein zweites Frühstück einpackt, sollte auf Abwechslung und die geeignete Verpackung achten. Am besten eignet sich eine Brotdose - die spart Verpackungsmüll und vermeidet zermatschte Brote. Zudem lassen sich darin auch Obst und Gemüse sicher transportieren. Eine gute Ergänzung zu lecken belegten Vollkornbroten ist Rohkost. Dazu eignen sich besonders transportsichere feste Sorten wie Möhren, Kohlrabi, Cherrytomaten, Trauben oder Äpfel. Je nach Jahreszeit und Vorliebe der Kinder können Sie als Eltern hierbei für Abwechslung sorgen.
+        Heutzutage wird Schulmilch leider nicht mehr in allen Schulen angeboten. Schade, denn Milch liefert wichtiges Calcium, Eiweiß und viele B-Vitamine. Wer als Kind die Möglichkeit hat, in der Schule Milch zu trinken, sollte darauf nicht verzichten. Und selbst Milchmuffel dürften zufrieden sein: Da Milch in vielen Varianten angeboten wird - von Erdbeermilch über Kakao zu Vanillemilch -, ist für jedes Kind das Richtige dabei. Generell ist der Wasserbedarf von Kindern im Verhältnis zum Körpergewicht höher als bei Erwachsenen. Trinken Kinder zu wenig, beeinträchtigt dies schneller die körperliche und geistige Leistungsfähigkeit. Kinder sollten deshalb je nach Alter mindestens 0,7 Liter bis 1,2 Liter trinken - Milch nicht mitgerechnet. Wenn das Kind viel Sport treibt oder tobt und bei besonders warmen Tagen brauchen die Kinder entsprechend mehr Flüssigkeit. Viele Kinder trinken zu wenig. Häufig vergessen sie ganz einfach zu trinken, wenn sie konzentriert spielen oder lernen. Ganz wichtig ist es daher, Kinder immer mal wieder zum Trinken aufzufordern und auch zwischen den Mahlzeiten den Durst zu löschen, auch während der Unterrichtsstunden. Am besten sind Wasser, Kräutertees und Saftschorlen geeignet. Übrigens: Fast ein Viertel aller Schüler in Deutschland trinkt vormittags nichts oder fast nichts. Das hat eine Untersuchung der Universität Paderborn zum Trinkverhalten vor und während der Unterrichtszeit ergeben. Die unzureichende Flüssigkeitsaufnahme führte dabei nachweislich zu Einschränkungen der geistigen und körperlichen Leistungsfähigkeit.
+        Kinder mögen Süßes. Schokoriegel und Süßigkeiten sollten allerdings beim Pausenbrot nicht die Regel sein. Eine gute Alternative dazu sind Trockenfrüchte, Fruchtschnitten oder Studentenfutter. Sie liefern wichtige Vitamine und Mineralstoffe und sind als Energieschub zwischendurch geeignet. Aber Vorsicht: Sie enthalten auch viel Energie und sollten gerade von Kindern, die leichtes Übergewicht haben, nur in geringen Mengen gegessen werden. Viele Eltern nehmen sich morgens nicht die Zeit, mit ihren Kindern zu frühstücken, und geben Ihnen lieber Geld mit, damit sie sich auf dem Schulweg ein Frühstück kaufen können. Versuchen Sie, das zu vermeiden. Denn die meisten Kinder legen das Geld in Süßwaren oder Fast Food, Cola oder andere Süßgetränke an. Die Mittagsverpflegung in Schulen kann sehr unterschiedlich sein. Ein weiteres Pausenbrot wäre jedenfalls eine Zumutung für die Kinder. Deshalb gibt es verschiedene Systeme für die Versorgung am Mittag - Catering, kochende Eltern oder Profi-Küchen mit geschultem Personal. Klar ist: Für die Kinder sind Pausen und regelmäßige Mahlzeiten zur Aufrechterhaltung ihrer Leistungsfähigkeit wichtig. Daher sollte es im Interesse aller sein, den Kindern in der Schule eine geeignete Mittagsverpflegung zur Verfügung zu stellen.
+      </p>
+    </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1.  Einige Eltern</h3>
+          <label><input type="radio" name="q1" value="a"> haben selbst keinen Appetit auf ein Frühstück.</label>
+          <label><input type="radio" name="q1" value="b"> lassen das Frühstück aus Zeitmangel ausfallen.</label>
+          <label><input type="radio" name="q1" value="c"> schaufeln das Frühstück einfach in sich hinein.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Ein gesundes Frühstück </h3>
+          <label><input type="radio" name="q2" value="a"> erhöht auch die Sicherheit des Kindes auf dem Weg zur Schule.</label>
+          <label><input type="radio" name="q2" value="b"> muss mindestens aus einem Glas Kakao oder Milch bestehen.  </label>
+          <label><input type="radio" name="q2" value="c"> sollte gemeinsam in der Schule angenommen werden.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Milch </h3>
+            <label><input type="radio" name="q3" value="a"> deckt den täglichen Flüssigkeitsbedarf.</label>
+            <label><input type="radio" name="q3" value="b"> gehört zum Angebot der Schulkantinen.</label>
+            <label><input type="radio" name="q3" value="c"> wird in verschiedenen Geschmacksrichtungen angeboten.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Kinder  </h3>
+            <label><input type="radio" name="q4" value="a"> denken von alleine nicht immer daran, genug zu trinken. </label>
+            <label><input type="radio" name="q4" value="b"> dürfen während des Unterrichts nichts trinken. </label>
+            <label><input type="radio" name="q4" value="c"> können sich auch noch gut konzentrieren, wenn sie nicht genug getrunken haben </label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.  Mittagessen   </h3>
+            <label><input type="radio" name="q5" value="a"> sollte in der Schule angeboten werden.</label>
+            <label><input type="radio" name="q5" value="b"> sollten die Kinder von zu Hause mitbringen.</label>
+            <label><input type="radio" name="q5" value="c"> sollten Kinder bei den Eltern zu Hause bekommen.</label>
+          </div>  
+
+        <!-- Weitere Fragen... -->
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index2.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "b",
+        q2: "a",
+        q3: "c",
+        q4: "a",
+        q5: "a"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+  
+
+
+</body>

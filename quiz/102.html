@@ -1,0 +1,282 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Google Earth</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h1>Die ganze Welt auf dem eigenen PC</h1>
+      
+        <p>"Google Earth" das digitale Abbild der Erde mit Satelliten- und Luftbildern, ist seit 2006 im Internet. Und es gibt auch eine deutsche Version. Ohne langes Training, gewissermaßen von einer Sekunde zur anderen, wird man mit „Google Earth“ zum Weltraumfahrer und Astronauten. Der Computer ersetzt das Weltraumschiff, die Computermaus den Steuerknüppel. Nutzer können sich auf einen Kontinent, ein Land, eine Stadt, sogar aufs eigene Haus oder in die Fußballstadien des Landes zoomen: inzwischen gibt es „Google Earth“ in einer völlig neuen Version - mit viermal mehr Daten als bisher und erstmals auch in deutscher Sprache. (http://earth.google.com).</p>
+        <p>„Deutschland ist unser wichtigster Standort“, sagte John Hanke, Leiter von Googles Keyhole-Gruppe. Keyhole, dessen Chef Hanke bis zur Übernahme durch Google im Oktober 2004 war, hat die Software für „Google Earth“ entwickelt. „Rund ein Fünftel der Erde - auf dieser Fläche wohnt fast die Hälfte der Weltbevölkerung - haben wir jetzt dargestellt. Viermal so viele Daten wie bisher“. Deutschland sei weltweit das einzige Land, für das komplett hochauflösendes, also besonders genau abbildendes Material zur Verfügung stand, erklärt Hanke. Ein Bildpunkt (Pixel) entspricht dabei 15 Metern auf der Erde. Größere deutsche Städte beispielsweise werden in der höchstmöglichen Auflösung sogar mit zehn Zentimetern pro Pixel dargestellt. Kleinere Städte jedoch, wie etwa Hameln, sind nach wie vor sehr grob dargestellt.</p>
+        <p>Neugierige Reporter, die über den Gartenzaun von Nachbarn oder bekannten Persönlichkeiten sehen wollen, haben Pech: „Google Earth“ bietet keine Livebilder. Die Daten stammen von Flugzeugen und drei Satelliten und können viele Monate alt sein. So kommt es, dass etwa ein Sportstadion in Hannover lange Zeit ohne Rasen zu sehen war - die Aufnahme stammt aus der Zeit der Renovierung.</p>
+        <p>Ursprünglich waren es nur Kunden aus dem Bereichen Militär und Immobilien, die sich für die verrückte Idee interessierten, die Erde im Internet nachzubilden. Doch aus Hankes „fixer Idee“ wurde ein Renner. Da es sich bei „Google Earth“ um einen offenen Standard handelt und nur die professionellen Produkte Geld kosten, entwickelt sich rundherum eine immer größer werdende Familie von Anwendern, die Möglichkeiten zur Nutzung der Bilder sehen. Künftig soll das Programm nach dem Prinzip der freien Enzyklopädie Wikipedia durch die Informationen und Beiträge alle Nutzer wachsen, sagt Hanke.</p>
+        <p>"Google Earth" zählt inzwischen zu den weltweit am häufigsten angeklickten Internetseiten. Wenn TV-Stationen in den USA ihre Nachrichten beginnen, fliegen sie mit „Google Earth“ zum Ort des Geschehens. Wegen des riesigen Erfolges sind auch die Mitstreiter Yahoo und Microsoft auf den Zug gesprungen und versuchen, mit der Idee von „Google Earth“ Geld zu verdienen.</p>
+        <p>Das Spektrum neuer Anwendungen von „Google Earth“ reicht von nützlich bis negativ. So kann man sich die Standorte billiger Tankstellen oder Weltmeisterschafts- Stadien mit Zeittafeln der Fußballspiele genauso auf einer Karte anzeigen lassen wie die Wohnorte aller in Florida erfassten Verbrecher, Name, Adresse und Polizeifoto inklusive. Von Datenschutz kann dort also nicht die Rede sein. Die Kaufhauskette „Kaufhof“ und das Internet-Reisebüro lastminute.de sind die ersten deutschen Unternehmen, die sich die neue Technik zunutze gemacht haben.</p>
+        <p>Mit der neuen Version von „Google Earth“ öffnet sich auch ein völlig neues Kapitel der Routenplanung bei Reisen. Je mehr Informationen gesammelt und dargestellt werden, desto besser werden die Ergebnisse bei der lokalen Suche. Einige Gebäude - vor allem in den USA - lassen sich ganz realistisch darstellen. In Deutschland dauert es jedoch noch etwas.</p>
+      
+    </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1.  Das Besondere an der neuen Version von „Google Earth“ ist, dass es</h3>
+          <label><input type="radio" name="q1" value="a"> von der gesamten Erde ein genaues Abbild bietet.</label>
+          <label><input type="radio" name="q1" value="b"> von einigen Ländern ein genaueres Abbild bietet als früher.</label>
+          <label><input type="radio" name="q1" value="c"> zunächst nur in deutscher Sprache bedient werden kann.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Die Bilder von „Google Earth“ </h3>
+          <label><input type="radio" name="q2" value="a"> sind aktuell, d.h., ich kann mich selbst im Garten sitzen sehen.</label>
+          <label><input type="radio" name="q2" value="b"> sind alle nicht ganz neu.</label>
+          <label><input type="radio" name="q2" value="c"> werden bald als aktuelle Bilder zu Verfügung stehen.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Für „Google Earth“ interessieren sich heute </h3>
+            <label><input type="radio" name="q3" value="a"> insbesondere Militärs und Immobilienhändler.</label>
+            <label><input type="radio" name="q3" value="b"> Menschen aus vielen Berufsgruppen.</label>
+            <label><input type="radio" name="q3" value="c"> vorwiegend die Nutzer der Enzyklopädie „Wikipedia“.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Negativ an „Google Earth“ ist laut Text, dass</h3>
+            <label><input type="radio" name="q4" value="a"> die Daten kommerziell genutzt werden. </label>
+            <label><input type="radio" name="q4" value="b"> persönliche Daten öffentlich verfügbar sind. </label>
+            <label><input type="radio" name="q4" value="c"> Verbrecher es nutzen. </label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.  Positiv an „Google Earth“ ist laut Text, dass   </h3>
+            <label><input type="radio" name="q5" value="a"> Gebäude in Deutschland wirklichkeitsnah abgebildet werden.</label>
+            <label><input type="radio" name="q5" value="b"> man damit Lokale suchen kann.</label>
+            <label><input type="radio" name="q5" value="c"> man sich damit orientieren kann.</label>
+          </div>  
+
+        <!-- Weitere Fragen... -->
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index2.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "b",
+        q2: "b",
+        q3: "b",
+        q4: "b",
+        q5: "c"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+  
+
+
+</body>

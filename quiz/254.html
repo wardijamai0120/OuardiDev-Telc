@@ -1,0 +1,452 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Liebe Jelena</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #e9eaec;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1400px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    @media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+    .columns {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+      .columns {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .letter,
+      .choices {
+        flex: 1;
+        height: auto;
+      }
+    }
+
+    .letter {
+      padding: 30px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .blank {
+      background-color: #3f6ccf;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      min-width: 24px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .choices {
+      background-color: #f2f3f7;
+      padding: 30px 20px;
+      overflow-y: auto;
+      max-height: 60vh;
+    }
+
+    @media (max-width: 767px) {
+      .choices {
+        max-height: none;
+      }
+    }
+
+    .question-block {
+      margin-bottom: 20px;
+    }
+
+    .row-container {
+      background-color: #e0e4f3;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .option {
+      background-color: white;
+      padding: 6px 14px;
+      font-size: 14px;
+      border-radius: 18px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: 0.2s ease;
+      user-select: none;
+      text-align: center;
+      flex: 1;
+    }
+
+    .option:hover {
+      background-color: #e6ebf9;
+    }
+
+    .option.selected {
+      background-color: #d0defc;
+      border-color: #3f6ccf;
+      font-weight: bold;
+    }
+
+    .option.correct {
+      background-color: #c8f7c5;
+      border-color: #34a853;
+    }
+
+    .option.incorrect {
+      background-color: #fbd5d5;
+      border-color: #e53935;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .button-wrapper {
+      max-width: 1400px;
+      margin: 30px auto 60px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    #checkBtn,
+    #homeBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      min-width: 200px;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #checkBtn {
+      background-color: #3f6ccf;
+      color: white;
+    }
+
+    #checkBtn:hover {
+      background-color: #2f56b3;
+    }
+
+    #homeBtn {
+      background-color: #7c3aed;
+      color: white;
+      display: inline-block;
+      line-height: 1.6;
+    }
+
+    #homeBtn:hover {
+      background-color: #5a6268;
+    }
+
+    #resetBtn {
+      background-color: #7c3aed;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      min-width: 200px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #resetBtn:hover {
+      background-color: #5a6268;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="columns">
+    <div class="letter">
+        <p>Liebe Jelena, </p>
+      <p>ich hab dir doch schon vom Deutschkurs erzählt, <span class="blank" id="blank1">1</span> ich hier besuche. Der ist wirklich ganz gut. Wir haben jetzt eine neue Aufgabe bekommen. Wir müssen Informationen <span class="blank" id="blank2">2</span> Thema Gesundheit und Ernährung suchen und schauen, was es dazu Interessantes <span class="blank" id="blank3">3</span> Internet gibt. Die interessanteste Internetseite, die ich finden <span class="blank" id="blank4">4</span> , ist www.gesund.ch .</p>
+      <p>Diese Seite ist für <span class="blank" id="blank5">5</span> Leute gemacht, die gern mehr über gesunde Ernährung erfahren möchten. Fachleute beschreiben hier genau, <span class="blank" id="blank6">6</span> Lebensmittel für unseren Körper wichtig und gesund sind und wie oft und wie viel man pro Tag essen sollte. Außerdem kann man <span class="blank" id="blank7">7</span> seinen persönlichen Speiseplan selbst erstellen und dafür passende Rezepte <span class="blank" id="blank8">8</span>.</p>
+      <p>Für Menschen, <span class="blank" id="blank9">9</span> ein paar Kilos zu viel haben, gibt es auch Tipps zum Abnehmen und Links zu verschiedenen Fitnesszentren in der Schweiz. Und was gibt es bei dir Neues?</p>
+      <p><span class="blank" id="blank10">10</span> mir doch möglichst bald zurück!</p>
+      <p>Bis dann und viele Grüße </p>
+      <p>Paola</p>
+    </div>
+
+    <div class="choices">
+      <!-- All 10 questions -->
+      <div class="question-block" data-blank="1">
+        <div><strong>1.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q1" value="das">das</label>
+            <label class="option"><input type="radio" name="q1" value="den">den</label>
+            <label class="option"><input type="radio" name="q1" value="der">der</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="2">
+        <div><strong>2.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q2" value="zu">zu</label>
+            <label class="option"><input type="radio" name="q2" value="zum">zum</label>
+            <label class="option"><input type="radio" name="q2" value="zur">zur</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="3">
+        <div><strong>3.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q3" value="am">am</label>
+            <label class="option"><input type="radio" name="q3" value="im">im</label>
+            <label class="option"><input type="radio" name="q3" value="mit">mit</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="4">
+        <div><strong>4.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q4" value="können">können</label>
+            <label class="option"><input type="radio" name="q4" value="könnten">könnten</label>
+            <label class="option"><input type="radio" name="q4" value="konnte">konnte</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="5">
+        <div><strong>5.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q5" value="junge">junge</label>
+            <label class="option"><input type="radio" name="q5" value="jungen">jungen</label>
+            <label class="option"><input type="radio" name="q5" value="junges">junges</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="6">
+        <div><strong>6.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q6" value="welche">welche</label>
+            <label class="option"><input type="radio" name="q6" value="welchen">welchen</label>
+            <label class="option"><input type="radio" name="q6" value="welcher">welcher</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="7">
+        <div><strong>7.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q7" value="mir">mir</label>
+            <label class="option"><input type="radio" name="q7" value="dir">dir</label>
+            <label class="option"><input type="radio" name="q7" value="sich">sich</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="8">
+        <div><strong>8.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q8" value="fand">fand</label>
+            <label class="option"><input type="radio" name="q8" value="finden">finden</label>
+            <label class="option"><input type="radio" name="q8" value="gefunden">gefunden</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="9">
+        <div><strong>9.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q9" value="denen">denen</label>
+            <label class="option"><input type="radio" name="q9" value="deren">deren</label>
+            <label class="option"><input type="radio" name="q9" value="die">die</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="10">
+        <div><strong>10.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q10" value="Schreibe">Schreibe</label>
+            <label class="option"><input type="radio" name="q10" value="Schreiben">Schreiben</label>
+            <label class="option"><input type="radio" name="q10" value="Schreibt">Schreibt</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="button-wrapper">
+  <button id="checkBtn">Antworten prüfen</button>
+  <button id="resetBtn">Zurücksetzen</button>
+  <a href="../index1.html" id="homeBtn">Zurück zur Startseite</a>
+</div>
+
+<script>
+  const correctAnswers = {
+    1: "den",
+    2: "zum",
+    3: "im",
+    4: "konnte",
+    5: "junge",
+    6: "welche",
+    7: "sich",
+    8: "finden",
+    9: "die",
+    10: "Schreibe"
+  };
+
+  document.querySelectorAll('.option input[type="radio"]').forEach(input => {
+    input.addEventListener('change', (e) => {
+      const label = e.target.closest('label');
+      const block = e.target.closest('.question-block');
+      const blankId = block.getAttribute('data-blank');
+      const blank = document.getElementById('blank' + blankId);
+      block.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+      label.classList.add('selected');
+      blank.textContent = e.target.value;
+    });
+  });
+
+  document.getElementById("checkBtn").addEventListener("click", () => {
+    document.querySelectorAll('.question-block').forEach(block => {
+      const blankId = block.getAttribute('data-blank');
+      const selectedInput = block.querySelector('input[type="radio"]:checked');
+      const options = block.querySelectorAll('.option');
+      options.forEach(opt => opt.classList.remove('correct', 'incorrect'));
+      if (selectedInput) {
+        const value = selectedInput.value;
+        const label = selectedInput.closest('.option');
+        if (value === correctAnswers[blankId]) {
+          label.classList.add('correct');
+        } else {
+          label.classList.add('incorrect');
+          options.forEach(opt => {
+            if (opt.textContent.trim() === correctAnswers[blankId]) {
+              opt.classList.add('correct');
+            }
+          });
+        }
+      }
+    });
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
+    for (let i = 1; i <= 10; i++) {
+      const blank = document.getElementById('blank' + i);
+      if (blank) blank.textContent = i;
+    }
+    document.querySelectorAll('.option').forEach(option => {
+      option.classList.remove('selected', 'correct', 'incorrect');
+    });
+  });
+</script>
+<script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+</body>

@@ -1,0 +1,423 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Corinna</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #e9eaec;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1400px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .letter {
+      flex: 2;
+      padding: 30px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .blank {
+      background-color: #3f6ccf;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      min-width: 24px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .choices {
+  flex: 1.5;
+  background-color: #f2f3f7;
+  padding: 30px 20px;
+  overflow-y: auto;
+  max-height: 90vh; /* Adjust height as needed */
+}
+
+    .question-block {
+      margin-bottom: 20px;
+    }
+
+    .row-container {
+      background-color: #e0e4f3;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .option {
+      background-color: white;
+      padding: 6px 14px;
+      font-size: 14px;
+      border-radius: 18px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: 0.2s ease;
+      user-select: none;
+      text-align: center;
+      flex: 1;
+    }
+
+    .option:hover {
+      background-color: #e6ebf9;
+    }
+
+    .option.selected {
+      background-color: #d0defc;
+      border-color: #3f6ccf;
+      font-weight: bold;
+    }
+
+    .option.correct {
+      background-color: #c8f7c5;
+      border-color: #34a853;
+    }
+
+    .option.incorrect {
+      background-color: #fbd5d5;
+      border-color: #e53935;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+#checkBtn,
+#homeBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  min-width: 200px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Primary button style */
+#checkBtn {
+  background-color: #3f6ccf;
+  color: white;
+}
+
+#checkBtn:hover {
+  background-color: #2f56b3;
+}
+
+/* Secondary button style */
+#homeBtn {
+  background-color: #6c757d;
+  color: white;
+  display: inline-block;
+  line-height: 1.6;
+}
+
+#homeBtn:hover {
+  background-color: #5a6268;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="letter">
+    <p>Liebe Corinna,</p>
+    <p>
+     es tut mir wirklich leid, <span class="blank" id="blank1">1</span> ich dir seit Ewigkeiten nicht mehr geschrieben habe. Aber du weißt ja: Ich habe seit drei Monaten eine neue Arbeit. Und da hatte ich gar keine Zeit, mich mit etwas Anderem zu <span class="blank" id="blank2">2</span> als mit der neuen Arbeit. Es hat mich wirklich überrascht, wie schnell ich nach dem Abschluss meiner Ausbildung etwas gefunden habe. Dabei haben alle immer nur gesagt: "Gärtner? Die gibt es <span class="blank" id="blank3">3</span> wie Sand am Meer, wie willst du da so schnell einen Job finden?".
+     Ich arbeite jetzt in einer Baumschule. Wir kultivieren und verkaufen Obstbäume, <span class="blank" id="blank4">4</span> an die Obstbauern der näheren Umgebung. Die Arbeit macht mir großen Spaß, es ist andererseits aber ein bisschen anstrengend, acht Stunden am Tag körperlich - <span class="blank" id="blank5">5</span> im Freien - zu arbeiten. Und leider <span class="blank" id="blank6">6</span> ich fast eine dreiviertel Stunde mit dem Zug fahren, um an meinen Arbeitsplatz zu kommen.
+     Wenn ich dann am Abend nach Hause komme, bin ich so müde, dass ich eigentlich nur noch fernsehen oder Musik hören kann. Ich habe im Moment nur <span class="blank" id="blank7">7</span> Lust, etwas zu unternehmen, aber ich bin mir sicher: Sie <span class="blank" id="blank8">8</span> wieder. Wie geht es dir denn? Du müsstest doch jetzt auch bald mit deiner Ausbildung fertig sein, oder? Hast du schon damit angefangen, dich bei verschiedenen Arbeitgebern zu bewerben? Oder <span class="blank" id="blank9">9</span> du dir noch ein bisschen Zeit damit? Ich würde dir in jedem Fall raten: Fang so früh wie <span class="blank" id="blank10">10</span> mit den Bewerbungen an, je früher, desto besser. Du weißt ja, was unser Klassenlehrer in der Realschule immer gesagt hat: Gut Ding will Weile haben. So, jetzt muss ich aufhören und ins Bett gehen, damit ich morgen wieder fit bin.  
+    </p>
+    <p>Mach's gut, bis bald, </p>
+    <p>dein Richard</p>
+  </div>
+
+  <div class="choices">
+    <!-- Repeat for all 10 questions -->
+    <!-- Here's how one looks. Copy/paste for others -->
+
+    <div class="question-block" data-blank="1">
+      <div><strong>1.</strong></div>
+      <div class="row-container">
+        <div class="options">
+          <label class="option"><input type="radio" name="q1" value="dass">dass</label>
+          <label class="option"><input type="radio" name="q1" value="ob">ob</label>
+          <label class="option"><input type="radio" name="q1" value="weil">weil</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block" data-blank="2">
+      <div><strong>2.</strong></div>
+      <div class="row-container">
+        <div class="options">
+          <label class="option"><input type="radio" name="q2" value="bedienen">bedienen</label>
+          <label class="option"><input type="radio" name="q2" value="beeilen">beeilen</label>
+          <label class="option"><input type="radio" name="q2" value="beschäftigen">beschäftigen</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block" data-blank="3">
+        <div><strong>3.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q3" value="bloß">bloß</label>
+            <label class="option"><input type="radio" name="q3" value="doch">doch</label>
+            <label class="option"><input type="radio" name="q3" value="nur">nur</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="4">
+        <div><strong>4.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q4" value="außerdem">außerdem</label>
+            <label class="option"><input type="radio" name="q4" value="insbesondere">insbesondere</label>
+            <label class="option"><input type="radio" name="q4" value="jedoch">jedoch</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="5">
+        <div><strong>5.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q5" value="übermächtig">übermächtig</label>
+            <label class="option"><input type="radio" name="q5" value="übermäßig">übermäßig</label>
+            <label class="option"><input type="radio" name="q5" value="überwiegend">überwiegend</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="6">
+        <div><strong>6.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q6" value="darf">darf</label>
+            <label class="option"><input type="radio" name="q6" value="muss">muss</label>
+            <label class="option"><input type="radio" name="q6" value="soll">soll</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="7">
+        <div><strong>7.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q7" value="gering">gering</label>
+            <label class="option"><input type="radio" name="q7" value="knapp">knapp</label>
+            <label class="option"><input type="radio" name="q7" value="wenig">wenig</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="8">
+        <div><strong>8.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q8" value="kommt">kommt</label>
+            <label class="option"><input type="radio" name="q8" value="läuft">läuft</label>
+            <label class="option"><input type="radio" name="q8" value="steht">steht</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="9">
+        <div><strong>9.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q9" value="brauchst">brauchst</label>
+            <label class="option"><input type="radio" name="q9" value="hast">hast</label>
+            <label class="option"><input type="radio" name="q9" value="lässt">lässt</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="10">
+        <div><strong>10.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q10" value="kürzlich">kürzlich</label>
+            <label class="option"><input type="radio" name="q10" value="möglich">möglich</label>
+            <label class="option"><input type="radio" name="q10" value="üblich">üblich</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button id="checkBtn">Antworten prüfen</button>
+        <a href="../index2.html" id="homeBtn">Zurück zur Startseite</a>
+      </div>
+      
+  </div>
+</div>
+
+
+<script>
+  const correctAnswers = {
+    1: "dass",
+    2: "beschäftigen",
+    3: "doch",
+    4: "insbesondere",
+    5: "überwiegend",
+    6: "muss",
+    7: "wenig",
+    8: "kommt",
+    9: "lässt",
+    10: "möglich"
+  };
+
+  document.querySelectorAll('.option input[type="radio"]').forEach(input => {
+    input.addEventListener('change', (e) => {
+      const label = e.target.closest('label');
+      const block = e.target.closest('.question-block');
+      const blankId = block.getAttribute('data-blank');
+      const blank = document.getElementById('blank' + blankId);
+
+      block.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+      label.classList.add('selected');
+      blank.textContent = e.target.value;
+    });
+  });
+
+  document.getElementById("checkBtn").addEventListener("click", () => {
+    document.querySelectorAll('.question-block').forEach(block => {
+      const blankId = block.getAttribute('data-blank');
+      const selectedInput = block.querySelector('input[type="radio"]:checked');
+      const options = block.querySelectorAll('.option');
+
+      options.forEach(opt => opt.classList.remove('correct', 'incorrect'));
+
+      if (selectedInput) {
+        const value = selectedInput.value;
+        const label = selectedInput.closest('.option');
+
+        if (value === correctAnswers[blankId]) {
+          label.classList.add('correct');
+        } else {
+          label.classList.add('incorrect');
+
+          // Show correct answer
+          options.forEach(opt => {
+            if (opt.textContent.trim() === correctAnswers[blankId]) {
+              opt.classList.add('correct');
+            }
+          });
+        }
+      }
+    });
+  });
+</script>
+<script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+
+</body>

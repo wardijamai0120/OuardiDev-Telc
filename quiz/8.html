@@ -1,0 +1,1098 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Hören: Teil1</title>
+  <style>
+    body {
+      background-color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    .quiz-container {
+      background-color: white;
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      color: #1f3655;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #1f3655;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+    td:first-child {
+      width: 50px;
+      text-align: center;
+    }
+    input[type="radio"] {
+      transform: scale(1.3);
+      margin: 5px;
+    }
+    .btn-check {
+      margin-top: 20px;
+      padding: 10px 18px;
+      font-size: 16px;
+      background-color: #1f3655;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .correct {
+      background-color: #d4edda;
+    }
+    .wrong {
+      background-color: #f8d7da;
+    }
+
+    #warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container" id="quiz1">
+    <h2>Lufthansa</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_1" value="richtig"></td>
+          <td><input type="radio" name="q1_1" value="falsch"></td>
+          <td>1. Die Deutsche Lufthansa hat ihre Führungsposition verloren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_2" value="richtig"></td>
+          <td><input type="radio" name="q1_2" value="falsch"></td>
+          <td>2. Ein Bonner Sportverein zeigt der Öffentlichkeit sein Angebot.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_3" value="richtig"></td>
+          <td><input type="radio" name="q1_3" value="falsch"></td>
+          <td>3. Die Rahmenbedingungen in deutschen Pflegeheimen bedürfen dringend einer Änderung.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_4" value="richtig"></td>
+          <td><input type="radio" name="q1_4" value="falsch"></td>
+          <td>4. Durch moderne Wärmedämmung könnten die Heizkosten deutlich reduziert werden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_5" value="richtig"></td>
+          <td><input type="radio" name="q1_5" value="falsch"></td>
+          <td>5. Das Nationale Olympische Komitee hat die Dopingsperre für Tom Sanders aufgehoben.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('1')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz2">
+    <h2>Erdbeben</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_1" value="richtig"></td>
+          <td><input type="radio" name="q2_1" value="falsch"></td>
+          <td>1. Nach dem Erdbeben meldeten viele Bürger Schäden bei Polizei und Feuerwehr.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_2" value="richtig"></td>
+          <td><input type="radio" name="q2_2" value="falsch"></td>
+          <td>2. Eltern müssen sich neuerdings über den Impfschutz für ihre Kinder beraten lassen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_3" value="richtig"></td>
+          <td><input type="radio" name="q2_3" value="falsch"></td>
+          <td>3. Verkehrsbehinderungen drohen in den nächsten Wochen besonders samstags und sonn.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_4" value="richtig"></td>
+          <td><input type="radio" name="q2_4" value="falsch"></td>
+          <td>4. Pipelines tragen mafigeblich zur Umweltverschmutzung in Schleswig-Holstein bei.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_5" value="richtig"></td>
+          <td><input type="radio" name="q2_5" value="falsch"></td>
+          <td>5. Anfang nächster Woche ist mit einer erhöhten Ozonbelastung zu rechnen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('2')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz3">
+    <h2>Bierkonsum</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_1" value="richtig"></td>
+          <td><input type="radio" name="q3_1" value="falsch"></td>
+          <td>1. Der Bierkonsum steigt um 10%.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_2" value="richtig"></td>
+          <td><input type="radio" name="q3_2" value="falsch"></td>
+          <td>2. Deutsche Einkommen liegen im europäischen Vergleich nur im Mittelfeld.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_3" value="richtig"></td>
+          <td><input type="radio" name="q3_3" value="falsch"></td>
+          <td>3. Es ist ein Ende des Bahnstreiks in Sicht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_4" value="richtig"></td>
+          <td><input type="radio" name="q3_4" value="falsch"></td>
+          <td>4. Es wird Gewalt von Fußballfans auch in Deutschland befürchtet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_5" value="richtig"></td>
+          <td><input type="radio" name="q3_5" value="falsch"></td>
+          <td>5. Die leopoldina soll internationale Akademie werden.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('3')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz4">
+    <h2>Schiff</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_1" value="richtig"></td>
+          <td><input type="radio" name="q4_1" value="falsch"></td>
+          <td>1. Ein deutsches Schiff ist am Südpol eingetroren, aber Menschen kamen nicht zu Schaden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_2" value="richtig"></td>
+          <td><input type="radio" name="q4_2" value="falsch"></td>
+          <td>2. Die Firma Brain International ist in wirtschaftliche Schwierigkeiten geraten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_3" value="richtig"></td>
+          <td><input type="radio" name="q4_3" value="falsch"></td>
+          <td>3. Die Europäische Union will Gesetze zur Kontrolle sozialer Netzwerke erlassen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_4" value="richtig"></td>
+          <td><input type="radio" name="q4_4" value="falsch"></td>
+          <td>4. mit einem neuen Gesetz wollen die österreichischen Banken Sparkonten wieder attraktiver</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_5" value="richtig"></td>
+          <td><input type="radio" name="q4_5" value="falsch"></td>
+          <td>5. Nach den Bürgermeisterwahlen in Bensheim bleibt die CDU weiterhin an der Regierung.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('4')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz5">
+    <h2>Vögel</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_1" value="richtig"></td>
+          <td><input type="radio" name="q5_1" value="falsch"></td>
+          <td>1. Viele Kunden würden für bessere Service Leistungen der Paketdienst höhere geboren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_2" value="richtig"></td>
+          <td><input type="radio" name="q5_2" value="falsch"></td>
+          <td>2. Nach dem Unfall konnten beide Schiffe nicht fortsetzen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_3" value="richtig"></td>
+          <td><input type="radio" name="q5_3" value="falsch"></td>
+          <td>3. Europaweit gibt es immer weniger Vögel.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_4" value="richtig"></td>
+          <td><input type="radio" name="q5_4" value="falsch"></td>
+          <td>4. Die Polizei hat auf der Autobahn ein dort verbotenes Fahrzeug entdeckt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_5" value="richtig"></td>
+          <td><input type="radio" name="q5_5" value="falsch"></td>
+          <td>5. Bei dem Festival konnte man Konzert an verschiedenen Orten besuchen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('5')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz6">
+    <h2>Europäischen</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_1" value="richtig"></td>
+          <td><input type="radio" name="q6_1" value="falsch"></td>
+          <td>1. In der Europäischen Union verzeichnet man weniger jugendliche Arbeitslose.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_2" value="richtig"></td>
+          <td><input type="radio" name="q6_2" value="falsch"></td>
+          <td>2. Das Bundesarbeitsministerium bemüht sich um ausländische Arbeitnehmer bestimmter Berufsgruppen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_3" value="richtig"></td>
+          <td><input type="radio" name="q6_3" value="falsch"></td>
+          <td>3. Die 'Lange Nacht der Musik' findet am Odeonsplatz in München statt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_4" value="richtig"></td>
+          <td><input type="radio" name="q6_4" value="falsch"></td>
+          <td>4. Im. Tal der goldenen Mumien" würden bisher fast 10,000 Tote gefunden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_5" value="richtig"></td>
+          <td><input type="radio" name="q6_5" value="falsch"></td>
+          <td>5. Die Gefahr schwerer Uawetter ist nun vorbei.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('6')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz7">
+    <h2>wetter</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_1" value="richtig"></td>
+          <td><input type="radio" name="q7_1" value="falsch"></td>
+          <td>1. Wegen Unwetterschäden wurden Urlauber in einer Notunterkunft untergebracht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_2" value="richtig"></td>
+          <td><input type="radio" name="q7_2" value="falsch"></td>
+          <td>2. Sämtliche Waren der Firma Mirella wurden aus den Läden entfernt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_3" value="richtig"></td>
+          <td><input type="radio" name="q7_3" value="falsch"></td>
+          <td>3. Das Arbeitsplatzangebot in der Bundesrepublik hat einen Tiefstand erreicht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_4" value="richtig"></td>
+          <td><input type="radio" name="q7_4" value="falsch"></td>
+          <td>4. Am 21. Mai ist der Besuch der Sonderausstellung kostenlos.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_5" value="richtig"></td>
+          <td><input type="radio" name="q7_5" value="falsch"></td>
+          <td>5. Entlaufene Tiere verursachten einen Unfall auf der Autobahn.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('7')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz8">
+    <h2>nicht sicher</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_1" value="richtig"></td>
+          <td><input type="radio" name="q8_1" value="falsch"></td>
+          <td>1. Es ist nicht sicher, ob es erneut zu diesem Problem kommen kann.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_2" value="richtig"></td>
+          <td><input type="radio" name="q8_2" value="falsch"></td>
+          <td>2. Hamburgs Politiker befürworteten den Bau des Einkaufszentrums nicht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_3" value="richtig"></td>
+          <td><input type="radio" name="q8_3" value="falsch"></td>
+          <td>3. Zwischen Frankreich und deutschiand wurde ein neuer Hochgeschwindigkeits genommen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_4" value="richtig"></td>
+          <td><input type="radio" name="q8_4" value="falsch"></td>
+          <td>4. Die Produkte von TipTop sind in Deutschland nicht mehr so gefragt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_5" value="richtig"></td>
+          <td><input type="radio" name="q8_5" value="falsch"></td>
+          <td>5. Ingrid Thieme wird sich an der kommenden WM beteiligen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('8')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz9">
+    <h2>Die Stadt Friedrichsberg</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_1" value="richtig"></td>
+          <td><input type="radio" name="q9_1" value="falsch"></td>
+          <td>1. Die Stadt Friedrichsberg lädt zu einer Preisverleihung ein.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_2" value="richtig"></td>
+          <td><input type="radio" name="q9_2" value="falsch"></td>
+          <td>2. Die Alte brücke ist zum Jahresbeginn wieder befahrbar.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_3" value="richtig"></td>
+          <td><input type="radio" name="q9_3" value="falsch"></td>
+          <td>3. Der Wanderer Wurde verarztet und in Sicherheit gebracht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_4" value="richtig"></td>
+          <td><input type="radio" name="q9_4" value="falsch"></td>
+          <td>4. In dem Unternehmen kommt es zu Kundigungen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_5" value="richtig"></td>
+          <td><input type="radio" name="q9_5" value="falsch"></td>
+          <td>5. Man kann nach einer Registrierung an einem Gruppenlauf teilnehmen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('9')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz10">
+    <h2>Frau Jürgens</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_1" value="richtig"></td>
+          <td><input type="radio" name="q10_1" value="falsch"></td>
+          <td>1. Frau Jürgens tritt wegen Streitigkeiten zurück.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_2" value="richtig"></td>
+          <td><input type="radio" name="q10_2" value="falsch"></td>
+          <td>2. Die Filme werden in den Kinos der Stadt gezeigt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_3" value="richtig"></td>
+          <td><input type="radio" name="q10_3" value="falsch"></td>
+          <td>3. Der öffentliche Nahverkehr funktioniert noch nicht störungsfrei.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_4" value="richtig"></td>
+          <td><input type="radio" name="q10_4" value="falsch"></td>
+          <td>4. Wildes Camping ist im In- und Ausland nur bedingt zugelassen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_5" value="richtig"></td>
+          <td><input type="radio" name="q10_5" value="falsch"></td>
+          <td>5. Die Temperaturen steigen in den nächsten Tagen an.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('10')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz11">
+    <h2>Die Wahlbeteiligung</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_1" value="richtig"></td>
+          <td><input type="radio" name="q11_1" value="falsch"></td>
+          <td>1. Die Wahlbeteiligung in Deutschland nimmt wieder zu.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_2" value="richtig"></td>
+          <td><input type="radio" name="q11_2" value="falsch"></td>
+          <td>2. 150 Bauarbeiter müssen entlassen werden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_3" value="richtig"></td>
+          <td><input type="radio" name="q11_3" value="falsch"></td>
+          <td>3.  Bei der Sportveranstaltung wurden neue Bestzeiten aufgestellt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_4" value="richtig"></td>
+          <td><input type="radio" name="q11_4" value="falsch"></td>
+          <td>4. Die Sicherheitslücke beim Online-Banking wurde noch nicht gefunden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_5" value="richtig"></td>
+          <td><input type="radio" name="q11_5" value="falsch"></td>
+          <td>5. Kinder können in der Bücherei ihre eigenen Texte vorlesen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('11')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz12">
+    <h2>In den Alpen</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_1" value="richtig"></td>
+          <td><input type="radio" name="q12_1" value="falsch"></td>
+          <td>1. Die Wetterlage in den Alpen wird sich in den nächsten Tagen verbessern.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_2" value="richtig"></td>
+          <td><input type="radio" name="q12_2" value="falsch"></td>
+          <td>2. Die Fans des FC neustadt waren von dem Sieg ihrer Mannschaft überrascht</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_3" value="richtig"></td>
+          <td><input type="radio" name="q12_3" value="falsch"></td>
+          <td>3.  Erzieherinnen verlangen eine bessere Bezahlung .</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_4" value="richtig"></td>
+          <td><input type="radio" name="q12_4" value="falsch"></td>
+          <td>4. im Berliner Zoo gibt eine große Pandafamilie.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_5" value="richtig"></td>
+          <td><input type="radio" name="q12_5" value="falsch"></td>
+          <td>5. Die Zahl der Deutschschland Urlauber ist rückläufig.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('12')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz19">
+    <h2>In den Alpen</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_1" value="richtig"></td>
+          <td><input type="radio" name="q19_1" value="falsch"></td>
+          <td>1. Wetterlage in den Alpen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_2" value="richtig"></td>
+          <td><input type="radio" name="q19_2" value="falsch"></td>
+          <td>2. Die Fans, die das Spiel unterstützen, waren überrascht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_3" value="richtig"></td>
+          <td><input type="radio" name="q19_3" value="falsch"></td>
+          <td>3.  Eine Familie von Pandas kommt im Park an.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_4" value="richtig"></td>
+          <td><input type="radio" name="q19_4" value="falsch"></td>
+          <td>4. Urlaub in Deutschland un weniger Kosten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_5" value="richtig"></td>
+          <td><input type="radio" name="q19_5" value="falsch"></td>
+          <td>5. Erzieherinnen verlangen bessere Bezahlung.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('19')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz13">
+    <h2>Insel Bali</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_1" value="richtig"></td>
+          <td><input type="radio" name="q13_1" value="falsch"></td>
+          <td>1. Auf der Insel Bali wurden neue Maßnahmen zur Müllentsorgung beschlossen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_2" value="richtig"></td>
+          <td><input type="radio" name="q13_2" value="falsch"></td>
+          <td>2. In Nordfrankreich wird nach einem entlaufenen Panther gesucht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_3" value="richtig"></td>
+          <td><input type="radio" name="q13_3" value="falsch"></td>
+          <td>3. Die Mietervereinigung und Mielern die Betriebskosten nicht zu bezahlen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_4" value="richtig"></td>
+          <td><input type="radio" name="q13_4" value="falsch"></td>
+          <td>4. Der Sekthersteller hat die Pläne für sein Bauvorhaben geändert.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_5" value="richtig"></td>
+          <td><input type="radio" name="q13_5" value="falsch"></td>
+          <td>5. Die Löscharbeiten sind noch nicht abgeschlosse.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('13')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz14">
+    <h2>Die Fluggeselschaft </h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_1" value="richtig"></td>
+          <td><input type="radio" name="q14_1" value="falsch"></td>
+          <td>1. die Fluaggeselschaft DL fligt Z. B Rostok nicht mehr.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_2" value="richtig"></td>
+          <td><input type="radio" name="q14_2" value="falsch"></td>
+          <td>2. Süßwaren warden dieses Jahr angeboten, um Käufer Zurückzugewinnen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_3" value="richtig"></td>
+          <td><input type="radio" name="q14_3" value="falsch"></td>
+          <td>3. Die Sonnenstürme hatten keine negativen Auswirkungen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_4" value="richtig"></td>
+          <td><input type="radio" name="q14_4" value="falsch"></td>
+          <td>4. Einer der kandidaten Konnte die Mehrheit der Zuschauer fur sich gewinnen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_5" value="richtig"></td>
+          <td><input type="radio" name="q14_5" value="falsch"></td>
+          <td>5. Das Tiefdruckgebiet "Helena" Kann morgen im SüdWesten Deutschlands Verkehrsprobleme Verursachen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('14')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz15">
+    <h2>Der Bau</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_1" value="richtig"></td>
+          <td><input type="radio" name="q15_1" value="falsch"></td>
+          <td>1. Der Bau des höchsten Gebäudes der Welt in Dubai hat eine Milliarde Dollar gekostet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_2" value="richtig"></td>
+          <td><input type="radio" name="q15_2" value="falsch"></td>
+          <td>2. Nach der Aussage der Bundesbank wirkt sich die abkühlende US-Konjunktur auffallend auf die deutsche Industrie aus.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_3" value="richtig"></td>
+          <td><input type="radio" name="q15_3" value="falsch"></td>
+          <td>3. Die niedersächsischen Grünen haben vor, viel Geld in die Bereiche Klimaschutz und Bil- dung zu stecken.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_4" value="richtig"></td>
+          <td><input type="radio" name="q15_4" value="falsch"></td>
+          <td>4. Die Freiburger FC hat das Finale verloren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_5" value="richtig"></td>
+          <td><input type="radio" name="q15_5" value="falsch"></td>
+          <td>5. Am Nachmittag herrscht Windstille und die Temperaturen steigen im Norden und Nordosten auf 2 bis 7 Grad, im Westen und Südwesten auf 6 bis 11 Grad.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('15')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz16">
+    <h2>50-Euro</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_1" value="richtig"></td>
+          <td><input type="radio" name="q16_1" value="falsch"></td>
+          <td>1. Die 50-Euro-Noten der Deutschen Bundesbank sind jetzt fälschungssicherer.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_2" value="richtig"></td>
+          <td><input type="radio" name="q16_2" value="falsch"></td>
+          <td>2. Der Ärzteverband hat gefordert, dass junge Ärzte in Zukunft ein Pflichtjahr in einer Landarztpraxis absolvieren müssen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_3" value="richtig"></td>
+          <td><input type="radio" name="q16_3" value="falsch"></td>
+          <td>3. Wissenschaftler der Universität Mainz sind am Projekt zur Erforschung des Planeten Marsbeteiligt</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_4" value="richtig"></td>
+          <td><input type="radio" name="q16_4" value="falsch"></td>
+          <td>4. Der Verband,,Bildung und Erziehung fordert 10.000 zusätzliche Lehrerstellen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_5" value="richtig"></td>
+          <td><input type="radio" name="q16_5" value="falsch"></td>
+          <td>5. Die Schwarzarbeit hat im vergangenen Jahr um 15% zugenommen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('16')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz17">
+    <h2>Das Schladminger</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_1" value="richtig"></td>
+          <td><input type="radio" name="q17_1" value="falsch"></td>
+          <td>1.  Das Schladminger Skirennen fällt wieder aus.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_2" value="richtig"></td>
+          <td><input type="radio" name="q17_2" value="falsch"></td>
+          <td>2. Mehr Mädchen als Buben leisten als pflegende Kinder und Jugendliche Betreuungsarbeit in den Familien.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_3" value="richtig"></td>
+          <td><input type="radio" name="q17_3" value="falsch"></td>
+          <td>3. Ein Grazer Wohnhaus brannte bei einem Großbrand komplett aus.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_4" value="richtig"></td>
+          <td><input type="radio" name="q17_4" value="falsch"></td>
+          <td>4. Alle bei Australien gestrandeten Wale sind verendet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_5" value="richtig"></td>
+          <td><input type="radio" name="q17_5" value="falsch"></td>
+          <td>5. Insgesamt bleibt es mäd.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('17')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz18">
+    <h2>Bei den Europawahlen</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_1" value="richtig"></td>
+          <td><input type="radio" name="q18_1" value="falsch"></td>
+          <td>1. Bei den Europawahlen haben die CDU und CSU fast die Hälfte aller Stimmen erhalten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_2" value="richtig"></td>
+          <td><input type="radio" name="q18_2" value="falsch"></td>
+          <td>2. Die Tarifverhandlungen zwischen Arbeitgebern und Arbeitnehmern in der Chemiebranche sind gescheitert.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_3" value="richtig"></td>
+          <td><input type="radio" name="q18_3" value="falsch"></td>
+          <td>3. Der Benzinpreis hat sich aufgrund internationaler Einflussfaktoren erhöht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_4" value="richtig"></td>
+          <td><input type="radio" name="q18_4" value="falsch"></td>
+          <td>4. Die Rechtschreibreform in den deutschsprachigen Ländern wird abermals überarbeitet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_5" value="richtig"></td>
+          <td><input type="radio" name="q18_5" value="falsch"></td>
+          <td>5. Bei einem S-Bahn-Unglück in München gab es zahlreiche Verletzte und einen hohen Sachschaden.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('18')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz20">
+    <h2>Bei den Europawahlen</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_1" value="richtig"></td>
+          <td><input type="radio" name="q20_1" value="falsch"></td>
+          <td>1. Bei den Europawahlen haben die Linksparteien zugelegt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_2" value="richtig"></td>
+          <td><input type="radio" name="q20_2" value="falsch"></td>
+          <td>2. Die Tarifverhandlungen hat sich aufgrund internationaler Einflussfaktoren erhöht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_3" value="richtig"></td>
+          <td><input type="radio" name="q20_3" value="falsch"></td>
+          <td>3. Der Benzinpreis hat sich aufgrund internationaler Einflussfaktoren erhöht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_4" value="richtig"></td>
+          <td><input type="radio" name="q20_4" value="falsch"></td>
+          <td>4. Die Rechtschreibreform in den deutschsprachigen Ländern wird abermals überarbeitet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_5" value="richtig"></td>
+          <td><input type="radio" name="q20_5" value="falsch"></td>
+          <td>5. Bei einem S-Bahn-Unglück in München gab es zahlreiche Verletzte und einen hohen Sachschaden.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('20')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+    <a href="../index2.html" style="text-decoration: none;">
+      <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+        Zurück zur Startseite
+      </div>
+  </a></div><a href="../index2.html" style="text-decoration: none;"> 
+
+
+
+  <script>
+    const correctAnswers = {
+      // Quiz 1
+      q1_1: "falsch",
+      q1_2: "richtig",
+      q1_3: "richtig",
+      q1_4: "falsch",
+      q1_5: "falsch",
+
+      // Quiz 2
+      q2_1: "richtig",
+      q2_2: "falsch",
+      q2_3: "falsch",
+      q2_4: "falsch",
+      q2_5: "richtig",
+
+      // Quiz 3
+      q3_1: "falsch",
+      q3_2: "richtig",
+      q3_3: "falsch",
+      q3_4: "richtig",
+      q3_5: "falsch",
+
+      // Quiz 4
+      q4_1: "richtig",
+      q4_2: "richtig",
+      q4_3: "falsch",
+      q4_4: "falsch",
+      q4_5: "richtig",
+
+      // Quiz 5
+      q5_1: "falsch",
+      q5_2: "falsch",
+      q5_3: "richtig",
+      q5_4: "richtig",
+      q5_5: "richtig",
+
+      // Quiz 6
+      q6_1: "richtig",
+      q6_2: "richtig",
+      q6_3: "falsch",
+      q6_4: "falsch",
+      q6_5: "falsch",
+
+      // Quiz 7
+      q7_1: "richtig",
+      q7_2: "falsch",
+      q7_3: "falsch",
+      q7_4: "richtig",
+      q7_5: "falsch",
+
+      // Quiz 8
+      q8_1: "richtig",
+      q8_2: "falsch",
+      q8_3: "falsch",
+      q8_4: "richtig",
+      q8_5: "falsch",
+
+      // Quiz 9
+      q9_1: "falsch",
+      q9_2: "richtig",
+      q9_3: "richtig",
+      q9_4: "falsch",
+      q9_5: "richtig",
+
+      // Quiz 10
+      q10_1: "falsch",
+      q10_2: "falsch",
+      q10_3: "richtig",
+      q10_4: "richtig",
+      q10_5: "richtig",
+
+      // Quiz 11
+      q11_1: "richtig",
+      q11_2: "falsch",
+      q11_3: "richtig",
+      q11_4: "falsch",
+      q11_5: "falsch",
+
+      // Quiz 12
+      q12_1: "falsch",
+      q12_2: "richtig",
+      q12_3: "richtig",
+      q12_4: "falsch",
+      q12_5: "falsch",
+
+      // Quiz 13
+      q13_1: "falsch",
+      q13_2: "falsch",
+      q13_3: "falsch",
+      q13_4: "richtig",
+      q13_5: "richtig",
+
+      // Quiz 14
+      q14_1: "richtig",
+      q14_2: "falsch",
+      q14_3: "falsch",
+      q14_4: "falsch",
+      q14_5: "richtig",
+
+      // Quiz 15
+      q15_1: "richtig",
+      q15_2: "falsch",
+      q15_3: "richtig",
+      q15_4: "richtig",
+      q15_5: "falsch",
+
+      // Quiz 16
+      q16_1: "richtig",
+      q16_2: "falsch",
+      q16_3: "richtig",
+      q16_4: "falsch",
+      q16_5: "falsch",
+
+      // Quiz 17
+      q17_1: "richtig",
+      q17_2: "richtig",
+      q17_3: "falsch",
+      q17_4: "falsch",
+      q17_5: "richtig",
+
+      // Quiz 18
+      q18_1: "richtig",
+      q18_2: "falsch",
+      q18_3: "richtig",
+      q18_4: "falsch",
+      q18_5: "richtig",
+
+      // Quiz 19
+      q19_1: "falsch",
+      q19_2: "richtig",
+      q19_3: "richtig",
+      q19_4: "falsch",
+      q19_5: "richtig",
+
+      // Quiz 20
+      q20_1: "falsch",
+      q20_2: "falsch",
+      q20_3: "richtig",
+      q20_4: "falsch",
+      q20_5: "richtig",
+    };
+
+    function checkAnswers(quizNumber) {
+      for (let i = 1; i <= 5; i++) {
+        const question = `q${quizNumber}_${i}`;
+        const inputs = document.getElementsByName(question);
+        const row = inputs[0].closest("tr");
+        row.className = "";
+        const selected = Array.from(inputs).find(input => input.checked);
+        if (selected) {
+          if (selected.value === correctAnswers[question]) {
+            row.classList.add("correct");
+          } else {
+            row.classList.add("wrong");
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+
+</a></body>

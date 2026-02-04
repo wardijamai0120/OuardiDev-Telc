@@ -1,0 +1,426 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Dr. Moosberger</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #e9eaec;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1400px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .letter {
+      flex: 2;
+      padding: 30px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .blank {
+      background-color: #3f6ccf;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      min-width: 24px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .choices {
+      flex: 1.5;
+      background-color: #f2f3f7;
+      padding: 30px 20px;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    .question-block {
+      margin-bottom: 20px;
+    }
+
+    .row-container {
+      background-color: #e0e4f3;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .option {
+      background-color: white;
+      padding: 6px 14px;
+      font-size: 14px;
+      border-radius: 18px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: 0.2s ease;
+      user-select: none;
+      text-align: center;
+      flex: 1;
+    }
+
+    .option:hover {
+      background-color: #e6ebf9;
+    }
+
+    .option.selected {
+      background-color: #d0defc;
+      border-color: #3f6ccf;
+      font-weight: bold;
+    }
+
+    .option.correct {
+      background-color: #c8f7c5;
+      border-color: #34a853;
+    }
+
+    .option.incorrect {
+      background-color: #fbd5d5;
+      border-color: #e53935;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .button-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    #checkBtn,
+    #homeBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      min-width: 200px;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #checkBtn {
+      background-color: #3f6ccf;
+      color: white;
+    }
+
+    #checkBtn:hover {
+      background-color: #2f56b3;
+    }
+
+    #homeBtn {
+      background-color: #6c757d;
+      color: white;
+      display: inline-block;
+      line-height: 1.6;
+    }
+
+    #homeBtn:hover {
+      background-color: #5a6268;
+    }
+
+    #warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="letter">
+    <p>Sehr geehrter Herr Dr. Moosberger,</p>
+    <p>mit <span class="blank" id="blank1">1</span> Interesse habe ich Ihr Stellenangebot in der Essener Zeitung gelesen,<span class="blank" id="blank2">2</span> Sie eine Teilzeit-Mitarbeiterin in Ihrem Antiquitätengeschäft suchen. Es reizt mich eine verantwortungsvolle Aufgabe in einem <span class="blank" id="blank3">3</span> renommierten Geschäft wie dem Ihrigen übernehmen <span class="blank" id="blank4">4</span>.<br>
+      Nach dem Abitur am Kreisgymnasium in Velbert <span class="blank" id="blank5">5</span> ich eine dreijährige Schreinerlehre bei der Firma Eichelbohrer &amp; Co und besuchte die Kreisberufsschule in Velbert. Nach erfolgreichem Abschluss meiner Berufsausbildung arbeitete ich <span class="blank" id="blank6">6</span> bei Stutz &amp; Partner - Möbeldesign in Düsseldorf. Danach schrieb ich mich an der Fachhochschule Köln im Fachbereich Möbeldesign ein und <span class="blank" id="blank7">7</span> meine Liebe zu antiquarischen Möbelstücken.<br>
+      Meine Spezialität ist das stilgenaue Restaurieren und Aufarbeiten antiquarischer Möbel insbesondere aus dem Biedermeier und dem Jugendstil. <span class="blank" id="blank8">8</span> meiner Berufserfahrung und meines Studiums konnte ich umfangreiche Kenntnisse erwerben, was Möbelstile und die Herstellungskunst in den verschiedensten Epochen <span class="blank" id="blank9a" data-blank="9" data-part="0">9</span> in Nord <span class="blank" id="blank9b" data-blank="9" data-part="1">9</span> in Südeuropa angeht.<br>
+      Mein Studium lässt mir genügend Zeit, eine Teilzeitstelle zu übernehmen, die darüber hinaus meinen beruflichen Fähigkeiten und Neigungen entspricht. Aus diesem Grund habe ich mich entschlossen, <span class="blank" id="blank10">10</span>, und bewerbe mich um die von Ihnen angebotene Teilzeitstelle.<br>
+      Ich freue mich auf ein persönliches Gespräch.</p>
+    <p>Mit freundlichen Grüßen,</p>
+    <p>Sabina Holzinger</p>
+  </div>
+
+  <div class="choices">
+    <!-- Sample of question blocks (1 to 10) — abbreviated for brevity -->
+    <!-- Paste your full list here (you already have it) -->
+
+    <div class="question-block" data-blank="1">
+      <div><strong>1.</strong></div>
+      <div class="row-container">
+        <div class="options">
+          <label class="option"><input type="radio" name="q1" value="allergrößte">allergrößte</label>
+          <label class="option"><input type="radio" name="q1" value="allergrößtem">allergrößtem</label>
+          <label class="option"><input type="radio" name="q1" value="allergrößten">allergrößten</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block" data-blank="2">
+      <div><strong>2.</strong></div>
+      <div class="row-container">
+        <div class="options">
+          <label class="option"><input type="radio" name="q2" value="an dem">an dem</label>
+          <label class="option"><input type="radio" name="q2" value="auf dem">auf dem</label>
+          <label class="option"><input type="radio" name="q2" value="in dem">in dem</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block" data-blank="3">
+        <div><strong>3.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q3" value="als">als</label>
+            <label class="option"><input type="radio" name="q3" value="so">so</label>
+            <label class="option"><input type="radio" name="q3" value="wie">wie</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="4">
+        <div><strong>4.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q4" value="können">können</label>
+            <label class="option"><input type="radio" name="q4" value="könnte">könnte</label>
+            <label class="option"><input type="radio" name="q4" value="zu können">zu können</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="5">
+        <div><strong>5.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q5" value="begann">begann</label>
+            <label class="option"><input type="radio" name="q5" value="beging">beging</label>
+            <label class="option"><input type="radio" name="q5" value="belief">belief</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="6">
+        <div><strong>6.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q6" value="ein Jahr lang"> ein Jahr lang</label>
+            <label class="option"><input type="radio" name="q6" value="durch ein Jahr"> durch ein Jahr</label>
+            <label class="option"><input type="radio" name="q6" value="seit einem Jahr">seit einem Jahr</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="7">
+        <div><strong>7.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q7" value="entdeckte">entdeckte</label>
+            <label class="option"><input type="radio" name="q7" value="erfand">erfand</label>
+            <label class="option"><input type="radio" name="q7" value="merkte">merkte</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="8">
+        <div><strong>8.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q8" value="Dabei">Dabei</label>
+            <label class="option"><input type="radio" name="q8" value="Während">Während</label>
+            <label class="option"><input type="radio" name="q8" value="inzwischen">inzwischen</label>
+          </div>
+        </div>
+      </div>
+    
+    <div class="question-block" data-blank="9">
+      <div><strong>9.</strong></div>
+      <div class="row-container">
+        <div class="options">
+          <label class="option"><input type="radio" name="q9" value="sowohl---als auch">sowohl---als auch</label>
+          <label class="option"><input type="radio" name="q9" value="teils---teils">teils---teils</label>
+          <label class="option"><input type="radio" name="q9" value="weder---noch">weder---noch</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block" data-blank="10">
+        <div><strong>10.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q10" value=" auf Ihre Anzeige antworten"> auf Ihre Anzeige antworten</label>
+            <label class="option"><input type="radio" name="q10" value="auf Ihre Anzeige zu antworten">auf Ihre Anzeige zu antworten</label>
+            <label class="option"><input type="radio" name="q10" value="um auf Ihre Anzeige zu antworten">um auf Ihre Anzeige zu antworten</label>
+          </div>
+        </div>
+      </div>
+
+    <div class="button-wrapper">
+      <button id="checkBtn">Antworten prüfen</button>
+      <a href="../index2.html" id="homeBtn">Zurück zur Startseite</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const correctAnswers = {
+    1: "allergrößtem",
+    2: "in dem",
+    3: "so",
+    4: "zu können",
+    5: "begann",
+    6: "ein Jahr lang",
+    7: "entdeckte",
+    8: "Während",
+    9: "sowohl---als auch",
+    10: "auf Ihre Anzeige zu antworten"
+  };
+
+  document.querySelectorAll('.option input[type="radio"]').forEach(input => {
+    input.addEventListener('change', (e) => {
+      const label = e.target.closest('label');
+      const block = e.target.closest('.question-block');
+      const blankId = block.getAttribute('data-blank');
+      const blanks = document.querySelectorAll(`.blank[data-blank="${blankId}"], #blank${blankId}`);
+      const value = e.target.value;
+      const parts = value.split('---');
+
+      // Highlight selected option
+      block.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+      label.classList.add('selected');
+
+      // ✅ Updated logic to support multiple parts using data-part
+      blanks.forEach((blank) => {
+        const part = blank.getAttribute('data-part');
+        blank.textContent = part !== null ? parts[part] || '' : value;
+      });
+    });
+  });
+
+  document.getElementById("checkBtn").addEventListener("click", () => {
+    document.querySelectorAll('.question-block').forEach(block => {
+      const blankId = block.getAttribute('data-blank');
+      const selectedInput = block.querySelector('input[type="radio"]:checked');
+      const options = block.querySelectorAll('.option');
+
+      options.forEach(opt => opt.classList.remove('correct', 'incorrect'));
+
+      if (selectedInput) {
+        const value = selectedInput.value;
+        const label = selectedInput.closest('.option');
+
+        if (value === correctAnswers[blankId]) {
+          label.classList.add('correct');
+        } else {
+          label.classList.add('incorrect');
+
+          // Show correct answer
+          options.forEach(opt => {
+            if (opt.textContent.trim() === correctAnswers[blankId]) {
+              opt.classList.add('correct');
+            }
+          });
+        }
+      }
+    });
+  });
+</script>
+<script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+
+</body>

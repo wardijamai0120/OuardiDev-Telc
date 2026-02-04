@@ -1,0 +1,287 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Kellner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h1>Noch ein Wasser, bitte!</h1>
+      <p>
+        Die Semesterferien sind zu Ende und diese Woche beginnt an der Universität das Sommersemester. Aber nicht nur Vorlesungen und Seminare gehen wieder los. 73 Prozent der Berliner Studenten müssen neben dem Studium auch noch Geld verdienen.
+        Ein beliebtes Studentenjob ist der des Kellners. Denn erstens arbeitet man meist am Abend, so dass es keine Terminkollisionen mit den Vorlesungs- und Seminarprogrammen gibt. Zweitens findet man leicht einen Job, da es in der Nähe von Universitäten häufig viele Cafés und Kneipen gibt, die sehr gut besucht sind. Und je mehr Gäste, desto höher natürlich die Chancen auf Trinkgelder. Das ist auch wichtig, denn nur so kommt man auf einen akzeptablen Stundenlohn. Allerdings ist es in manchen Restaurants auch üblich, dass die Trinkgelder gesammelt und am Ende dann an alle Kellner gleichmäßig verteilt werden. Davon profitieren dann auch diejenigen, die nicht so engagiert und motiviert arbeiten.
+        Als Kellner braucht man starke Nerven, denn der Gast hat immer recht. Manche Gäste machen es einem Kellner mit zahlreichen Beschwerden und Extrawünschen wirklich nicht leicht. Denn der Keller ist die Person, die direkt mit dem Gast in Kontakt kommt. Wenn das Essen nicht schmeckt, kalt ist oder nicht schnell genug zubereitet wird, bekommt der Kellner den Unmut der Gäste zu spüren, obwohl die “Schuld” beim Koch liegt.
+        Wer ist für den Job als Kellner geeignet? Man sollte offen sein und den Kontakt mit Menschen mögen und auf jeden Fall geduldig sein. Natürlich ist es wichtig, immer freundlich und zuvorkommend zu bleiben. Denn wenn der Service stimmt und der Kellner kompetent und freundlich wirkt, dann sitzt auch das Trinkgeld lockerer.
+      </p>
+      <h1>Kellnern war gestern</h1>
+      <p>
+        Neben den klassischen Studentenjobs wie Kellnern und Nachhilfe geben greifen manche aber auch zu eher ungewöhnlichen Jobs. Wie zum Beispiel Jan, der in Berlin als Fahrradkurier arbeitet, oder Stefanie, die Testkäuferin.
+        Jan fährt im Auftrag von Apotheken, Filmverleihfirmen oder Pizzadiensten im Schnitt zwischen 50 km und 200 km pro Tag. Um diesen Job machen zu können, braucht er eine sehr gute Kondition. Denn manche Strecken sind lang, und oft gibt es Gegenwind. Er arbeitet wie die meisten Fahrradkuriere auf selbständiger Basis und kommt auf einen Stundenlohn von etwa 10 Euro. Jan meint: “Reich wird man damit zwar nicht, aber man kann sagen: Wer schnell ist und gut, verdient als Fahrradkurier nicht schlecht.” Am liebsten würde Jan von einem Kurierdienst in einem klassischen Arbeitsverhältnis angestellt werden. Das ist in der Branche aber eher die Ausnahme. Wäre er Angestellte, würde er vom Kurierdienst ein Grundgehalt bekommen und für die gefahrenen Aufträge eine kleine Provision.
+        Einen der größten Vorteile seines Jobs sieht Jan darin, dass er sich den ganzen Tag im Freien bewegt und so die Beiträge für das Fitnessstudio spart. Außerdem lernt man so eine Stadt sehr gut kennen. Ein Nachteil ist, dass man auch bei Wind und Wetter oder bei dichtem Verkehr fahren muss. Aber das nimmt Jan in Kauf. Denn Kellnern oder ein Büro-Job wären nichts für ihn.
+        Der Job von Stefanie ist ein wahrer Glückstreffer: Sie darf den ganzen Tag einkaufen und wird dafür auch noch bezahlt. Stefanie arbeitet als Testkäuferin, um Beratung und Service von Verkäufern in Geschäften zu testen. Ein typischer Arbeitseinsatz sieht bei ihr so aus: Nach der letzten Vorlesung an der Uni geht sie zum Beispiel in einen Modeladen. Dort überprüft sie als Erstes den Eingang auf Sauberkeit, schlendert dann zu den Ständen mit Hosen und Blusen und schaut, ob alles ordentlich sortiert und beschildert ist. Dann spricht sie eine Verkäuferin an und sagt, dass sie eine Bluse sucht. Damit testet sie, ob sie als Kundin von der Verkäuferin angemessen beraten wird. Die Verkäuferin sollte nachfragen, für welchen Anlass und in welcher Farbe die Kundin eine Bluse sucht.
+        Leider läuft es nicht immer so, wie er sein sollte. In 90 Prozent der Fälle gibt es Grund zur Beschwerde, weil die Verkäuferin entweder unfreundlich oder uninteressiert ist. Bevor Stefanie die Läden wieder verlässt, kommt das Beste: Sie muss etwas kaufen, um die Kasse zu testen. 20 Euro bekommt sie dafür pro Test. Außerdem darf sie das, was sie kaufen sollte, auch noch behalten.
+        </p>
+    </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1.  Der Nebenjob als Kellner ...  </h3>
+          <label><input type="radio" name="q1" value="a"> hat an Attraktivität deutlich verloren.</label>
+          <label><input type="radio" name="q1" value="b"> ist insgesamt sehr gut bezahlt.</label>
+          <label><input type="radio" name="q1" value="c"> lässt sich gut mit dem Studium vereinbaren.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Wer als Kellner arbeitet, ... </h3>
+          <label><input type="radio" name="q2" value="a"> muss bei Beschwerden den Kontakt zwischen Koch und Gast herstellen.</label>
+          <label><input type="radio" name="q2" value="b"> muss das Trinkgeld mit den Kollegen teilen.  </label>
+          <label><input type="radio" name="q2" value="c"> sollte nicht aus der Ruhe zu bringen sein.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Jan arbeitet gern als Fahrradkurier, ... </h3>
+            <label><input type="radio" name="q3" value="a"> weil er außer dem Grundgehalt noch eine Provision bekommt.</label>
+            <label><input type="radio" name="q3" value="b"> weil er dann fest angestellt ist.</label>
+            <label><input type="radio" name="q3" value="c"> weil er mit dem Verdienst ganz zufrieden ist.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Jan sagte, ...  </h3>
+            <label><input type="radio" name="q4" value="a"> dass er durch seinen Job keine Ausgaben für ein Fitnessstudio hat.</label>
+            <label><input type="radio" name="q4" value="b"> dass er lieber im Büro arbeiten würde. </label>
+            <label><input type="radio" name="q4" value="c"> dass ihm schlechtes Wetter gar nicht stört. </label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.  Stefanie muss als Testkäuferin ...   </h3>
+            <label><input type="radio" name="q5" value="a"> auch den Service in Cafés und Kneipen überprüfen.</label>
+            <label><input type="radio" name="q5" value="b"> einige Waren selbst bezahlen.</label>
+            <label><input type="radio" name="q5" value="c"> sich beim Einkauf an einen festen Ablauf halten.</label>
+          </div>  
+
+        <!-- Weitere Fragen... -->
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index2.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "c",
+        q2: "c",
+        q3: "c",
+        q4: "a",
+        q5: "c"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+  
+
+
+</body>

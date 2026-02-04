@@ -1,0 +1,3345 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Hören: Teil2</title>
+  <style>
+    body {
+      background-color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    .quiz-container {
+      background-color: white;
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      color: #1f3655;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #1f3655;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+    td:first-child {
+      width: 50px;
+      text-align: center;
+    }
+    input[type="radio"] {
+      transform: scale(1.3);
+      margin: 5px;
+    }
+    .btn-check {
+      margin-top: 20px;
+      padding: 10px 18px;
+      font-size: 16px;
+      background-color: #1f3655;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .correct {
+      background-color: #d4edda;
+    }
+    .wrong {
+      background-color: #f8d7da;
+    }
+
+    #warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container" id="quiz1">
+    <h2>Herr Gasser und Frau Janke</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_1" value="richtig"></td>
+          <td><input type="radio" name="q1_1" value="falsch"></td>
+          <td>1. Herr Gasser und Frau Janke haben zusammen Urlaub im Geiberg gemacht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_2" value="richtig"></td>
+          <td><input type="radio" name="q1_2" value="falsch"></td>
+          <td>2. Josef Gasser ist ein gebürtiger Tiroler.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_3" value="richtig"></td>
+          <td><input type="radio" name="q1_3" value="falsch"></td>
+          <td>3. Die Bergbauern können kaum von verkauf ihrer Produkte leben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_4" value="richtig"></td>
+          <td><input type="radio" name="q1_4" value="falsch"></td>
+          <td>4. Auch haute werden die steilen Hänge noch manuell bearbeitet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_5" value="richtig"></td>
+          <td><input type="radio" name="q1_5" value="falsch"></td>
+          <td>5. Josef Gasser findet dass man die Bergkandschaft sich selbst über lassen sollte.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q1_6" value="richtig"></td>
+            <td><input type="radio" name="q1_6" value="falsch"></td>
+            <td>6. Eva janke begeistert sich immer noch für Flugreisen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q1_7" value="richtig"></td>
+            <td><input type="radio" name="q1_7" value="falsch"></td>
+            <td>7. Ihren ersten Einsatz auf der Alm hat.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q1_8" value="richtig"></td>
+            <td><input type="radio" name="q1_8" value="falsch"></td>
+            <td>8. für frau Janke ist der Erholungswert trotz der Anstrengung sehr hoch.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q1_9" value="richtig"></td>
+            <td><input type="radio" name="q1_9" value="falsch"></td>
+            <td>9. Alm helferinnen und helfer können viel Fältige Aufgabeen übernehmen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q1_10" value="richtig"></td>
+            <td><input type="radio" name="q1_10" value="falsch"></td>
+            <td>10. über die Dauer des Aufenthalt kann man Frei entscheiden.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('1')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz2">
+    <h2>Suza Hotop</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_1" value="richtig"></td>
+          <td><input type="radio" name="q2_1" value="falsch"></td>
+          <td>1. Für die Autorin Suza Hotop ist Schreiben Freude und Anstrengung | zugleich.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_2" value="richtig"></td>
+          <td><input type="radio" name="q2_2" value="falsch"></td>
+          <td>2. Suza begann im Alter von zwölf jahren mit ihrem Buch Jenseits von.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_3" value="richtig"></td>
+          <td><input type="radio" name="q2_3" value="falsch"></td>
+          <td>3. Am Anfang dachte Suza nicht daran,ihre Geschichte zu veröffentlichen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_4" value="richtig"></td>
+          <td><input type="radio" name="q2_4" value="falsch"></td>
+          <td>4.  Zuerst Stellte Suza Auszüge ihrer Geschichte ins Internet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_5" value="richtig"></td>
+          <td><input type="radio" name="q2_5" value="falsch"></td>
+          <td>5. Begeisterte Nutzer stellten den Kontakt zu einem Verlag her.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q2_6" value="richtig"></td>
+            <td><input type="radio" name="q2_6" value="falsch"></td>
+            <td>6. Suza beschreibt bewusst Personen aus ihre meigenen umfeld.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q2_7" value="richtig"></td>
+            <td><input type="radio" name="q2_7" value="falsch"></td>
+            <td>7. Die Autorin plant im Vorfeld genau, was inder Geschichte passieren wird.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q2_8" value="richtig"></td>
+            <td><input type="radio" name="q2_8" value="falsch"></td>
+            <td>8. Suza folgt beim Schreiben keinen besonderen Vorbildern.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q2_9" value="richtig"></td>
+            <td><input type="radio" name="q2_9" value="falsch"></td>
+            <td>9. Die junge Frau gab während des Radiointerviews eine Lese probe.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q2_10" value="richtig"></td>
+            <td><input type="radio" name="q2_10" value="falsch"></td>
+            <td>10. Suza braucht immer Ruhe, um schreiben zu können</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('2')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz3">
+    <h2>Suza Hotop</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_1" value="richtig"></td>
+          <td><input type="radio" name="q3_1" value="falsch"></td>
+          <td>1. Für die Autorin Suza Hotop ist Schreiben Freude und Anstrengung | zugleich.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_2" value="richtig"></td>
+          <td><input type="radio" name="q3_2" value="falsch"></td>
+          <td>2. Suza begann im Alter von zwölf jahren mit ihrem Buch Jenseits von Zaram. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_3" value="richtig"></td>
+          <td><input type="radio" name="q3_3" value="falsch"></td>
+          <td>3. Am Anfang dachte Suza nicht daran,ihre Geschichte zu veröffentlichen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_4" value="richtig"></td>
+          <td><input type="radio" name="q3_4" value="falsch"></td>
+          <td>4.  Zuerst Stellte Suza Auszüge ihrer Geschichte ins Internet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_5" value="richtig"></td>
+          <td><input type="radio" name="q3_5" value="falsch"></td>
+          <td>5. Begeisterte Nutzer stellten den Kontakt zu einem Verlag her.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q3_6" value="richtig"></td>
+            <td><input type="radio" name="q3_6" value="falsch"></td>
+            <td>6. Suza beschreibt bewusst Personen aus ihre meigenen umfeld.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q3_7" value="richtig"></td>
+            <td><input type="radio" name="q3_7" value="falsch"></td>
+            <td>7. Die Autorin plant nie ganz genau, was in der Geschichte passieren wird.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q3_8" value="richtig"></td>
+            <td><input type="radio" name="q3_8" value="falsch"></td>
+            <td>8. Suza folgt beim Schreiben keinen besonderen Vorbildern.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q3_9" value="richtig"></td>
+            <td><input type="radio" name="q3_9" value="falsch"></td>
+            <td>9. Die junge Frau gab während des Radiointerviews eine Lese probe.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q3_10" value="richtig"></td>
+            <td><input type="radio" name="q3_10" value="falsch"></td>
+            <td>10. Suza braucht immer Ruhe, um schreiben zu können</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('3')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz4">
+    <h2>Steiner</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_1" value="richtig"></td>
+          <td><input type="radio" name="q4_1" value="falsch"></td>
+          <td>1. Professor Steiner ist Haute gar niche mehr nerves, wenn er moderiern muss.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_2" value="richtig"></td>
+          <td><input type="radio" name="q4_2" value="falsch"></td>
+          <td>2. Steiner vermittelt den Studerenden nicht nur, theoretisches wissen, sondern fordert auch dass es Praktisch angewendet wird. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_3" value="richtig"></td>
+          <td><input type="radio" name="q4_3" value="falsch"></td>
+          <td>3. Steiner Hobby ist es expermentelle Film zu machen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_4" value="richtig"></td>
+          <td><input type="radio" name="q4_4" value="falsch"></td>
+          <td>4.  Journalisten sollen Heute auf einzelne Medien spezialisiert sein.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_5" value="richtig"></td>
+          <td><input type="radio" name="q4_5" value="falsch"></td>
+          <td>5. Sport-Journalist zu werden, ist nach Steiner Ansicht Heute fast ausgeschlissen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q4_6" value="richtig"></td>
+            <td><input type="radio" name="q4_6" value="falsch"></td>
+            <td>6. Journalisten sollten möglichst viele Informationen an die Öffentlichkeit Weitergeben.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q4_7" value="richtig"></td>
+            <td><input type="radio" name="q4_7" value="falsch"></td>
+            <td>7. Steiner musste wegen einer Verletzung mit dem fußballspielen aufhören</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q4_8" value="richtig"></td>
+            <td><input type="radio" name="q4_8" value="falsch"></td>
+            <td>8. Steiner hat während seines Journalistik-Studiums für das ZDF Fußballspiele moderiert.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q4_9" value="richtig"></td>
+            <td><input type="radio" name="q4_9" value="falsch"></td>
+            <td>9. Steiner ist es wichtig, als Moderator den Sportlern gegenüber neutral zu bleiben.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q4_10" value="richtig"></td>
+            <td><input type="radio" name="q4_10" value="falsch"></td>
+            <td>10. Steiner rät abiturienten dazu verschiedene Berufliche Möglichkeiten zu testen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('4')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz5">
+    <h2>Steiner</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_1" value="richtig"></td>
+          <td><input type="radio" name="q5_1" value="falsch"></td>
+          <td>1. Professor Steiner ist Haute gar nicht mehr nervös, wenn er moderiern muss.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_2" value="richtig"></td>
+          <td><input type="radio" name="q5_2" value="falsch"></td>
+          <td>2. Steiner möchte, dass die Studierenden das Gelernte auch in der Praxis anwenden können. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_3" value="richtig"></td>
+          <td><input type="radio" name="q5_3" value="falsch"></td>
+          <td>3. Steiner Hobby ist es expermentelle Film zu machen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_4" value="richtig"></td>
+          <td><input type="radio" name="q5_4" value="falsch"></td>
+          <td>4.  Journalisten sollen Heute auf einzelne Medien spezialisiert sein.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_5" value="richtig"></td>
+          <td><input type="radio" name="q5_5" value="falsch"></td>
+          <td>5.  Nach Steiners Ansicht ist der Berufswunsch Sportjournalist heutzutage unrealistisch.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q5_6" value="richtig"></td>
+            <td><input type="radio" name="q5_6" value="falsch"></td>
+            <td>6. Journalisten sollten Lust haben, etwas zu entdecken.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q5_7" value="richtig"></td>
+            <td><input type="radio" name="q5_7" value="falsch"></td>
+            <td>7. Steiner musste wegen einer Verletzung mit dem fußballspielen aufhören</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q5_8" value="richtig"></td>
+            <td><input type="radio" name="q5_8" value="falsch"></td>
+            <td>8. Steiner hat während seines Journalistik-Studiums für das ZDF Fußballspiele kommentiert.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q5_9" value="richtig"></td>
+            <td><input type="radio" name="q5_9" value="falsch"></td>
+            <td>9. Steiner ist es wichtig, als Moderator den Sportlern gegenüber neutral zu bleiben.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q5_10" value="richtig"></td>
+            <td><input type="radio" name="q5_10" value="falsch"></td>
+            <td>10. Steiner rät Abiturienten dazu, verschiedene testen zu Möglichkeit berufliche.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('5')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz6">
+    <h2>Mallorca</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_1" value="richtig"></td>
+          <td><input type="radio" name="q6_1" value="falsch"></td>
+          <td>1. Die Zahl der deutschen Mallorca-Urlaub hat nur leicht abgenommen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_2" value="richtig"></td>
+          <td><input type="radio" name="q6_2" value="falsch"></td>
+          <td>2. Nach Professor Kirsch achten die Deutschen bei der Wahl ihrer Urlaubsreisen nicht besonders auf die kosten. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_3" value="richtig"></td>
+          <td><input type="radio" name="q6_3" value="falsch"></td>
+          <td>3. Einige Einheimisch in Mallorca haben begonnen, sich gegen das Vordringen der deutschen Sprache zu wehren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_4" value="richtig"></td>
+          <td><input type="radio" name="q6_4" value="falsch"></td>
+          <td>4.  in Mallorca wird der Statt wegen der Umweltbelastungen zu kasse bitten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_5" value="richtig"></td>
+          <td><input type="radio" name="q6_5" value="falsch"></td>
+          <td>5.  Viele Deutsche haben jetzt Rumänien und Ungarn als Reiseziel entdeckt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q6_6" value="richtig"></td>
+            <td><input type="radio" name="q6_6" value="falsch"></td>
+            <td>6. Professor Kirsch weist auf günstige Angebote für Golfspieler am Plattensee hin.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q6_7" value="richtig"></td>
+            <td><input type="radio" name="q6_7" value="falsch"></td>
+            <td>7. Bulgarien hat sich als Urlaubsland sehr positiv entwickelt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q6_8" value="richtig"></td>
+            <td><input type="radio" name="q6_8" value="falsch"></td>
+            <td>8. Viele Westdeutsche meiden Bulgarien, weil die Einreisemodalitäten abschreckend sind.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q6_9" value="richtig"></td>
+            <td><input type="radio" name="q6_9" value="falsch"></td>
+            <td>9. Seit Ende der neunziger Jahre geben die Deutscheh mehr Geld für den Urlaub.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q6_10" value="richtig"></td>
+            <td><input type="radio" name="q6_10" value="falsch"></td>
+            <td>10. Durch die Vielzahl aktiver Senioren entsteht eine höhere Nachlrage nach Abenteuerreisen in ferne Länder.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('6')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz7">
+    <h2>Mallorca</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_1" value="richtig"></td>
+          <td><input type="radio" name="q7_1" value="falsch"></td>
+          <td>1. Die Zahl der deutschen Mallorca-Urlaub hat nur leicht abgenommen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_2" value="richtig"></td>
+          <td><input type="radio" name="q7_2" value="falsch"></td>
+          <td>2. Nach Professor Kirsch achten die Deutschen bei der Wahl ihrer Urlaubsreisen nicht besonders auf die kosten. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_3" value="richtig"></td>
+          <td><input type="radio" name="q7_3" value="falsch"></td>
+          <td>3. Einige Einheimisch in Mallorca haben begonnen, sich gegen das Vordringen der deutschen Sprache zu wehren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_4" value="richtig"></td>
+          <td><input type="radio" name="q7_4" value="falsch"></td>
+          <td>4.  Für den Einbruch des Tourismus auf Mallorca sind verschiedene Faktoren verantwortlich.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_5" value="richtig"></td>
+          <td><input type="radio" name="q7_5" value="falsch"></td>
+          <td>5.  Viele Deutsche haben jetzt Rumänien und Ungarn als Reiseziel entdeckt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q7_6" value="richtig"></td>
+            <td><input type="radio" name="q7_6" value="falsch"></td>
+            <td>6. Professor Kirsch weist auf günstige Angebote für Golfspieler am Plattensee hin.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q7_7" value="richtig"></td>
+            <td><input type="radio" name="q7_7" value="falsch"></td>
+            <td>7. Bulgarien hat sich als Urlaubsland sehr positiv entwickelt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q7_8" value="richtig"></td>
+            <td><input type="radio" name="q7_8" value="falsch"></td>
+            <td>8. Viele Westdeutsche meiden Bulgarien, weil die Einreisemodalitäten abschreckend sind.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q7_9" value="richtig"></td>
+            <td><input type="radio" name="q7_9" value="falsch"></td>
+            <td>9. Seit Ende der neunziger Jahre geben die Deutscheh mehr Geld für den Urlaub.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q7_10" value="richtig"></td>
+            <td><input type="radio" name="q7_10" value="falsch"></td>
+            <td>10. Durch die Vielzahl aktiver Senioren entsteht eine höhere Nachlrage nach Abenteuerreisen in ferne Länder.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('7')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz8">
+    <h2>Restaurant</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_1" value="richtig"></td>
+          <td><input type="radio" name="q8_1" value="falsch"></td>
+          <td>1. In dem Restaurant gab es einen Wasserschaden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_2" value="richtig"></td>
+          <td><input type="radio" name="q8_2" value="falsch"></td>
+          <td>2. Anton Laurito ist bei seinen Großeltern aufgewachsen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_3" value="richtig"></td>
+          <td><input type="radio" name="q8_3" value="falsch"></td>
+          <td>3. Im Haus der Großeltern lebten auch andere Kinder.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_4" value="richtig"></td>
+          <td><input type="radio" name="q8_4" value="falsch"></td>
+          <td>4.  Der Stress störte den Studiogast während der Ausbildung nicht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_5" value="richtig"></td>
+          <td><input type="radio" name="q8_5" value="falsch"></td>
+          <td>5.  Bei neuen Mitarbeitern legt Anton Laurito am meisten Wert auf viel Erfahrung.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q8_6" value="richtig"></td>
+            <td><input type="radio" name="q8_6" value="falsch"></td>
+            <td>6. Aussehen und Geschmack der Speisen haben für den Koch den gleichen Stellenwert.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q8_7" value="richtig"></td>
+            <td><input type="radio" name="q8_7" value="falsch"></td>
+            <td>7. In der Essschule können Kinder kochen lernen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q8_8" value="richtig"></td>
+            <td><input type="radio" name="q8_8" value="falsch"></td>
+            <td>8. Anton Laurito lehnt Fastfood nicht grundsätzlich ab.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q8_9" value="richtig"></td>
+            <td><input type="radio" name="q8_9" value="falsch"></td>
+            <td>9. Der Koch hat eine gesunde Einstellung zum Thema Wettbewerb.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q8_10" value="richtig"></td>
+            <td><input type="radio" name="q8_10" value="falsch"></td>
+            <td>10. Zuhause probiert er gerne komplizierte Gerichte aus.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('8')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz9">
+    <h2>Julia</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_1" value="richtig"></td>
+          <td><input type="radio" name="q9_1" value="falsch"></td>
+          <td>1.  Julia hatte an einem Schüleraustausch kein Interesse.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_2" value="richtig"></td>
+          <td><input type="radio" name="q9_2" value="falsch"></td>
+          <td>2. Die Lehrer in Julias Schule weigerten sich, mit dem Austauschschüler Englisch Zu sprechen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_3" value="richtig"></td>
+          <td><input type="radio" name="q9_3" value="falsch"></td>
+          <td>3. Frankreich ist als Aufenthaltsland bei Au-pairs nicht sehr gefragt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_4" value="richtig"></td>
+          <td><input type="radio" name="q9_4" value="falsch"></td>
+          <td>4.  Julia hatte auch darüber nachgedacht,in die Schweiz zu fahren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_5" value="richtig"></td>
+          <td><input type="radio" name="q9_5" value="falsch"></td>
+          <td>5.  Julia empfiehlt, mit der Gastfamilie einen Vertrag zu schließen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q9_6" value="richtig"></td>
+            <td><input type="radio" name="q9_6" value="falsch"></td>
+            <td>6. Zu Beginn der Au-pair-Bewegung schickten Familien ihre Kinder zum Sprachunterricht in die Schweiz.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q9_7" value="richtig"></td>
+            <td><input type="radio" name="q9_7" value="falsch"></td>
+            <td>7. Julia ist der Meinung, dass die Vermittlungskosten zu hoch sind.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q9_8" value="richtig"></td>
+            <td><input type="radio" name="q9_8" value="falsch"></td>
+            <td>8. Julia verbrachte mit den Kindern auch Zeit in Paris.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q9_9" value="richtig"></td>
+            <td><input type="radio" name="q9_9" value="falsch"></td>
+            <td>9. Es gab am Anfang Momente, in denen sich Julia der Gastfamilie nicht zugehörig fühlte.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q9_10" value="richtig"></td>
+            <td><input type="radio" name="q9_10" value="falsch"></td>
+            <td>10. Julia lernt im Sprachkurs mehr Französisch als durch den Kontakt mit der Gastfamilie.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('9')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz10">
+    <h2> Carina</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_1" value="richtig"></td>
+          <td><input type="radio" name="q10_1" value="falsch"></td>
+          <td>1.  Der Berufseinstieg ist in anderen Ländern nicht leicht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_2" value="richtig"></td>
+          <td><input type="radio" name="q10_2" value="falsch"></td>
+          <td>2. Carina ist ihr Beruf wichtiger als ihr Privatleben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_3" value="richtig"></td>
+          <td><input type="radio" name="q10_3" value="falsch"></td>
+          <td>3. Carina hat sich der Agentur mit einem Film präsentiert.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_4" value="richtig"></td>
+          <td><input type="radio" name="q10_4" value="falsch"></td>
+          <td>4. Carina musste für einen Film ihr Gewicht stark verändern.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_5" value="richtig"></td>
+          <td><input type="radio" name="q10_5" value="falsch"></td>
+          <td>5. Carina macht lieber gefühlvolle Filme als Action-Filme.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q10_6" value="richtig"></td>
+            <td><input type="radio" name="q10_6" value="falsch"></td>
+            <td>6.  Wegen der vielen Fehlstunden hatte Carina Probleme mit dem | Direktor der Schule.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q10_7" value="richtig"></td>
+            <td><input type="radio" name="q10_7" value="falsch"></td>
+            <td>7. Carinas Eltern haben ihre Tochter von Anfang an unterstützt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q10_8" value="richtig"></td>
+            <td><input type="radio" name="q10_8" value="falsch"></td>
+            <td>8. Carina finde den Wechsel zwischen Schule und Drehterminen | Nicht leicht.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q10_9" value="richtig"></td>
+            <td><input type="radio" name="q10_9" value="falsch"></td>
+            <td>9. Bei Dialogen darf man auch selbst etwas erfinden.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q10_10" value="richtig"></td>
+            <td><input type="radio" name="q10_10" value="falsch"></td>
+            <td>10. Carina empfiehlt, sich andere Schauspieler im Theater und in Filmen anzusehen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('10')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz11">
+    <h2> Carina</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_1" value="richtig"></td>
+          <td><input type="radio" name="q11_1" value="falsch"></td>
+          <td>1.  Der Berufseinstieg ist in anderen Ländern nicht leicht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_2" value="richtig"></td>
+          <td><input type="radio" name="q11_2" value="falsch"></td>
+          <td>2. Carina ist ihr Beruf wichtiger als ihr Privatleben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_3" value="richtig"></td>
+          <td><input type="radio" name="q11_3" value="falsch"></td>
+          <td>3. Carina hat den Agentur mit einem Videofilm Interesse gewerkt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_4" value="richtig"></td>
+          <td><input type="radio" name="q11_4" value="falsch"></td>
+          <td>4. Carina hat für einen Film ein Dait gemacht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_5" value="richtig"></td>
+          <td><input type="radio" name="q11_5" value="falsch"></td>
+          <td>5. Carina macht lieber gefühlvolle Filme als Action-Filme.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q11_6" value="richtig"></td>
+            <td><input type="radio" name="q11_6" value="falsch"></td>
+            <td>6.  Wegen der vielen Fehlstunden hatte Carina Probleme mit dem | Direktor der Schule.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q11_7" value="richtig"></td>
+            <td><input type="radio" name="q11_7" value="falsch"></td>
+            <td>7. Carinas Eltern haben ihre Tochter von Anfang an unterstützt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q11_8" value="richtig"></td>
+            <td><input type="radio" name="q11_8" value="falsch"></td>
+            <td>8. Carina finde den Wechsel zwischen Schule und Drehterminen shwierigkeiten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q11_9" value="richtig"></td>
+            <td><input type="radio" name="q11_9" value="falsch"></td>
+            <td>9. Bei Dialogen darf man auch selbst etwas erfinden.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q11_10" value="richtig"></td>
+            <td><input type="radio" name="q11_10" value="falsch"></td>
+            <td>10. Carina empfiehlt, sich andere Schauspieler im Theater und in Filmen anzusehen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('11')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz12">
+    <h2> Frau Schenk</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_1" value="richtig"></td>
+          <td><input type="radio" name="q12_1" value="falsch"></td>
+          <td>1.  Frau Schenk hat kurze blondierte Haar.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_2" value="richtig"></td>
+          <td><input type="radio" name="q12_2" value="falsch"></td>
+          <td>2. Angie ist der Künstlername von Frau Schenk.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_3" value="richtig"></td>
+          <td><input type="radio" name="q12_3" value="falsch"></td>
+          <td>3. Frau Schenk lebt seit etwas mehr als zwei Jahren in Bayer.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_4" value="richtig"></td>
+          <td><input type="radio" name="q12_4" value="falsch"></td>
+          <td>4. Der Interview hat keine guten Erinnerungen an seine Aufenthalte in | Jugendherberge.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_5" value="richtig"></td>
+          <td><input type="radio" name="q12_5" value="falsch"></td>
+          <td>5. Auch in der modernen Jugendherberge von Frau Schenk gibt es Schlafraum mit mehr als zehn Bette.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q12_6" value="richtig"></td>
+            <td><input type="radio" name="q12_6" value="falsch"></td>
+            <td>6. Nur bei Schullassen achtet man auf Geschlechtsertrennung in den | Schlafräume.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q12_7" value="richtig"></td>
+            <td><input type="radio" name="q12_7" value="falsch"></td>
+            <td>7. Das Angebot an Speisen werden auf die Wünsche der Gäste | zugeschnitten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q12_8" value="richtig"></td>
+            <td><input type="radio" name="q12_8" value="falsch"></td>
+            <td>8. Schüler aus ländlichen Regionen sind meist unproblematische Gäste.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q12_9" value="richtig"></td>
+            <td><input type="radio" name="q12_9" value="falsch"></td>
+            <td>9. Das Reiten zählt zu dem Sportprogramm der Jugendherberge.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q12_10" value="richtig"></td>
+            <td><input type="radio" name="q12_10" value="falsch"></td>
+            <td>10. Frau Schenk muss für ihre Dienstwohnung 800€ bezahle.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('12')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz13">
+    <h2> Frau Schenk</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_1" value="richtig"></td>
+          <td><input type="radio" name="q13_1" value="falsch"></td>
+          <td>1.  Frau Schenk hat kurze blondierte Haar.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_2" value="richtig"></td>
+          <td><input type="radio" name="q13_2" value="falsch"></td>
+          <td>2. Angie ist der Künstlername von Frau Schenk.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_3" value="richtig"></td>
+          <td><input type="radio" name="q13_3" value="falsch"></td>
+          <td>3. Frau Schenk lebt seit etwas mehr als zwei Jahren in Bayer.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_4" value="richtig"></td>
+          <td><input type="radio" name="q13_4" value="falsch"></td>
+          <td>4. Der Interview hat keine guten Erinnerungen an seine Aufenthalte in | Jugendherberge.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_5" value="richtig"></td>
+          <td><input type="radio" name="q13_5" value="falsch"></td>
+          <td>5. Auch in der modernen Jugendherberge von Frau Schenk gibt es Schlafraum mit mehr als zehn Bette.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q13_6" value="richtig"></td>
+            <td><input type="radio" name="q13_6" value="falsch"></td>
+            <td>6. Mädchen und jungen müssen in verschiedenen Schlafräumen | schlafen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q13_7" value="richtig"></td>
+            <td><input type="radio" name="q13_7" value="falsch"></td>
+            <td>7. In der Jugendherberge wird das Essen den Wünschen der Gästegruppen angepasst.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q13_8" value="richtig"></td>
+            <td><input type="radio" name="q13_8" value="falsch"></td>
+            <td>8. Schuler aus ländlichen Regionen verhalten sich in der Regel anständig.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q13_9" value="richtig"></td>
+            <td><input type="radio" name="q13_9" value="falsch"></td>
+            <td>9. Reiten ist Teil des Sportangebots der Jugendherberge.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q13_10" value="richtig"></td>
+            <td><input type="radio" name="q13_10" value="falsch"></td>
+            <td>10. Frau Schenk muss für ihre Dienstwohnung 800€ bezahle.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('13')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz14">
+    <h2>Herr Karimov</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_1" value="richtig"></td>
+          <td><input type="radio" name="q14_1" value="falsch"></td>
+          <td>1. Herr Karimov hat vor sechs Jahren die InternetPlattform ZEITPLAN gegründet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_2" value="richtig"></td>
+          <td><input type="radio" name="q14_2" value="falsch"></td>
+          <td>2. Die Mitglieder bekommen für ihre Hilfe ein Stunden Guthaben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_3" value="richtig"></td>
+          <td><input type="radio" name="q14_3" value="falsch"></td>
+          <td>3. Herr Karimov hatte ein eigenes Handwerksunternehmen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_4" value="richtig"></td>
+          <td><input type="radio" name="q14_4" value="falsch"></td>
+          <td>4. Nach dem Umzug aufs Land,war er auf die Hilfe der Nachbarn angewiesen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_5" value="richtig"></td>
+          <td><input type="radio" name="q14_5" value="falsch"></td>
+          <td>5. Manchmal erwarten Mitglieder keine Gegenleistung für ihre Arbeit.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q14_6" value="richtig"></td>
+            <td><input type="radio" name="q14_6" value="falsch"></td>
+            <td>6. Meistens brauchen alleinstehende frauen Herrn Karimovs Hilfe.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q14_7" value="richtig"></td>
+            <td><input type="radio" name="q14_7" value="falsch"></td>
+            <td>7. Viele Menschen sehen im ZEITPLAN eine Konkurrenz zu | Handwerksbetrieben .</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q14_8" value="richtig"></td>
+            <td><input type="radio" name="q14_8" value="falsch"></td>
+            <td>8. Herr Karimov erledigt nicht so gerne Büroarbeit.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q14_9" value="richtig"></td>
+            <td><input type="radio" name="q14_9" value="falsch"></td>
+            <td>9. Wer sich bei der Nachbarschaftshilfe einbringen möchte, muss sich persönlich vorstellen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q14_10" value="richtig"></td>
+            <td><input type="radio" name="q14_10" value="falsch"></td>
+            <td>10. Herr Karimov brauchte vorübergehend einen Chauffeur.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('14')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz15">
+    <h2>Nadine</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_1" value="richtig"></td>
+          <td><input type="radio" name="q15_1" value="falsch"></td>
+          <td>1. Nadine Wagner ist gerade ers von ihrer Weltreise | zurückgekehrt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_2" value="richtig"></td>
+          <td><input type="radio" name="q15_2" value="falsch"></td>
+          <td>2. sie hatte vor der Weltreise einige Zweifel und Bedenken.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_3" value="richtig"></td>
+          <td><input type="radio" name="q15_3" value="falsch"></td>
+          <td>3. Die Journalistin ist während ihrer Reise auch geflogen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_4" value="richtig"></td>
+          <td><input type="radio" name="q15_4" value="falsch"></td>
+          <td>4. Sie hat für dieses Abenteuer ihre Stelle gekündigt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q15_5" value="richtig"></td>
+          <td><input type="radio" name="q15_5" value="falsch"></td>
+          <td>5. Ihre Freunde waren unterschiedlicher Meinung über ihre Vorhaben.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q15_6" value="richtig"></td>
+            <td><input type="radio" name="q15_6" value="falsch"></td>
+            <td>6. In Tadschikistan hat sie eine Zeit lang andere Motorradfahrer begleitet.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q15_7" value="richtig"></td>
+            <td><input type="radio" name="q15_7" value="falsch"></td>
+            <td>7. sie hat auf der Reise ihr ganzes Erspartes auf gebracht.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q15_8" value="richtig"></td>
+            <td><input type="radio" name="q15_8" value="falsch"></td>
+            <td>8. Nadine Wagner hat auf der Reise gelegentlich gearbeitet.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q15_9" value="richtig"></td>
+            <td><input type="radio" name="q15_9" value="falsch"></td>
+            <td>9. sie hat am meisten ihre eigene Wohnung vermisst.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q15_10" value="richtig"></td>
+            <td><input type="radio" name="q15_10" value="falsch"></td>
+            <td>10. Nach ihrer Rückkehr musste sie nicht lange nach einer neuen | Arbeit.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('15')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz16">
+    <h2>Markus</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_1" value="richtig"></td>
+          <td><input type="radio" name="q16_1" value="falsch"></td>
+          <td>1. Markus ist schon während des Studiums an eine amerikanische Universität | gegangen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_2" value="richtig"></td>
+          <td><input type="radio" name="q16_2" value="falsch"></td>
+          <td>2. Markus wollte in einem besonders erfolgreichen Team mitarbeiten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_3" value="richtig"></td>
+          <td><input type="radio" name="q16_3" value="falsch"></td>
+          <td>3. Um eine Stelle in einer amerikanischen Forschergruppe zu bekommen, muss man viel Glück haben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_4" value="richtig"></td>
+          <td><input type="radio" name="q16_4" value="falsch"></td>
+          <td>4. Markus befindet sich zwischen Ausbildung und Beruf.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q16_5" value="richtig"></td>
+          <td><input type="radio" name="q16_5" value="falsch"></td>
+          <td>5. Das Studium in Bonn hat Markus sehr gut auf den Auslandsaufenthalt | vorbereitet.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q16_6" value="richtig"></td>
+            <td><input type="radio" name="q16_6" value="falsch"></td>
+            <td>6. Markus hatte nach der Ankunft in den USA sehr viele Schwierigkeiten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q16_7" value="richtig"></td>
+            <td><input type="radio" name="q16_7" value="falsch"></td>
+            <td>7. Markus ist immer noch sehr nervös in der fremden Umgebung.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q16_8" value="richtig"></td>
+            <td><input type="radio" name="q16_8" value="falsch"></td>
+            <td>8. Markus ist mit den Arbeitsbedingungen zufrieden.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q16_9" value="richtig"></td>
+            <td><input type="radio" name="q16_9" value="falsch"></td>
+            <td>9. Markus befürwortet es nicht, dass sich Studenten in der USA früh auf ihre zukünftig Beruf festlegen müssen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q16_10" value="richtig"></td>
+            <td><input type="radio" name="q16_10" value="falsch"></td>
+            <td>10. für Markus ist Vorteil, dass er in Deutschland die Referat und vortrag halten | müsste.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('16')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz17">
+    <h2>Markus</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_1" value="richtig"></td>
+          <td><input type="radio" name="q17_1" value="falsch"></td>
+          <td>1. Markus ist schon während des Studiums an eine amerikanische Universität | gegangen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_2" value="richtig"></td>
+          <td><input type="radio" name="q17_2" value="falsch"></td>
+          <td>2. Markus wollte in einem besonders erfolgreichen Team mitarbeiten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_3" value="richtig"></td>
+          <td><input type="radio" name="q17_3" value="falsch"></td>
+          <td>3. Um eine Stelle in einer amerikanischen Forschergruppe zu bekommen, muss man viel Glück haben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_4" value="richtig"></td>
+          <td><input type="radio" name="q17_4" value="falsch"></td>
+          <td>4. Markus befindet sich zwischen Ausbildung und Beruf.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q17_5" value="richtig"></td>
+          <td><input type="radio" name="q17_5" value="falsch"></td>
+          <td>5. Markus profitiert im Amrika von Erfahrung die während Studium sammlt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q17_6" value="richtig"></td>
+            <td><input type="radio" name="q17_6" value="falsch"></td>
+            <td>6. Markus hatte nach der Ankunft in den USA sehr viele Schwierigkeiten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q17_7" value="richtig"></td>
+            <td><input type="radio" name="q17_7" value="falsch"></td>
+            <td>7. Markus ist immer noch sehr nervös in der fremden Umgebung.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q17_8" value="richtig"></td>
+            <td><input type="radio" name="q17_8" value="falsch"></td>
+            <td>8. Markus ist mit den Arbeitsbedingungen zufrieden.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q17_9" value="richtig"></td>
+            <td><input type="radio" name="q17_9" value="falsch"></td>
+            <td>9. Markus befürwortet es nicht, dass sich Studenten in der USA früh auf ihre zukünftig Beruf festlegen müssen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q17_10" value="richtig"></td>
+            <td><input type="radio" name="q17_10" value="falsch"></td>
+            <td>10. für Markus ist Vorteil, dass er in Deutschland die Referat und vortrag halten | müsste.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('17')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz18">
+    <h2>Roland</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_1" value="richtig"></td>
+          <td><input type="radio" name="q18_1" value="falsch"></td>
+          <td>1. Roland wünschmann arbeitet Vollzeit als Fußballtrainer bei Viktoria Köln.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_2" value="richtig"></td>
+          <td><input type="radio" name="q18_2" value="falsch"></td>
+          <td>2. Viktoria Köln möchte nicht nur gegen Mannschaften aus der verbandsliga spielen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_3" value="richtig"></td>
+          <td><input type="radio" name="q18_3" value="falsch"></td>
+          <td>3. zu Beginn dieser Saison hat ein Spieler Viktoria Köln verlassen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_4" value="richtig"></td>
+          <td><input type="radio" name="q18_4" value="falsch"></td>
+          <td>4. Neue Spieler kommen bei Viktoria Köln immer aus der eigenen Jugendmannschaft.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q18_5" value="richtig"></td>
+          <td><input type="radio" name="q18_5" value="falsch"></td>
+          <td>5.  Die Mannschaft von Viktoria Köln hat Schwächen in der Abwehr.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q18_6" value="richtig"></td>
+            <td><input type="radio" name="q18_6" value="falsch"></td>
+            <td>6. Roland wünschmann wagt die Prognose, dass dieser Saison der 1 FC Mönchengladbach Meister wird.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q18_7" value="richtig"></td>
+            <td><input type="radio" name="q18_7" value="falsch"></td>
+            <td>7. Roland wünschmann kann seinen Beruf und sein Ehrenamt als Fußballtrainer Problems miteinander vereinbaren.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q18_8" value="richtig"></td>
+            <td><input type="radio" name="q18_8" value="falsch"></td>
+            <td>8. Auch die Frau von Ronald wünschmann engagiert sich im Fußball.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q18_9" value="richtig"></td>
+            <td><input type="radio" name="q18_9" value="falsch"></td>
+            <td>9. Der vereinsvorstand schätzt Herren wünschmann Arbeit.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q18_10" value="richtig"></td>
+            <td><input type="radio" name="q18_10" value="falsch"></td>
+            <td>10. Roland wünschmann ist mit bisherigen Nachwuchsförderung des Vereins zufrieden</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('18')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz19">
+    <h2>Roland2</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_1" value="richtig"></td>
+          <td><input type="radio" name="q19_1" value="falsch"></td>
+          <td>1. Roland wünschmann spielt selbst bei Viktoria Köln Fußball.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_2" value="richtig"></td>
+          <td><input type="radio" name="q19_2" value="falsch"></td>
+          <td>2. Viktoria Köln möchte am Ende der Spielsaison aufsteigen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_3" value="richtig"></td>
+          <td><input type="radio" name="q19_3" value="falsch"></td>
+          <td>3. zu Beginn dieser Saison hat ein Spieler Viktoria Köln verlassen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_4" value="richtig"></td>
+          <td><input type="radio" name="q19_4" value="falsch"></td>
+          <td>4. Neue Spieler kommen bei Viktoria Köln immer aus der eigenen Jugendmannschaft.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q19_5" value="richtig"></td>
+          <td><input type="radio" name="q19_5" value="falsch"></td>
+          <td>5.  Die Mannschaft von Viktoria Köln hat Schwächen in der Abwehr.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q19_6" value="richtig"></td>
+            <td><input type="radio" name="q19_6" value="falsch"></td>
+            <td>6. Roland wünschmann wagt die Prognose, dass dieser Saison der 1 FC Mönchengladbach Meister wird.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q19_7" value="richtig"></td>
+            <td><input type="radio" name="q19_7" value="falsch"></td>
+            <td>7. Roland wünschmann kann seinen Beruf und sein Ehrenamt als Fußballtrainer miteinander vereinbaren.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q19_8" value="richtig"></td>
+            <td><input type="radio" name="q19_8" value="falsch"></td>
+            <td>8. Auch die Frau von Ronald wünschmann engagiert sich im Fußball.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q19_9" value="richtig"></td>
+            <td><input type="radio" name="q19_9" value="falsch"></td>
+            <td>9. Der vereinsvorstand schätzt Herren wünschmann Arbeit.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q19_10" value="richtig"></td>
+            <td><input type="radio" name="q19_10" value="falsch"></td>
+            <td>10. Roland wünschmann ist mit bisherigen Nachwuchsförderung des Vereins zufrieden</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('19')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz20">
+    <h2>Roland3</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_1" value="richtig"></td>
+          <td><input type="radio" name="q20_1" value="falsch"></td>
+          <td>1. Roland wünschmann spielt selbst bei Viktoria Köln Fußball.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_2" value="richtig"></td>
+          <td><input type="radio" name="q20_2" value="falsch"></td>
+          <td>2. Viktoria Köln spielt seit Beginn der Saison in einer höheren Lige.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_3" value="richtig"></td>
+          <td><input type="radio" name="q20_3" value="falsch"></td>
+          <td>3. Die meisten Spieler der Mannschaft haben schön in der letzten Saison bei Viktoria Köln gespielt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_4" value="richtig"></td>
+          <td><input type="radio" name="q20_4" value="falsch"></td>
+          <td>4. Neuzugänge kommen bei Viktoria Köln meist aus ganz unterschiedlichen | Mannschaften.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q20_5" value="richtig"></td>
+          <td><input type="radio" name="q20_5" value="falsch"></td>
+          <td>5.  Die Mannschaft von Viktoria Köln möchte in dieser Saison neue spieltaktiken | ausprobieren.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q20_6" value="richtig"></td>
+            <td><input type="radio" name="q20_6" value="falsch"></td>
+            <td>6. Roland wünschmann wagt die Prognose, dass dieser Saison der 1 FC Mönchengladbach Meister wird.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q20_7" value="richtig"></td>
+            <td><input type="radio" name="q20_7" value="falsch"></td>
+            <td>7. Roland wünschmann empfindet sein Ehrenamt oft als Belastung.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q20_8" value="richtig"></td>
+            <td><input type="radio" name="q20_8" value="falsch"></td>
+            <td>8. Roland wünschmanns Frau engagiert sich für denselben Verein.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q20_9" value="richtig"></td>
+            <td><input type="radio" name="q20_9" value="falsch"></td>
+            <td>9. Herr wünschmann und der vereinsvorstand sind meistens einer Meinung.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q20_10" value="richtig"></td>
+            <td><input type="radio" name="q20_10" value="falsch"></td>
+            <td>10. Roland wünschmann hofft auf Verbesserungen in der Nachwuchsförderung.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('20')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz21">
+    <h2>Die Deutschen machen</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q21_1" value="richtig"></td>
+          <td><input type="radio" name="q21_1" value="falsch"></td>
+          <td>1. Die Deutschen machen zurzeit gerne bis zu drei Wochen oder mehr Urlaub.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q21_2" value="richtig"></td>
+          <td><input type="radio" name="q21_2" value="falsch"></td>
+          <td>2. Viele Wellness-Hotels befinden sich in Großstädten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q21_3" value="richtig"></td>
+          <td><input type="radio" name="q21_3" value="falsch"></td>
+          <td>3. Wellness-Angebote gibt es vor allem in Hotels der gehobenen Kategorie.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q21_4" value="richtig"></td>
+          <td><input type="radio" name="q21_4" value="falsch"></td>
+          <td>4. Die von den Hotels angebotenen,,Pakete" enthalten in der Regel Vollpension.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q21_5" value="richtig"></td>
+          <td><input type="radio" name="q21_5" value="falsch"></td>
+          <td>5.  In den Hotels kann man auch schwimmen Sauna gehen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q21_6" value="richtig"></td>
+            <td><input type="radio" name="q21_6" value="falsch"></td>
+            <td>6. Die Gäste nehmen die Sportangebote kaum wahr.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q21_7" value="richtig"></td>
+            <td><input type="radio" name="q21_7" value="falsch"></td>
+            <td>7. Oft bieten die Hotels auch kulturelle Rahmenprogramme wie Stadtführungen und Opembesuche an.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q21_8" value="richtig"></td>
+            <td><input type="radio" name="q21_8" value="falsch"></td>
+            <td>8. Frauen kommen fast immer in Begleitung ihrer Ehemänner.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q21_9" value="richtig"></td>
+            <td><input type="radio" name="q21_9" value="falsch"></td>
+            <td>9. Die Hotels haben besondere Angebote für Männer.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q21_10" value="richtig"></td>
+            <td><input type="radio" name="q21_10" value="falsch"></td>
+            <td>10. Mitglieder von Krankenkassen können die Hotels kostenlos besuchen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('21')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz22">
+    <h2>Herr Scherer</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q22_1" value="richtig"></td>
+          <td><input type="radio" name="q22_1" value="falsch"></td>
+          <td>1. Herr Scherer wird an seinem Arbeitsplatz interviewt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q22_2" value="richtig"></td>
+          <td><input type="radio" name="q22_2" value="falsch"></td>
+          <td>2. Herr Scherer probt jede Woche zweimal mit dem Kirchenchor.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q22_3" value="richtig"></td>
+          <td><input type="radio" name="q22_3" value="falsch"></td>
+          <td>3. Herr Scherer hat wechselnde Arbeitszeiten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q22_4" value="richtig"></td>
+          <td><input type="radio" name="q22_4" value="falsch"></td>
+          <td>4. Verspätungen gehen häufig auf das Konto undisziplinierter Fahrgäste.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q22_5" value="richtig"></td>
+          <td><input type="radio" name="q22_5" value="falsch"></td>
+          <td>5.  Herr Scherer und seine Kollegen verkaufen keine Fahrscheine mehr.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q22_6" value="richtig"></td>
+            <td><input type="radio" name="q22_6" value="falsch"></td>
+            <td>6. Alkoholisierte Fahrgäste verursachen zunehmend Probleme.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q22_7" value="richtig"></td>
+            <td><input type="radio" name="q22_7" value="falsch"></td>
+            <td>7. Die Verkehrsbetriebe haben ein eigenes Schwimmbad.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q22_8" value="richtig"></td>
+            <td><input type="radio" name="q22_8" value="falsch"></td>
+            <td>8. Herr Scherer hat bei der Bundeswehr eine Ausbildung zum Automechaniker gemacht.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q22_9" value="richtig"></td>
+            <td><input type="radio" name="q22_9" value="falsch"></td>
+            <td>9. Herr Scherer hat bei der Post 15 Jahre in Nachtschicht gearbeitet.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q22_10" value="richtig"></td>
+            <td><input type="radio" name="q22_10" value="falsch"></td>
+            <td>10. Die Klimatisierung der Busse ist bei hohen Temperaturen nicht ausreichend.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('22')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz23">
+    <h2>beim wettkampf</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q23_1" value="richtig"></td>
+          <td><input type="radio" name="q23_1" value="falsch"></td>
+          <td>1. Beim Wettkampf auf Sylt gibt es mehr Zuschauer als bei anderen Surf-Wettkämpfen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q23_2" value="richtig"></td>
+          <td><input type="radio" name="q23_2" value="falsch"></td>
+          <td>2. Die Wind-Bedingungen sind auf Sylt sehr unberechenbar.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q23_3" value="richtig"></td>
+          <td><input type="radio" name="q23_3" value="falsch"></td>
+          <td>3. Herr Dunderbeck ist noch immer so fit wie früher.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q23_4" value="richtig"></td>
+          <td><input type="radio" name="q23_4" value="falsch"></td>
+          <td>4. Im Freestyle hat er schon starke Gegner, die viel jünger sind als er.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q23_5" value="richtig"></td>
+          <td><input type="radio" name="q23_5" value="falsch"></td>
+          <td>5.  Beim Slalom muss er auch mit starken Gegnern rechnen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q23_6" value="richtig"></td>
+            <td><input type="radio" name="q23_6" value="falsch"></td>
+            <td>6. Sein Hobby ist, solche Strände zu suchen, wo sich im Windsurfen noch niemand ausprobiert hat.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q23_7" value="richtig"></td>
+            <td><input type="radio" name="q23_7" value="falsch"></td>
+            <td>7. Er hat ständig Angst vor den Haien.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q23_8" value="richtig"></td>
+            <td><input type="radio" name="q23_8" value="falsch"></td>
+            <td>8. Seine Kinder haben noch ein bisschen Angst vor dem Wasser, obwohl er sie schon aufs Brett gesetzt hatte.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q23_9" value="richtig"></td>
+            <td><input type="radio" name="q23_9" value="falsch"></td>
+            <td>9. Falls er auf Sylt siegen würde, würde er dies zuerst gerne mit seinen Freunden feiern.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q23_10" value="richtig"></td>
+            <td><input type="radio" name="q23_10" value="falsch"></td>
+            <td>10. Er hat zwei Kinder und sie gehen mit ihm auf Reisen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('23')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz24">
+    <h2>Vanessa</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q24_1" value="richtig"></td>
+          <td><input type="radio" name="q24_1" value="falsch"></td>
+          <td>1. Vanessa versucht, so viele Orte wie möglich zu besuchen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q24_2" value="richtig"></td>
+          <td><input type="radio" name="q24_2" value="falsch"></td>
+          <td>2. Mit den Arbeitsbedingungen in der Werbeagentur war Vanessa unzufrieden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q24_3" value="richtig"></td>
+          <td><input type="radio" name="q24_3" value="falsch"></td>
+          <td>3. Wenn Vanessa unter Menschen ist. Schadet das manchmal ihrer Konzentration.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q24_4" value="richtig"></td>
+          <td><input type="radio" name="q24_4" value="falsch"></td>
+          <td>4. Die sicherheit, die eine feste Stelle bietet, bedeutet Vanessa nicht viel.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q24_5" value="richtig"></td>
+          <td><input type="radio" name="q24_5" value="falsch"></td>
+          <td>5. Vanessa ist sich sicher, dass sie nie mehr als Angestellte arbeiten möchte.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q24_6" value="richtig"></td>
+            <td><input type="radio" name="q24_6" value="falsch"></td>
+            <td>6. Dass sie immer wieder neue Auftraggeber suchen muss, hat für Vanessa auch Vorteile.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q24_7" value="richtig"></td>
+            <td><input type="radio" name="q24_7" value="falsch"></td>
+            <td>7. Vanessa Eltern würden auch gerne öfter verreisen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q24_8" value="richtig"></td>
+            <td><input type="radio" name="q24_8" value="falsch"></td>
+            <td>8. Es fiel Vanessa leicht, sich von persönlichen Gegenständen zu trennen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q24_9" value="richtig"></td>
+            <td><input type="radio" name="q24_9" value="falsch"></td>
+            <td>9. Vanessa glaubt, dass man in Zukunft in mehr Berufen ortsunabhängig arbeiten kann.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q24_10" value="richtig"></td>
+            <td><input type="radio" name="q24_10" value="falsch"></td>
+            <td>10. Auch wer ortsunabhängig arbeitet, sollte nicht zu oft den Ort wechseln.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('24')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz25">
+    <h2>Zu BeGinn</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q25_1" value="richtig"></td>
+          <td><input type="radio" name="q25_1" value="falsch"></td>
+          <td>1. Zu Beginn der Sendung hatte der Reporter ein exklusives Frühstücksrezept erwartet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q25_2" value="richtig"></td>
+          <td><input type="radio" name="q25_2" value="falsch"></td>
+          <td>2. Ole hat sich vor 17 Jahren selbstständig gemacht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q25_3" value="richtig"></td>
+          <td><input type="radio" name="q25_3" value="falsch"></td>
+          <td>3. Davor hatte er eine Lehre als Koch absolviert.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q25_4" value="richtig"></td>
+          <td><input type="radio" name="q25_4" value="falsch"></td>
+          <td>4. Er bevorzugt Gerichte ohne Fleisch.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q25_5" value="richtig"></td>
+          <td><input type="radio" name="q25_5" value="falsch"></td>
+          <td>5. Ole sieht wie ein Punker aus.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q25_6" value="richtig"></td>
+            <td><input type="radio" name="q25_6" value="falsch"></td>
+            <td>6. Er kocht für Musiker, die auf Tournee sind.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q25_7" value="richtig"></td>
+            <td><input type="radio" name="q25_7" value="falsch"></td>
+            <td>7. Zuletzt hat er für die Band Die Prinzen" gekocht.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q25_8" value="richtig"></td>
+            <td><input type="radio" name="q25_8" value="falsch"></td>
+            <td>8. Ole nimmt eine komplette Kücheneinrichtung mit auf Tournee.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q25_9" value="richtig"></td>
+            <td><input type="radio" name="q25_9" value="falsch"></td>
+            <td>9. Er macht sich über den Sender lustig, weil der Reporter bei englischen Wörtern nachfragt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q25_10" value="richtig"></td>
+            <td><input type="radio" name="q25_10" value="falsch"></td>
+            <td>10. Die Musiker müssen immer essen, was auf den Tisch kommt.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('25')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz26">
+    <h2>Die TU Dresden</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q26_1" value="richtig"></td>
+          <td><input type="radio" name="q26_1" value="falsch"></td>
+          <td>1. Die TU Dresden ist eine kleine Universität.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q26_2" value="richtig"></td>
+          <td><input type="radio" name="q26_2" value="falsch"></td>
+          <td>2. An der TU Dresden kann man nur technische Fächer studieren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q26_3" value="richtig"></td>
+          <td><input type="radio" name="q26_3" value="falsch"></td>
+          <td>3. Ältere Studierende kümmern sich um neue Studierende.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q26_4" value="richtig"></td>
+          <td><input type="radio" name="q26_4" value="falsch"></td>
+          <td>4. Man erreicht die Neustadt nicht mit öffentlichen Verkehrsmitteln.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q26_5" value="richtig"></td>
+          <td><input type="radio" name="q26_5" value="falsch"></td>
+          <td>5. Jens ist nicht sicher, ob er nach dem Studium einen interessanten Job bekommt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q26_6" value="richtig"></td>
+            <td><input type="radio" name="q26_6" value="falsch"></td>
+            <td>6. Studienanfänger können noch zwischen Bachelor und Diplom wählen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q26_7" value="richtig"></td>
+            <td><input type="radio" name="q26_7" value="falsch"></td>
+            <td>7. Mit dem Semesterticket dürfen Studierende öffentliche Verkehrsmittel in Dresden nutzen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q26_8" value="richtig"></td>
+            <td><input type="radio" name="q26_8" value="falsch"></td>
+            <td>8. Für Studienanfänger gibt es die Möglichkeit, bestimmte Grundkenntnisse aufzufrischen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q26_9" value="richtig"></td>
+            <td><input type="radio" name="q26_9" value="falsch"></td>
+            <td>9. Im Studium gibt es keine Gruppenarbeit.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q26_10" value="richtig"></td>
+            <td><input type="radio" name="q26_10" value="falsch"></td>
+            <td>10. An der TU Dresden kann man auch außergewöhnliche Sportarten treiben.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('26')">Antworten prüfen</button>
+    </form>
+  </div>
+  <div class="quiz-container" id="quiz27">
+    <h2>Lisa Eisenberg</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q27_1" value="richtig"></td>
+          <td><input type="radio" name="q27_1" value="falsch"></td>
+          <td>1. Lisa Eisenberg war aus beruflichen Gründen in den USA.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q27_2" value="richtig"></td>
+          <td><input type="radio" name="q27_2" value="falsch"></td>
+          <td>2. Während einer Reise entschied sich Lisa Eisenberg für einen beruflichen Neuanfang.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q27_3" value="richtig"></td>
+          <td><input type="radio" name="q27_3" value="falsch"></td>
+          <td>3. Lisa Eisenbergs Geschäftsidee stieß in ihrem Bekanntenkreis auf Skepsis.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q27_4" value="richtig"></td>
+          <td><input type="radio" name="q27_4" value="falsch"></td>
+          <td>4. Lisa Eisenberg hat sich auf regionale Speisen spezialisiert.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q27_5" value="richtig"></td>
+          <td><input type="radio" name="q27_5" value="falsch"></td>
+          <td>5. In der Mittagszeit erzielt Lisa Eisenberg den Großteil ihres Umsatzes.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q27_6" value="richtig"></td>
+            <td><input type="radio" name="q27_6" value="falsch"></td>
+            <td>6. Lisa Eisenberg muss nicht mehr aktiv nach Kunden suchen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q27_7" value="richtig"></td>
+            <td><input type="radio" name="q27_7" value="falsch"></td>
+            <td>7. Lisa Eisenberg bietet für Firmen täglich auch abends Gerichte an.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q27_8" value="richtig"></td>
+            <td><input type="radio" name="q27_8" value="falsch"></td>
+            <td>8. Es war für Lisa Eisenberg leicht, ein geeignetes Fahrzeug zu finden.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q27_9" value="richtig"></td>
+            <td><input type="radio" name="q27_9" value="falsch"></td>
+            <td>9. Lisa Eisenberg hat als Studentin nebenbei in der Gastronomie gearbeitet.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q27_10" value="richtig"></td>
+            <td><input type="radio" name="q27_10" value="falsch"></td>
+            <td>10. In den nächsten Monaten wird Lisa Eisenberg einen zweiten Wagen kaufen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('27')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz28">
+    <h2>Mirjam Pressier</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q28_1" value="richtig"></td>
+          <td><input type="radio" name="q28_1" value="falsch"></td>
+          <td>1. Mirjam Pressier freut sich, in Kürze die Doktorwürde der Universität Groningen zu erhalten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q28_2" value="richtig"></td>
+          <td><input type="radio" name="q28_2" value="falsch"></td>
+          <td>2. Sie arbeitet auch als Übersetzerin.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q28_3" value="richtig"></td>
+          <td><input type="radio" name="q28_3" value="falsch"></td>
+          <td>3. Sie hat als Erste Anne Frank ins Deutsche übersetzt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q28_4" value="richtig"></td>
+          <td><input type="radio" name="q28_4" value="falsch"></td>
+          <td>4. Sie macht jedes Jahr Urlaub in einem Ferienhaus bei Venedig.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q28_5" value="richtig"></td>
+          <td><input type="radio" name="q28_5" value="falsch"></td>
+          <td>5. Wenn Sie an ihre Kindheit denkt, denkt sie an den Krieg.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q28_6" value="richtig"></td>
+            <td><input type="radio" name="q28_6" value="falsch"></td>
+            <td>6. Der Kontakt zu ihren Pflegeeltern war sehr gut.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q28_7" value="richtig"></td>
+            <td><input type="radio" name="q28_7" value="falsch"></td>
+            <td>7. Ihre Werke haben oft biographische Züge.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q28_8" value="richtig"></td>
+            <td><input type="radio" name="q28_8" value="falsch"></td>
+            <td>8. Ihre erste Lektüre war ein Roman, der in Petersburg spielt./td&gt;
+        </td></tr>
+        <tr>
+            <td><input type="radio" name="q28_9" value="richtig"></td>
+            <td><input type="radio" name="q28_9" value="falsch"></td>
+            <td>9. Als Kind las sie immer im Keller des Hauses.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q28_10" value="richtig"></td>
+            <td><input type="radio" name="q28_10" value="falsch"></td>
+            <td>10. Ihre Pflegemutter wollte nicht, dass sie Tagebuch schreibt.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('28')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz29">
+    <h2>Mirjam Pressier</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q29_1" value="richtig"></td>
+          <td><input type="radio" name="q29_1" value="falsch"></td>
+          <td>1. Mirjam Pressier freut sich, in Kürze die Doktorwürde der Universität Groningen zu erhalten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q29_2" value="richtig"></td>
+          <td><input type="radio" name="q29_2" value="falsch"></td>
+          <td>2. Sie arbeitet auch als Übersetzerin.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q29_3" value="richtig"></td>
+          <td><input type="radio" name="q29_3" value="falsch"></td>
+          <td>3. Sie hat über Anne Frank gearbeitet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q29_4" value="richtig"></td>
+          <td><input type="radio" name="q29_4" value="falsch"></td>
+          <td>4. Sie macht jedes Jahr Urlaub in einem Ferienhaus bei Venedig.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q29_5" value="richtig"></td>
+          <td><input type="radio" name="q29_5" value="falsch"></td>
+          <td>5. Wenn Sie an ihre Kindheit denkt, denkt sie an den Krieg.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q29_6" value="richtig"></td>
+            <td><input type="radio" name="q29_6" value="falsch"></td>
+            <td>6. Der Kontakt zu ihren Pflegeeltern war sehr gut.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q29_7" value="richtig"></td>
+            <td><input type="radio" name="q29_7" value="falsch"></td>
+            <td>7. Ihre Werke haben oft biographische Züge.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q29_8" value="richtig"></td>
+            <td><input type="radio" name="q29_8" value="falsch"></td>
+            <td>8. Ihre erste Lektüre war ein Roman, der in Petersburg spielt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q29_9" value="richtig"></td>
+            <td><input type="radio" name="q29_9" value="falsch"></td>
+            <td>9. Als Kind las sie immer im Keller des Hauses.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q29_10" value="richtig"></td>
+            <td><input type="radio" name="q29_10" value="falsch"></td>
+            <td>10. Ihre Pflegemutter wollte nicht, dass sie Tagebuch schreibt.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('29')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz42">
+    <h2>Franz Schumacher</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q42_1" value="richtig"></td>
+          <td><input type="radio" name="q42_1" value="falsch"></td>
+          <td>1. Franz Schumacher handelt nicht nur mit Produkten aus eigenem Anbau.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q42_2" value="richtig"></td>
+          <td><input type="radio" name="q42_2" value="falsch"></td>
+          <td>2. Herr Schumacher lässt sich auch von anderen Bauern Produkte liefern.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q42_3" value="richtig"></td>
+          <td><input type="radio" name="q42_3" value="falsch"></td>
+          <td>3. Auf dem Markt sind schon viele Besucher unterwegs.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q42_4" value="richtig"></td>
+          <td><input type="radio" name="q42_4" value="falsch"></td>
+          <td>4. Die große Mehrheit der Kunden von Herrn Schumacher sind Stammkunden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q42_5" value="richtig"></td>
+          <td><input type="radio" name="q42_5" value="falsch"></td>
+          <td>5. Herr Schumacher ist auf die Pfälzer Kartoffeln besonders stolz.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q42_6" value="richtig"></td>
+            <td><input type="radio" name="q42_6" value="falsch"></td>
+            <td>6. Franz Schumacher hat keine hohe Meinung vom „Fachhändlerverein vom Rathausplatz".</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q42_7" value="richtig"></td>
+            <td><input type="radio" name="q42_7" value="falsch"></td>
+            <td>7. Herr Schumacher kommt morgens sehr früh auf den Markt, um sich einen guten Platz für seinen Stand zu sichern.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q42_8" value="richtig"></td>
+            <td><input type="radio" name="q42_8" value="falsch"></td>
+            <td>8. Herr Schumacher hat seit über 20 Jahren einen Stand auf dem Landauer Markt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q42_9" value="richtig"></td>
+            <td><input type="radio" name="q42_9" value="falsch"></td>
+            <td>9. Herr Schumacher trägt eine Mütze, um sich vor Kälte zu schützen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q42_10" value="richtig"></td>
+            <td><input type="radio" name="q42_10" value="falsch"></td>
+            <td>10. Herr Schumacher möchte in Zukunft einen Verkaufsstand in einer Markthalle eröffnen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('42')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz30">
+    <h2>Frau Pesina</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q30_1" value="richtig"></td>
+          <td><input type="radio" name="q30_1" value="falsch"></td>
+          <td>1. Frau Pesina die Chefin des Kosmos Kinos.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q30_2" value="richtig"></td>
+          <td><input type="radio" name="q30_2" value="falsch"></td>
+          <td>2. Von Hanau nach Frankfurt braucht man weniger als eine halbe Stunde.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q30_3" value="richtig"></td>
+          <td><input type="radio" name="q30_3" value="falsch"></td>
+          <td>3. Die Gründung des Kinos vor 100 Jahren war eher ein Zufall.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q30_4" value="richtig"></td>
+          <td><input type="radio" name="q30_4" value="falsch"></td>
+          <td>4. Der Großonkel baute sofort einen separaten Kinosaal.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q30_5" value="richtig"></td>
+          <td><input type="radio" name="q30_5" value="falsch"></td>
+          <td>5. Nach ihrem Großonkel leitete gleich Frau Pesina das Kino.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q30_6" value="richtig"></td>
+            <td><input type="radio" name="q30_6" value="falsch"></td>
+            <td>6. Manchmal denkt sie, es wäre besser gewesen, die sichere Stelle bei der Bank zu behalten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q30_7" value="richtig"></td>
+            <td><input type="radio" name="q30_7" value="falsch"></td>
+            <td>7. In dem Kino gibt es heute außer der Schwägerin und den beiden auch noch weitere Mitarbeiter.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q30_8" value="richtig"></td>
+            <td><input type="radio" name="q30_8" value="falsch"></td>
+            <td>8. Der Arbeitsalltag im Kino läuft immer völlig reibungslos ab.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q30_9" value="richtig"></td>
+            <td><input type="radio" name="q30_9" value="falsch"></td>
+            <td>9. Frau Pesina entscheidet immer allein, was im Kino läuft.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q30_10" value="richtig"></td>
+            <td><input type="radio" name="q30_10" value="falsch"></td>
+            <td>10. Manchmal gibt es in dem Kino ein spezielles Programm für Frauen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('30')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz31">
+    <h2>Wohnmobile</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q31_1" value="richtig"></td>
+          <td><input type="radio" name="q31_1" value="falsch"></td>
+          <td>1. Der Hauptpreis des Gewinnspiels ist ein rund vierwöchiger Urlaub in Spanien.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q31_2" value="richtig"></td>
+          <td><input type="radio" name="q31_2" value="falsch"></td>
+          <td>2. Sie können in der Sendung auch schöne Bildbände über verschiedene Länder gewinnen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q31_3" value="richtig"></td>
+          <td><input type="radio" name="q31_3" value="falsch"></td>
+          <td>3. Thomas Schilp vertritt einen großen Wohnmobilhändler.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q31_4" value="richtig"></td>
+          <td><input type="radio" name="q31_4" value="falsch"></td>
+          <td>4. Für das Wohnmobil Camper 500F benötigt man einen Zusatzführerschein.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q31_5" value="richtig"></td>
+          <td><input type="radio" name="q31_5" value="falsch"></td>
+          <td>5. Wohnmobile für Reisen in Europa sollte man erst am Urlaubsort mieten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q31_6" value="richtig"></td>
+            <td><input type="radio" name="q31_6" value="falsch"></td>
+            <td>6. Reisende mit Wohnmobilen schätzen ihre Unabhängigkeit.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q31_7" value="richtig"></td>
+            <td><input type="radio" name="q31_7" value="falsch"></td>
+            <td>7. Auf Luxus muss man im Wohnwagen auch heute nicht verzichten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q31_8" value="richtig"></td>
+            <td><input type="radio" name="q31_8" value="falsch"></td>
+            <td>8. Wer den Urlaub mit dem Wohnmobil erst einmal ausprobieren will, sollte ein gebrauchtes Fahrzeug kaufen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q31_9" value="richtig"></td>
+            <td><input type="radio" name="q31_9" value="falsch"></td>
+            <td>9. Deutsche zahlen für ein Wohnmobil durchschnittlich 200.000 Euro.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q31_10" value="richtig"></td>
+            <td><input type="radio" name="q31_10" value="falsch"></td>
+            <td>10. Der Mietpreis für ein Wohnmobil hängt von der Jahreszeit ab.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('31')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz32">
+    <h2>Straßenkinder</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q32_1" value="richtig"></td>
+          <td><input type="radio" name="q32_1" value="falsch"></td>
+          <td>1. Frau Edler arbeitete früher für die Verkehrsbetriebe Leipzig.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q32_2" value="richtig"></td>
+          <td><input type="radio" name="q32_2" value="falsch"></td>
+          <td>2. Zum ersten Mal wurde sie in Frankfurt mit dem Problem der Straßenkinder konfrontiert.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q32_3" value="richtig"></td>
+          <td><input type="radio" name="q32_3" value="falsch"></td>
+          <td>3. Zu Anfang kümmerte sie sich um obdachlose Erwachsene.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q32_4" value="richtig"></td>
+          <td><input type="radio" name="q32_4" value="falsch"></td>
+          <td>4. Sie hat den Straßenkindern immer Geld gegeben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q32_5" value="richtig"></td>
+          <td><input type="radio" name="q32_5" value="falsch"></td>
+          <td>5. Die Kinder (Kids) wollten, nach Meinung von Frau Edler, Zigaretten kaufen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q32_6" value="richtig"></td>
+            <td><input type="radio" name="q32_6" value="falsch"></td>
+            <td>6. Sie hat mit den Kindern in leerstehenden Häusern übernachtet.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q32_7" value="richtig"></td>
+            <td><input type="radio" name="q32_7" value="falsch"></td>
+            <td>7. Die Kolleginnen hatten anfangs kein Verständnis für ihr Engagement.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q32_8" value="richtig"></td>
+            <td><input type="radio" name="q32_8" value="falsch"></td>
+            <td>8. Die Zahl der Kinder, die an den Weihnachtsfeiern teilnehmen, ist seit 1990 stark gesunken.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q32_9" value="richtig"></td>
+            <td><input type="radio" name="q32_9" value="falsch"></td>
+            <td>9. Sie sammelt noch heute bei den früheren Kollegen Geld für die Straßenkinder.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q32_10" value="richtig"></td>
+            <td><input type="radio" name="q32_10" value="falsch"></td>
+            <td>10. Mit einer Büchse herumzulaufen, ist ihr manchmal peinlich.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('32')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz33">
+    <h2>Straßenkinder</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q33_1" value="richtig"></td>
+          <td><input type="radio" name="q33_1" value="falsch"></td>
+          <td>1. Fast 11500 Kinder leben nicht bei ihren leiblichen Eltern.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q33_2" value="richtig"></td>
+          <td><input type="radio" name="q33_2" value="falsch"></td>
+          <td>2. Früher wurden Fälle von Gewalt in der Familie oft nicht bekannt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q33_3" value="richtig"></td>
+          <td><input type="radio" name="q33_3" value="falsch"></td>
+          <td>3. Kinder werden nicht sofort von ihren Familien getrennt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q33_4" value="richtig"></td>
+          <td><input type="radio" name="q33_4" value="falsch"></td>
+          <td>4. Materielle Unterstützung wie Elektrogeräte kann keine Hilfe sein.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q33_5" value="richtig"></td>
+          <td><input type="radio" name="q33_5" value="falsch"></td>
+          <td>5. Die Nachmittagsbetreuung für die ältesten Kinder ist kostenlos.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q33_6" value="richtig"></td>
+            <td><input type="radio" name="q33_6" value="falsch"></td>
+            <td>6. In Skandinavien gibt es eine bessere Familienvorsorge.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q33_7" value="richtig"></td>
+            <td><input type="radio" name="q33_7" value="falsch"></td>
+            <td>7. Früher lernte man Erziehung an Modellsituationen in der Großfamilie.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q33_8" value="richtig"></td>
+            <td><input type="radio" name="q33_8" value="falsch"></td>
+            <td>8. Der Kontakt zwischen Kindern und leiblichen Eltern wird möglichst erhalten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q33_9" value="richtig"></td>
+            <td><input type="radio" name="q33_9" value="falsch"></td>
+            <td>9. Es gibt spezielle WGs für Jugendliche, die nicht bei ihren Eltern leben.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q33_10" value="richtig"></td>
+            <td><input type="radio" name="q33_10" value="falsch"></td>
+            <td>10. Herr Blaschitz bittet die Hörer um Unterstützung.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('33')">Antworten prüfen</button>
+    </form>
+  </div>
+
+    <div class="quiz-container" id="quiz34">
+    <h2>Revolution Day</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q34_1" value="richtig"></td>
+          <td><input type="radio" name="q34_1" value="falsch"></td>
+          <td>1. Am 24. April ist der Fashion Revolution Day.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q34_2" value="richtig"></td>
+          <td><input type="radio" name="q34_2" value="falsch"></td>
+          <td>2. Der Anlass für den Fashion Revolution Day ist der Einsturz des Fabrikgebäudes in Bangladesch.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q34_3" value="richtig"></td>
+          <td><input type="radio" name="q34_3" value="falsch"></td>
+          <td>3. Nur wenige Menschen wurden beim Einsturz schwer verletzt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q34_4" value="richtig"></td>
+          <td><input type="radio" name="q34_4" value="falsch"></td>
+          <td>4. An diesem Tag wird nur schwarze Kleidung getragen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q34_5" value="richtig"></td>
+          <td><input type="radio" name="q34_5" value="falsch"></td>
+          <td>5. Eine Näherin verdient dort ca. 20 Cent.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q34_6" value="richtig"></td>
+            <td><input type="radio" name="q34_6" value="falsch"></td>
+            <td>6. Die Clean Clothes Kampagne fordert bereits seit Jahren einen existenzsichernden Lohn.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q34_7" value="richtig"></td>
+            <td><input type="radio" name="q34_7" value="falsch"></td>
+            <td>7. Faire Mode ist im Geschäft teurer, weil größere Serien produziert werden.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q34_8" value="richtig"></td>
+            <td><input type="radio" name="q34_8" value="falsch"></td>
+            <td>8. Eine andere Attraktion ist das Filmscreening des Films Traceable.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q34_9" value="richtig"></td>
+            <td><input type="radio" name="q34_9" value="falsch"></td>
+            <td>9. Nach dem Film ist die Veranstaltung zu Ende.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q34_10" value="richtig"></td>
+            <td><input type="radio" name="q34_10" value="falsch"></td>
+            <td>10. Weitere Informationen können auf der Webseite traceable.org abgerufen werden.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('34')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz35">
+    <h2>Bicycle</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q35_1" value="richtig"></td>
+          <td><input type="radio" name="q35_1" value="falsch"></td>
+          <td>1. Das ist ein Interview mit dem Restaurant "Bicycle".</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q35_2" value="richtig"></td>
+          <td><input type="radio" name="q35_2" value="falsch"></td>
+          <td>2. Gert Kronheimer ist der alleinige Gründer von Bicycle.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q35_3" value="richtig"></td>
+          <td><input type="radio" name="q35_3" value="falsch"></td>
+          <td>3. Bicycle bietet Arbeitsplätze für junge Leute, die schon länger arbeitslos sind.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q35_4" value="richtig"></td>
+          <td><input type="radio" name="q35_4" value="falsch"></td>
+          <td>4. Bicycle gibt es schon seit 1926.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q35_5" value="richtig"></td>
+          <td><input type="radio" name="q35_5" value="falsch"></td>
+          <td>5. Anlass für die Gründung von Bicycle war die steigende Arbeitslosigkeit Anfang der 80er Jahre.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q35_6" value="richtig"></td>
+            <td><input type="radio" name="q35_6" value="falsch"></td>
+            <td>6. Gert Kronheimer findet, dass das Fahrrad für junge Leute interessant ist.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q35_7" value="richtig"></td>
+            <td><input type="radio" name="q35_7" value="falsch"></td>
+            <td>7. Das Fahrrad ist heute leider sehr unpopulär geworden.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q35_8" value="richtig"></td>
+            <td><input type="radio" name="q35_8" value="falsch"></td>
+            <td>8. Bei Bicycle kann man nur Vollzeit arbeiten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q35_9" value="richtig"></td>
+            <td><input type="radio" name="q35_9" value="falsch"></td>
+            <td>9. Bei Bicycle werden im Jahr ungefähr 10000 Fahrräder repariert.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q35_10" value="richtig"></td>
+            <td><input type="radio" name="q35_10" value="falsch"></td>
+            <td>10. Sibylle Hartung ist nur eine Assistentin und keine Expertin für technische Fragen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('35')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz36">
+    <h2>Radiosendung</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q36_1" value="richtig"></td>
+          <td><input type="radio" name="q36_1" value="falsch"></td>
+          <td>1. Die Radiosendung stellt wöchentlich Leute aus ganz Deutschland vor.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q36_2" value="richtig"></td>
+          <td><input type="radio" name="q36_2" value="falsch"></td>
+          <td>2. Eva Küpper läuft im Training wenigstens einmal pro Woche auch über die Marathondistanz.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q36_3" value="richtig"></td>
+          <td><input type="radio" name="q36_3" value="falsch"></td>
+          <td>3. Ihren Job als Bankangestellte würde Eva Küpper gerne kündigen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q36_4" value="richtig"></td>
+          <td><input type="radio" name="q36_4" value="falsch"></td>
+          <td>4. Nach der Ausbildung hat Eva Küpper ihren Lebensstil radikal verändert.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q36_5" value="richtig"></td>
+          <td><input type="radio" name="q36_5" value="falsch"></td>
+          <td>5. Eva Küpper kommt ursprünglich aus München.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q36_6" value="richtig"></td>
+            <td><input type="radio" name="q36_6" value="falsch"></td>
+            <td>6. Eva Küpper gefallen Dauerläufe in der Stadt genauso gut wie in den Bergen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q36_7" value="richtig"></td>
+            <td><input type="radio" name="q36_7" value="falsch"></td>
+            <td>7. Während eines Ultramarathons wechselt Eva Küpper die Laufschuhe dreimal.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q36_8" value="richtig"></td>
+            <td><input type="radio" name="q36_8" value="falsch"></td>
+            <td>8. Die spezielle Uhr ist für Eva Küpper nicht nur im Training, sondern auch im Wettkampf wichtig.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q36_9" value="richtig"></td>
+            <td><input type="radio" name="q36_9" value="falsch"></td>
+            <td>9. Solange der Körper gesund ist, will Eva Küpper weiterhin Ultramarathons laufen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q36_10" value="richtig"></td>
+            <td><input type="radio" name="q36_10" value="falsch"></td>
+            <td>10. Nach dem Berlin Marathon kann Eva Küpper dem Lauf-Club offiziell beitreten.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('36')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz37">
+    <h2>psychische</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q37_1" value="richtig"></td>
+          <td><input type="radio" name="q37_1" value="falsch"></td>
+          <td>1. Weniger als zehn Prozent der Fehltage am Arbeitsplatz sind auf psychische Erkrankungen zurückzuführen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q37_2" value="richtig"></td>
+          <td><input type="radio" name="q37_2" value="falsch"></td>
+          <td>2. Betroffene Arbeitnehmer sprechen relativ offen über ihre psychischen Probleme.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q37_3" value="richtig"></td>
+          <td><input type="radio" name="q37_3" value="falsch"></td>
+          <td>3. Auch Arbeitslosigkeit ist ein Risikofaktor für psychische Probleme.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q37_4" value="richtig"></td>
+          <td><input type="radio" name="q37_4" value="falsch"></td>
+          <td>4. Schlechte Stimmung am Arbeitsplatz ist die Hauptursache für psychische Erkrankungen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q37_5" value="richtig"></td>
+          <td><input type="radio" name="q37_5" value="falsch"></td>
+          <td>5. Menschen, die zu wenig zu tun haben, versuchen, das nicht zu zeigen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q37_6" value="richtig"></td>
+            <td><input type="radio" name="q37_6" value="falsch"></td>
+            <td>6. Menschen, die am Arbeitsplatz wenig zu tun haben, sind besonders zufrieden.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q37_7" value="richtig"></td>
+            <td><input type="radio" name="q37_7" value="falsch"></td>
+            <td>7. Internet und Smartphone können einen Einfluss auf die Psyche haben.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q37_8" value="richtig"></td>
+            <td><input type="radio" name="q37_8" value="falsch"></td>
+            <td>8. Wem seine Arbeit Spaß macht, der kann eher mehr leisten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q37_9" value="richtig"></td>
+            <td><input type="radio" name="q37_9" value="falsch"></td>
+            <td>9. Bei Managern ist das Risiko für psychische Erkrankungen unter allen Berufsgruppen am höchsten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q37_10" value="richtig"></td>
+            <td><input type="radio" name="q37_10" value="falsch"></td>
+            <td>10. Für die psychische Gesundheit ist es besser, arbeitslos zu sein, als eine nur durchschnittlich interessante Arbeit zu finden.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('37')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz38">
+    <h2>Herr Kemper</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q38_1" value="richtig"></td>
+          <td><input type="radio" name="q38_1" value="falsch"></td>
+          <td>1. Herr Kemper arbeitet aus Dankbarkeit für die Hilfe, die er früher bekommen hat, ehrenamtlich.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q38_2" value="richtig"></td>
+          <td><input type="radio" name="q38_2" value="falsch"></td>
+          <td>2. Der Tierschutz hat für Herrn Kemper oberste Priorität.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q38_3" value="richtig"></td>
+          <td><input type="radio" name="q38_3" value="falsch"></td>
+          <td>3. Herr Kemper hat zuerst handwerkliche Arbeiten im Tierheim gemacht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q38_4" value="richtig"></td>
+          <td><input type="radio" name="q38_4" value="falsch"></td>
+          <td>4. Herr Kemper hat es abgelehnt, Reinigungsarbeiten zu übernehmen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q38_5" value="richtig"></td>
+          <td><input type="radio" name="q38_5" value="falsch"></td>
+          <td>5. Alle Helferinnen und Helfer arbeiten mehrmals in der Woche im Tierheim.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q38_6" value="richtig"></td>
+            <td><input type="radio" name="q38_6" value="falsch"></td>
+            <td>6. Greta hat angefangen, ehrenamtlich zu arbeiten, weil sie zu Hause Langeweile hatte.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q38_7" value="richtig"></td>
+            <td><input type="radio" name="q38_7" value="falsch"></td>
+            <td>7. Herr Kemper hat einer jungen Frau geholfen, ihren beruflichen Weg zu finden.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q38_8" value="richtig"></td>
+            <td><input type="radio" name="q38_8" value="falsch"></td>
+            <td>8. Herr Kemper findet. dass sich jeder Mensch ehrenamtlich engagieren sollte.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q38_9" value="richtig"></td>
+            <td><input type="radio" name="q38_9" value="falsch"></td>
+            <td>9. Herr Kemper hat auch Verständnis für Menschen, die sich nicht ehrenamtlich engagieren.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q38_10" value="richtig"></td>
+            <td><input type="radio" name="q38_10" value="falsch"></td>
+            <td>10. Herr Kemper wohnt in einem Haus, in dem Tierhaltung verboten ist.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('38')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz39">
+    <h2>Meron Makeba</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q39_1" value="richtig"></td>
+          <td><input type="radio" name="q39_1" value="falsch"></td>
+          <td>1. Meron Makeba hat schon in Ghana Leichtathletik gemacht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q39_2" value="richtig"></td>
+          <td><input type="radio" name="q39_2" value="falsch"></td>
+          <td>2. Frau Makeba ist mit ihrem Ergebnis bei der WM sehr zufrieden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q39_3" value="richtig"></td>
+          <td><input type="radio" name="q39_3" value="falsch"></td>
+          <td>3. Frau Makeba hat im vergangenen Jahr ihre Eltern in Ghana besucht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q39_4" value="richtig"></td>
+          <td><input type="radio" name="q39_4" value="falsch"></td>
+          <td>4. Das Publikum hat bei der WM die Sportler aller Nationen unterstützt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q39_5" value="richtig"></td>
+          <td><input type="radio" name="q39_5" value="falsch"></td>
+          <td>5. Frau Makeba trifft selten andere Sportler aus Ghana.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q39_6" value="richtig"></td>
+            <td><input type="radio" name="q39_6" value="falsch"></td>
+            <td>6. Für Frau Makeba ist Ghana noch immer ihre Heimat.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q39_7" value="richtig"></td>
+            <td><input type="radio" name="q39_7" value="falsch"></td>
+            <td>7. Wegen ihres Migrationshintergrundes hatte Frau Makeba keine Schwierigkeiten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q39_8" value="richtig"></td>
+            <td><input type="radio" name="q39_8" value="falsch"></td>
+            <td>8. Anfangs war Frau Makeba in ihrem Verein die einzige Migrantin.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q39_9" value="richtig"></td>
+            <td><input type="radio" name="q39_9" value="falsch"></td>
+            <td>9. Frau Makeba glaubt nicht, dass man aufgrund der Herkunft in bestimmten Sportarten bevorzugt wird.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q39_10" value="richtig"></td>
+            <td><input type="radio" name="q39_10" value="falsch"></td>
+            <td>10. Frau Makebas Erfahrungen im privaten Bereich unterscheiden sich stark von denen im Sport.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('39')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz40">
+    <h2>Thomas</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q40_1" value="richtig"></td>
+          <td><input type="radio" name="q40_1" value="falsch"></td>
+          <td>1. Nach seinem Studium hat Thomas Hirschbaum zuerst im IT-Bereich gearbeitet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q40_2" value="richtig"></td>
+          <td><input type="radio" name="q40_2" value="falsch"></td>
+          <td>2. Er hat den Managementbereich in seiner Firma gegründet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q40_3" value="richtig"></td>
+          <td><input type="radio" name="q40_3" value="falsch"></td>
+          <td>3. Es hat ihm gefallen, Verantwortung für sein 50-köpfiges Team zu haben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q40_4" value="richtig"></td>
+          <td><input type="radio" name="q40_4" value="falsch"></td>
+          <td>4. Seine Eltern haben erwartet, dass er einmal mehr Geld verdient als sie.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q40_5" value="richtig"></td>
+          <td><input type="radio" name="q40_5" value="falsch"></td>
+          <td>5. Seit seinem Start ins Berufsleben hatte er keine Freizeit mehr.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q40_6" value="richtig"></td>
+            <td><input type="radio" name="q40_6" value="falsch"></td>
+            <td>6. Er hat sich oft nicht gut gefühlt, wenn er an seine Familie dachte.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q40_7" value="richtig"></td>
+            <td><input type="radio" name="q40_7" value="falsch"></td>
+            <td>7. Nach seinem 40. Geburtstag hatte er den Wunsch, mal einen Monat Urlaub zu machen.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q40_8" value="richtig"></td>
+            <td><input type="radio" name="q40_8" value="falsch"></td>
+            <td>8. Sein Chef war sofort mit dem Vorschlag einverstanden, die Arbeit anders zu organisieren.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q40_9" value="richtig"></td>
+            <td><input type="radio" name="q40_9" value="falsch"></td>
+            <td>9. Wie sein Kollege arbeitet Thomas Hirschbaum jetzt halbtags.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q40_10" value="richtig"></td>
+            <td><input type="radio" name="q40_10" value="falsch"></td>
+            <td>10. Trotzdem steht die Arbeit für ihn an oberster Stelle.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('40')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz41">
+    <h2>Stadtbibliothek</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q41_1" value="richtig"></td>
+          <td><input type="radio" name="q41_1" value="falsch"></td>
+          <td>1. Astrid Nowak hat ihr ganzes Berufsleben in der Stadtbibliothek verbracht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q41_2" value="richtig"></td>
+          <td><input type="radio" name="q41_2" value="falsch"></td>
+          <td>2. Die meisten Besucher/innen der Stadtbibliothek wollen Medien ausleihen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q41_3" value="richtig"></td>
+          <td><input type="radio" name="q41_3" value="falsch"></td>
+          <td>3. Viele halten sich gern in den attraktiven Räumen der Bibliothek auf.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q41_4" value="richtig"></td>
+          <td><input type="radio" name="q41_4" value="falsch"></td>
+          <td>4. Die Bibliothek bietet ihre Dienstleistungen seit Jahren auch sonntags</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q41_5" value="richtig"></td>
+          <td><input type="radio" name="q41_5" value="falsch"></td>
+          <td>5. Die vielfältigen Angebote der Bibliothek sind gratis nutzbar.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q41_6" value="richtig"></td>
+            <td><input type="radio" name="q41_6" value="falsch"></td>
+            <td>6. Ein Angebotsschwerpunkt sind Informationsmedien für jüngere Leute.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q41_7" value="richtig"></td>
+            <td><input type="radio" name="q41_7" value="falsch"></td>
+            <td>7. Man kann in der Bibliothek auch elektronische Geräte mieten.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q41_8" value="richtig"></td>
+            <td><input type="radio" name="q41_8" value="falsch"></td>
+            <td>8. Heute finden nur Kurse aus dem Bereich Medien und Technik statt.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q41_9" value="richtig"></td>
+            <td><input type="radio" name="q41_9" value="falsch"></td>
+            <td>9. Es gibt einen Raum, in dem man mit anderen zusammen modernen technischen Werkzeugen ausprobieren kann.</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="q41_10" value="richtig"></td>
+            <td><input type="radio" name="q41_10" value="falsch"></td>
+            <td>10. Die Bibliotheken in Deutschland werden genauso häufig genutzt wie Kinos oder Museen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('41')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+    <a href="../index2.html" style="text-decoration: none;">
+      <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+        Zurück zur Startseite
+      </div>
+  </a></div><a href="../index2.html" style="text-decoration: none;"> 
+
+  <script>
+    const correctAnswers = {
+      // Quiz 1
+      q1_1: "falsch",
+      q1_2: "falsch",
+      q1_3: "richtig",
+      q1_4: "richtig",
+      q1_5: "falsch",
+      q1_6: "falsch",
+      q1_7: "falsch",
+      q1_8: "richtig",
+      q1_9: "richtig",
+      q1_10: "richtig",
+
+      // Quiz 2
+      q2_1: "richtig",
+      q2_2: "falsch",
+      q2_3: "richtig",
+      q2_4: "richtig",
+      q2_5: "falsch",
+      q2_6: "falsch",
+      q2_7: "falsch",
+      q2_8: "richtig",
+      q2_9: "falsch",
+      q2_10: "falsch",
+
+      // Quiz 3
+      q3_1: "richtig",
+      q3_2: "falsch",
+      q3_3: "richtig",
+      q3_4: "richtig",
+      q3_5: "falsch",
+      q3_6: "falsch",
+      q3_7: "richtig",
+      q3_8: "richtig",
+      q3_9: "falsch",
+      q3_10: "falsch",
+
+      // Quiz 4
+      q4_1: "falsch",
+      q4_2: "richtig",
+      q4_3: "falsch",
+      q4_4: "falsch",
+      q4_5: "falsch",
+      q4_6: "falsch",
+      q4_7: "falsch",
+      q4_8: "falsch",
+      q4_9: "richtig",
+      q4_10: "richtig",
+
+      // Quiz 5
+      q5_1: "falsch",
+      q5_2: "richtig",
+      q5_3: "falsch",
+      q5_4: "falsch",
+      q5_5: "falsch",
+      q5_6: "falsch",
+      q5_7: "falsch",
+      q5_8: "falsch",
+      q5_9: "richtig",
+      q5_10: "richtig",
+
+      // Quiz 6
+      q6_1: "falsch",
+      q6_2: "falsch",
+      q6_3: "richtig",
+      q6_4: "richtig",
+      q6_5: "falsch",
+      q6_6: "falsch",
+      q6_7: "richtig",
+      q6_8: "falsch",
+      q6_9: "falsch",
+      q6_10: "falsch",
+
+      // Quiz 7
+      q7_1: "falsch",
+      q7_2: "falsch",
+      q7_3: "richtig",
+      q7_4: "richtig",
+      q7_5: "falsch",
+      q7_6: "falsch",
+      q7_7: "richtig",
+      q7_8: "falsch",
+      q7_9: "falsch",
+      q7_10: "falsch",
+
+      // Quiz 8
+      q8_1: "richtig",
+      q8_2: "falsch",
+      q8_3: "richtig",
+      q8_4: "richtig",
+      q8_5: "falsch",
+      q8_6: "falsch",
+      q8_7: "falsch",
+      q8_8: "richtig",
+      q8_9: "richtig",
+      q8_10: "falsch",
+
+      // Quiz 9
+      q9_1: "richtig",
+      q9_2: "falsch",
+      q9_3: "richtig",
+      q9_4: "richtig",
+      q9_5: "richtig",
+      q9_6: "falsch",
+      q9_7: "falsch",
+      q9_8: "richtig",
+      q9_9: "falsch",
+      q9_10: "falsch",
+
+      // Quiz 10
+      q10_1: "richtig",
+      q10_2: "falsch",
+      q10_3: "richtig",
+      q10_4: "richtig",
+      q10_5: "falsch",
+      q10_6: "falsch",
+      q10_7: "falsch",
+      q10_8: "richtig",
+      q10_9: "richtig",
+      q10_10: "richtig",
+
+      // Quiz 11
+      q11_1: "richtig",
+      q11_2: "falsch",
+      q11_3: "richtig",
+      q11_4: "richtig",
+      q11_5: "falsch",
+      q11_6: "falsch",
+      q11_7: "falsch",
+      q11_8: "richtig",
+      q11_9: "richtig",
+      q11_10: "richtig",
+
+      // Quiz 12
+      q12_1: "richtig",
+      q12_2: "falsch",
+      q12_3: "falsch",
+      q12_4: "richtig",
+      q12_5: "falsch",
+      q12_6: "richtig",
+      q12_7: "richtig",
+      q12_8: "richtig",
+      q12_9: "falsch",
+      q12_10: "falsch",
+
+      // Quiz 13
+      q13_1: "richtig",
+      q13_2: "falsch",
+      q13_3: "falsch",
+      q13_4: "richtig",
+      q13_5: "falsch",
+      q13_6: "richtig",
+      q13_7: "richtig",
+      q13_8: "richtig",
+      q13_9: "falsch",
+      q13_10: "falsch",
+
+      // Quiz 14
+      q14_1: "falsch",
+      q14_2: "richtig",
+      q14_3: "falsch",
+      q14_4: "falsch",
+      q14_5: "richtig",
+      q14_6: "falsch",
+      q14_7: "falsch",
+      q14_8: "richtig",
+      q14_9: "richtig",
+      q14_10: "richtig",
+
+      // Quiz 15
+      q15_1: "falsch",
+      q15_2: "richtig",
+      q15_3: "richtig",
+      q15_4: "falsch",
+      q15_5: "richtig",
+      q15_6: "richtig",
+      q15_7: "falsch",
+      q15_8: "richtig",
+      q15_9: "falsch",
+      q15_10: "richtig",
+
+      // Quiz 16
+      q16_1: "falsch",
+      q16_2: "richtig",
+      q16_3: "falsch",
+      q16_4: "richtig",
+      q16_5: "richtig",
+      q16_6: "falsch",
+      q16_7: "falsch",
+      q16_8: "richtig",
+      q16_9: "falsch",
+      q16_10: "richtig",
+
+      // Quiz 17
+      q17_1: "falsch",
+      q17_2: "richtig",
+      q17_3: "falsch",
+      q17_4: "richtig",
+      q17_5: "richtig",
+      q17_6: "falsch",
+      q17_7: "falsch",
+      q17_8: "richtig",
+      q17_9: "falsch",
+      q17_10: "richtig",
+
+      // Quiz 18
+      q18_1: "falsch",
+      q18_2: "richtig",
+      q18_3: "richtig",
+      q18_4: "richtig",
+      q18_5: "falsch",
+      q18_6: "falsch",
+      q18_7: "richtig",
+      q18_8: "falsch",
+      q18_9: "richtig",
+      q18_10: "richtig",
+
+      // Quiz 19
+      q19_1: "falsch",
+      q19_2: "falsch",
+      q19_3: "richtig",
+      q19_4: "richtig",
+      q19_5: "falsch",
+      q19_6: "falsch",
+      q19_7: "richtig",
+      q19_8: "falsch",
+      q19_9: "richtig",
+      q19_10: "falsch",
+
+      // Quiz 20
+      q20_1: "falsch",
+      q20_2: "richtig",
+      q20_3: "richtig",
+      q20_4: "falsch",
+      q20_5: "richtig",
+      q20_6: "falsch",
+      q20_7: "falsch",
+      q20_8: "richtig",
+      q20_9: "richtig",
+      q20_10: "falsch",
+      
+      // Quiz 21
+      q21_1: "falsch",
+      q21_2: "falsch",
+      q21_3: "richtig",
+      q21_4: "richtig",
+      q21_5: "richtig",
+      q21_6: "falsch",
+      q21_7: "falsch",
+      q21_8: "falsch",
+      q21_9: "richtig",
+      q21_10: "falsch",
+
+      // Quiz 22
+      q22_1: "falsch",
+      q22_2: "falsch",
+      q22_3: "richtig",
+      q22_4: "richtig",
+      q22_5: "falsch",
+      q22_6: "falsch",
+      q22_7: "falsch",
+      q22_8: "falsch",
+      q22_9: "falsch",
+      q22_10: "richtig",
+ 
+      // Quiz 23
+      q23_1: "richtig",
+      q23_2: "richtig",
+      q23_3: "falsch",
+      q23_4: "richtig",
+      q23_5: "falsch",
+      q23_6: "richtig",
+      q23_7: "falsch",
+      q23_8: "falsch",
+      q23_9: "falsch",
+      q23_10: "falsch",
+
+      // Quiz 24
+      q24_1: "falsch",
+      q24_2: "richtig",
+      q24_3: "richtig",
+      q24_4: "richtig",
+      q24_5: "falsch",
+      q24_6: "richtig",
+      q24_7: "falsch",
+      q24_8: "richtig",
+      q24_9: "falsch",
+      q24_10: "richtig",
+
+      // Quiz 25
+      q25_1: "richtig",
+      q25_2: "richtig",
+      q25_3: "richtig",
+      q25_4: "richtig",
+      q25_5: "falsch",
+      q25_6: "richtig",
+      q25_7: "falsch",
+      q25_8: "richtig",
+      q25_9: "richtig",
+      q25_10: "falsch",
+
+      // Quiz 26
+      q26_1: "falsch",
+      q26_2: "falsch",
+      q26_3: "richtig",
+      q26_4: "falsch",
+      q26_5: "richtig",
+      q26_6: "falsch",
+      q26_7: "richtig",
+      q26_8: "richtig",
+      q26_9: "falsch",
+      q26_10: "richtig",
+
+      // Quiz 27
+      q27_1: "richtig",
+      q27_2: "falsch",
+      q27_3: "richtig",
+      q27_4: "falsch",
+      q27_5: "richtig",
+      q27_6: "richtig",
+      q27_7: "falsch",
+      q27_8: "richtig",
+      q27_9: "falsch",
+      q27_10: "falsch",
+
+      // Quiz 28
+      q28_1: "richtig",
+      q28_2: "richtig",
+      q28_3: "falsch",
+      q28_4: "falsch",
+      q28_5: "richtig",
+      q28_6: "falsch",
+      q28_7: "richtig",
+      q28_8: "falsch",
+      q28_9: "falsch",
+      q28_10: "richtig",
+
+      // Quiz 29
+      q29_1: "richtig",
+      q29_2: "richtig",
+      q29_3: "richtig",
+      q29_4: "falsch",
+      q29_5: "richtig",
+      q29_6: "falsch",
+      q29_7: "richtig",
+      q29_8: "falsch",
+      q29_9: "falsch",
+      q29_10: "richtig",
+
+      // Quiz 30
+      q30_1: "richtig",
+      q30_2: "richtig",
+      q30_3: "richtig",
+      q30_4: "falsch",
+      q30_5: "falsch",
+      q30_6: "falsch",
+      q30_7: "richtig",
+      q30_8: "falsch",
+      q30_9: "falsch",
+      q30_10: "richtig",
+
+      // Quiz 31
+      q31_1: "richtig",
+      q31_2: "falsch",
+      q31_3: "falsch",
+      q31_4: "falsch",
+      q31_5: "falsch",
+      q31_6: "richtig",
+      q31_7: "richtig",
+      q31_8: "richtig",
+      q31_9: "falsch",
+      q31_10: "falsch",
+
+      // Quiz 32
+      q32_1: "richtig",
+      q32_2: "richtig",
+      q32_3: "richtig",
+      q32_4: "falsch",
+      q32_5: "richtig",
+      q32_6: "richtig",
+      q32_7: "richtig",
+      q32_8: "falsch",
+      q32_9: "richtig",
+      q32_10: "falsch",
+
+      // Quiz 33
+      q33_1: "richtig",
+      q33_2: "richtig",
+      q33_3: "richtig",
+      q33_4: "falsch",
+      q33_5: "falsch",
+      q33_6: "richtig",
+      q33_7: "richtig",
+      q33_8: "richtig",
+      q33_9: "richtig",
+      q33_10: "richtig",
+
+      // Quiz 34
+      q34_1: "richtig",
+      q34_2: "richtig",
+      q34_3: "falsch",
+      q34_4: "falsch",
+      q34_5: "richtig",
+      q34_6: "richtig",
+      q34_7: "falsch",
+      q34_8: "richtig",
+      q34_9: "falsch",
+      q34_10: "falsch",
+
+      // Quiz 35
+      q35_1: "falsch",
+      q35_2: "falsch",
+      q35_3: "richtig",
+      q35_4: "falsch",
+      q35_5: "falsch",
+      q35_6: "richtig",
+      q35_7: "falsch",
+      q35_8: "falsch",
+      q35_9: "richtig",
+      q35_10: "falsch",
+
+      // Quiz 36
+      q36_1: "falsch",
+      q36_2: "richtig",
+      q36_3: "falsch",
+      q36_4: "richtig",
+      q36_5: "richtig",
+      q36_6: "falsch",
+      q36_7: "falsch",
+      q36_8: "richtig",
+      q36_9: "richtig",
+      q36_10: "falsch",
+
+      // Quiz 37
+      q37_1: "falsch",
+      q37_2: "falsch",
+      q37_3: "richtig",
+      q37_4: "richtig",
+      q37_5: "richtig",
+      q37_6: "falsch",
+      q37_7: "richtig",
+      q37_8: "richtig",
+      q37_9: "falsch",
+      q37_10: "falsch",
+
+      // Quiz 38
+      q38_1: "richtig",
+      q38_2: "falsch",
+      q38_3: "richtig",
+      q38_4: "falsch",
+      q38_5: "falsch",
+      q38_6: "richtig",
+      q38_7: "richtig",
+      q38_8: "falsch",
+      q38_9: "richtig",
+      q38_10: "richtig",
+
+      // Quiz 39
+      q39_1: "falsch",
+      q39_2: "falsch",
+      q39_3: "falsch",
+      q39_4: "richtig",
+      q39_5: "richtig",
+      q39_6: "falsch",
+      q39_7: "falsch",
+      q39_8: "falsch",
+      q39_9: "richtig",
+      q39_10: "richtig",
+
+      // Quiz 40
+      q40_1: "richtig",
+      q40_2: "falsch",
+      q40_3: "richtig",
+      q40_4: "falsch",
+      q40_5: "falsch",
+      q40_6: "falsch",
+      q40_7: "falsch",
+      q40_8: "falsch",
+      q40_9: "richtig",
+      q40_10: "falsch",
+
+      // Quiz 41
+      q41_1: "falsch",
+      q41_2: "richtig",
+      q41_3: "richtig",
+      q41_4: "falsch",
+      q41_5: "richtig",
+      q41_6: "falsch",
+      q41_7: "falsch",
+      q41_8: "falsch",
+      q41_9: "richtig",
+      q41_10: "falsch",
+
+      // Quiz 42
+      q42_1: "richtig",
+      q42_2: "richtig",
+      q42_3: "falsch",
+      q42_4: "richtig",
+      q42_5: "falsch",
+      q42_6: "richtig",
+      q42_7: "falsch",
+      q42_8: "richtig",
+      q42_9: "falsch",
+      q42_10: "richtig",
+
+
+    };
+
+    function checkAnswers(quizNumber) {
+      for (let i = 1; i <= 10; i++) {
+        const question = `q${quizNumber}_${i}`;
+        const inputs = document.getElementsByName(question);
+        const row = inputs[0].closest("tr");
+        row.className = "";
+        const selected = Array.from(inputs).find(input => input.checked);
+        if (selected) {
+          if (selected.value === correctAnswers[question]) {
+            row.classList.add("correct");
+          } else {
+            row.classList.add("wrong");
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+
+</a></body>

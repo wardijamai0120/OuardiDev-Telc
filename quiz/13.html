@@ -1,0 +1,281 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Kaufentscheidungen</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h1>Wie unsere Kaufentscheidungen beeinflusst werden.</h1>
+      <p>
+        Haben Sie schon einmal darüber nachgedacht, warum Sie manche Dinge kaufen und andere nicht? Warum Sie etwas einkaufen, das Sie gar nicht brauchen, obwohl Sie eigentlich aus einem ganz anderen Grund ins Geschäft gegangen sind? Die Ursache dafür liegt in unserem Körper. Er steuert unsere Entscheidungen viel stärker als bisher gedacht. Neue Forschungen setzen sich mit diesem Zusammenhang zwischen Körper, Kaufverhalten und Umweltbedingungen auseinander.
+        Nachdem Forscher Studenten über Filme und ihr Fernsehverhalten befragt hatten, fanden Sie Beweise dafür, dass gefühlte Kälte (zum Beispiel im Winter) ein Bedürfnis nach psychologischer Wärme hervorruft. Vorangegangene Studien hatten sich mit der Psychologie der Liebe beschäftigt. Dabei konnte gezeigt werden, dass verliebte Menschen sehr häufig das Gefühl feuchter Hände, gesteigertes Herzklopfen und beschleunigte Atmung wahrnehmen. Das alles sind Anzeichen, die auch mit körperlich erlebter Wärme zusammenhängen. Wenn uns kalt ist, beeinflusst daher unser Bedürfnis nach Wärme zum Beispiel den Kauf von romantischen Filmen auf DVD. Um diesen Zusammenhang zu belegen, manipulierten Forscher in einer Reihe von Experimenten entweder die Temperatur von Tee oder die Raumtemperatur. Kalter Tee oder eine niedrige Raumtemperatur sorgten dafür, dass die Teilnehmer Romantikfilme reizvoller fanden. Dieser Effekt trat unabhängig von Geschlecht und Alter bei allen Menschen auf. Wenn Hersteller also romantische DVDs herausgeben oder Reiseveranstalter "kuschelige Angebote für Zwei" verkaufen wollen, sollten sie damit bis zum Herbst oder Winter warten. Das Bedürfnis der Käufer nach diesen Waren ist dann ungleich größer. Aber wenn die Verkaufsräume eines Kaufhauses kühl klimatisiert sind, werden "wärmende" Angebote wie zum Beispiel Tee auch im Sommer mehr gekauft.
+        Andere Forschungen befassen sich mit dem Zusammenhang von Menge und Preis. Beim Erstellen von attraktiven Angeboten und Werbeveranstaltungen machen sich regelmäßig Menschen aus unterschiedlichen Bereichen, wie Marketing und Vertrieb, Gedanken über den richtigen Preis und die passenden Werbe-Botschaften. Bisher wenig beachtet wurde die Reihenfolge der Angabe von Preis und Menge. Neue Studien zeigen, dass Konsumenten auf Angebote extrem unterschiedlich reagieren, je nachdem, ob ihnen bei Sonderangeboten zuerst der Preis oder zuerst die Menge genannt wird. Eine neue Studie untersuchte nun die Reaktionen der Konsumenten auf genau diese Reihenfolge. Die Information über eine große Menge vor die Preisinformation zu setzen scheint deutlich reizvoller auf Konsumenten zu wirken als den Preis vor der Menge zu nennen. Außerdem wurde untersucht, was passiert, wenn die Packungen groß oder klein sind und wenn die Preise pro Stück leicht auszurechnen sind.
+        Wenn die Packung groß und der Stückpreis schwierig auszurechnen ist, zeigen sich die Konsumenten eher bereit, die Packung zu kaufen, wenn zuerst die Menge genannt wird. Außerdem sind sie dann der Meinung, dass ein solches Angebot einen guten Einkauf darstelle. Wenn allerdings der Preis zuerst dargestellt wird oder er ein Vielfaches der Stückzahl ausmacht und somit leicht auszurechnen ist (z. B. 5 DVDs für 50 €), tritt das genaue Gegenteil ein. Dies liegt unter anderem daran, dass das menschliche Gehirn Schwierigkeiten hat, große Zahlen zu verarbeiten. Unter Zeitdruck erscheinen uns dann sogar vermeintlich einfache Berechnungen als schwierig. Dann nutzen wir hauptsächlich die erste Information, die wir wahrnehmen, um so den Kauf und seine Vorteile oder Nachteile für uns zu bewerten.
+        Als Kunde begegnen wir also großen Packungen, bei denen zuerst die Menge mitgeteilt wird, und glauben, dass dies ein günstiges Angebot ist. Mit dem neuen Wissen über die Forschungsergebnisse sollten wir aber zumindest ab und zu beim Kauf von größeren Packungen innehalten und noch einmal überlegen, ob es sich wirklich um ein gutes Angebot handelt. Aus der Perspektive der Geschäfte muss die Schlussfolgerung allerdings wie folgt lauten: Große Angebote zusammenstellen und erst mit der Menge und dann mit dem Preis werben. Dass diese Strategie funktioniert, lässt sich Tag für Tag im Supermarkt beobachten.              
+      </p>
+    </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1. Es liegen Untersuchungen darüber vor,</h3>
+          <label><input type="radio" name="q1" value="a"> wie stark die Entscheidungen den Körper steuern.</label>
+          <label><input type="radio" name="q1" value="b"> welche Einflüsse bestimmte Faktoren auf das Kaufverhalten haben.</label>
+          <label><input type="radio" name="q1" value="c"> warum Menschen so viel über das eigene Einkaufsverhalten nachdenken.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Es gibt Hinweise darauf, dass</h3>
+          <label><input type="radio" name="q2" value="a"> man sich im Winter häufiger verliebt als im Sommer.</label>
+          <label><input type="radio" name="q2" value="b"> Forscher bei ihren Experimenten die Konsumenten manipulierten.</label>
+          <label><input type="radio" name="q2" value="c"> das Empfinden von Kälte zum Kauf romantischer Filme animiert.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Forscher haben untersucht,</h3>
+            <label><input type="radio" name="q3" value="a"> wie extrem günstige Angebote Konsumenten beeinflussen.</label>
+            <label><input type="radio" name="q3" value="b"> welche Kunden bei Sonderangeboten größere Mengen kaufen.</label>
+            <label><input type="radio" name="q3" value="c"> ob die Reihenfolge von Produktinformationen das Kaufverhalten beeinflusst.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Unser Gehirn </h3>
+            <label><input type="radio" name="q4" value="a"> verarbeitet beim Einkaufen hauptsächlich Preisangaben.</label>
+            <label><input type="radio" name="q4" value="b"> nutzt unter Zeitdruck vor allem die erste Information einer Botschaft.</label>
+            <label><input type="radio" name="q4" value="c"> kann unter Zeitdruck mathematische Aufgaben schneller lösen.</label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.  Großpackungen können besser verkauft werden, wenn die</h3>
+            <label><input type="radio" name="q5" value="a"> enthaltene Stückzahl möglichst hoch ist.</label>
+            <label><input type="radio" name="q5" value="b"> Produkte täglich beworben werden.</label>
+            <label><input type="radio" name="q5" value="c"> Mengenangabe vor dem Preis genannt wird.</label>
+          </div>  
+
+        <!-- Weitere Fragen... -->
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index2.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "b",
+        q2: "c",
+        q3: "c",
+        q4: "b",
+        q5: "c"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+        
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+  
+
+
+</body>

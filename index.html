@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="de">
+<script defer src="/_vercel/insights/script.js"></script>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TELC Prüfungen</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* خلفية متحركة */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  pointer-events: none;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+        /* Top Banner */
+        .top-banner {
+            background: linear-gradient(90deg, #00b4d8 0%, #0096c7 100%);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            direction: rtl;
+            font-size: 14px;
+        }
+
+        .telegram-btn {
+            background: white;
+            color: #0096c7;
+            padding: 8px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+/* زر تسجيل الخروج */
+.logout-button {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  padding: 12px 24px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255,255,255,0.3);
+  z-index: 999;
+}
+
+.logout-button:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* العنوان */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header h1 {
+  color: white;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+  letter-spacing: 1px;
+}
+
+.header p {
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  text-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* حاوية الأزرار */
+.buttons-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* أزرار B1 و B2 */
+.level-button {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #667eea;
+  font-size: 48px;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.level-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.level-button:hover::before {
+  opacity: 1;
+}
+
+.level-button:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  color: white;
+}
+
+.level-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.level-button::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  width: 50px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.level-button:hover::after {
+  width: 100px;
+}
+
+/* قسم التواصل الاجتماعي */
+.social-section {
+  margin-top: 60px;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.social-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.social-btn i,
+.social-btn svg {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.social-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ألوان الأزرار الاجتماعية */
+.social-btn.telegram {
+  background: linear-gradient(135deg, #0088cc, #1c9dd9);
+}
+
+.social-btn.whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* استجابة للموبايل */
+@media (max-width: 768px) {
+  .top-banner {
+    padding: 10px 15px;
+  }
+  
+  .banner-text {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .telegram-btn {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+  
+  .logout-button {
+    top: 70px;
+    right: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header p {
+    font-size: 1.1rem;
+  }
+  
+  .level-button {
+    width: 160px;
+    height: 160px;
+    font-size: 40px;
+  }
+  
+  .buttons-container {
+    gap: 20px;
+  }
+  
+  .social-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .level-button {
+    width: 140px;
+    height: 140px;
+    font-size: 36px;
+  }
+  
+  .social-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .social-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* تأثيرات إضافية */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+        /* Footer */
+        .footer {
+            background: #2d3748;
+            color: #cbd5e0;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #cbd5e0;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #667eea;
+        }
+
+        .copyright {
+            font-size: 0.9em;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(203, 213, 224, 0.2);
+        }
+
+        .developer-credit {
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: #a0aec0;
+        }
+
+        .developer-credit a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .developer-credit a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .test-options {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .register-btn {
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .test-card {
+                padding: 40px 60px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .contact-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+</style>
+</head>
+
+<body>
+
+<!-- الشريط العلوي -->
+<div class="top-banner">
+  <div class="banner-text">
+    إلى بغيتو يكون الهوغن بالصوت ديالو نفس لي فالامتحان أو لا ؟ |
+    لي موافق يقولها فتلغرام | 
+    غي شي دعوة معاكوم
+  </div>
+<!--  <a href="https://t.me/+Ol_rmVMqm-xmMzNk" target="_blank" class="telegram-btn">
+    <svg width="18" height="18" viewBox="0 0 240 240" fill="currentColor">
+      <path d="M179.9 73.7L153 172.6c-2 7.1-7.3 8.9-14.8 5.6l-41-30.2-19.8 19c-2.2 2.2-4 4-8.2 4l2.9-41.4 75.4-68c3.3-2.9-.7-4.5-5.1-1.6l-93.2 58.7-40.1-12.5c-8.7-2.7-8.9-8.7 1.8-12.9l156.9-60.5c7.3-2.7 13.6 1.8 11.2 13.5z"/>
+    </svg>
+    <span>Telegram</span>
+  </a>-->
+</div>
+
+<!-- زر تسجيل الخروج -->
+<a href="index.html" class="logout-button">
+  <i class="fas fa-sign-out-alt"></i> Abmelden
+</a>
+
+<!-- المحتوى الرئيسي -->
+<div class="main-content">
+  <!-- العنوان -->
+  <div class="header">
+    <h1>Willkommen zu unserem Test</h1>
+    <p>Wir freuen uns, Sie hier zu haben.</p>
+  </div>
+
+  <!-- أزرار المستويات -->
+  <div class="buttons-container">
+    <a href="indexb1.html" class="level-button floating">
+      <span>B1</span>
+    </a>
+    <a href="indexb2.html" class="level-button floating" style="animation-delay: 0.5s;">
+      <span>B2</span>
+    </a>
+  </div>
+
+  <!-- قسم التواصل الاجتماعي -->
+  <div class="social-section">
+    <div class="social-buttons">
+      <a href="https://t.me/+Ol_rmVMqm-xmMzNk" target="_blank" class="social-btn telegram">
+        <i class="fab fa-telegram"></i>
+        <span>انضم لمجموعة Telegram</span>
+      </a>
+  <!--    <a href="https://wa.me/212619627707" target="_blank" class="social-btn whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <span>تواصل عبر WhatsApp</span>
+      </a> -->
+    </div>
+  </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" class="footer-link">الرئيسية</a>
+                <a href="#" class="footer-link">عن الموقع</a>
+                <a href="https://t.me/+Ol_rmVMqm-xmMzNk" class="footer-link">اتصل بنا</a>
+                <a href="privacy-policy.html" class="footer-link">سياسة الخصوصية</a>
+            </div>
+            
+            <div class="copyright">
+                © 2026 جميع الحقوق محفوظة | OuardiDev
+            </div>
+            
+            <div class="developer-credit">
+                تم التطوير بواسطة <a href="https://t.me/+Ol_rmVMqm-xmMzNk">OuardiDev</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

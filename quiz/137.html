@@ -1,0 +1,461 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Liebe Lina, lieber Florian,</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #e9eaec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+    .container {
+      display: flex;
+      max-width: 1400px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .letter {
+      flex: 2;
+      padding: 30px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .blank {
+      background-color: #3f6ccf;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      min-width: 24px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .choices {
+  flex: 1.5;
+  background-color: #f2f3f7;
+  padding: 30px 20px;
+  overflow-y: auto;
+  max-height: 60vh; /* Adjust height as needed */
+}
+
+    .question-block {
+      margin-bottom: 20px;
+    }
+
+    .row-container {
+      background-color: #e0e4f3;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .option {
+      background-color: white;
+      padding: 6px 14px;
+      font-size: 14px;
+      border-radius: 18px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: 0.2s ease;
+      user-select: none;
+      text-align: center;
+      flex: 1;
+    }
+
+    .option:hover {
+      background-color: #e6ebf9;
+    }
+
+    .option.selected {
+      background-color: #d0defc;
+      border-color: #3f6ccf;
+      font-weight: bold;
+    }
+
+    .option.correct {
+      background-color: #c8f7c5;
+      border-color: #34a853;
+    }
+
+    .option.incorrect {
+      background-color: #fbd5d5;
+      border-color: #e53935;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .button-wrapper {
+  max-width: 1400px;
+  margin: 30px auto 60px; /* Space above and below */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+#checkBtn,
+#homeBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  min-width: 200px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Primary button style */
+#checkBtn {
+  background-color: #3f6ccf;
+  color: white;
+}
+
+#checkBtn:hover {
+  background-color: #2f56b3;
+}
+
+/* Secondary button style */
+#homeBtn {
+  background-color: #7c3aed;
+  color: white;
+  display: inline-block;
+  line-height: 1.6;
+}
+
+#homeBtn:hover {
+  background-color: #5a6268;
+}
+
+#resetBtn {
+  background-color: #7c3aed;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  min-width: 200px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#resetBtn:hover {
+  background-color: #5a6268;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+
+  </style>
+</head>
+<body>
+
+
+<div class="container">
+  <div class="letter">
+    <p>Liebe Lina, lieber Florian,</p>
+    <p>nun sind wir schon einige Monate in unserer neuen Wohnung, und ihr habt uns noch immer nicht besucht. Ihr <span class="blank" id="blank1">1</span> doch endlich unser neues Heim und unsere kleine Stadt Kennenlernen. Deshalb möchten wir euch <span class="blank" id="blank2">2</span> das verlängerte Wochenende Anfang Juni einladen. Wenn ihr am Donnerstagabend anreist, haben wir drei ganze Tage zur Verfügung. Wohnen könnt ihr natürlich <span class="blank" id="blank3">3</span> uns. Emma fährt im Juni in Urlaub, und sie überlässt euch gern ihr Zimmer.<br>
+       Die Stadt Steyr hat <span class="blank" id="blank4">4</span> zu bieten. Wir können eine Führung durch die historische Altstadt machen, die romantischen Innenhöfe besichtigen und auf <span class="blank" id="blank5">5</span> Tum der Stadtpfarrkirche steigen. Da geht es über 228 Stufen 60 Meter hinauf. Bei einem längeren Rundgang <span class="blank" id="blank6">6</span> Auch die wunderbare Schlossbibliothek und das Tapetenzimmer zu besichtigen. Besonders interessant ist die Runde durch den Wehrgraten, <span class="blank" id="blank7">7</span> man an den alten Bauten den Wandel der Industrie nachvollziehen kann, <span class="blank" id="blank8">8</span> erfährt man alles über die Eisenindustrie, die den Reichtum der Stadt begründet hat.<br>
+       Außerdem finden an <span class="blank" id="blank9">9</span> Wochenende die jährlichen Literaturtage Stadt. Bei dieser Veranstaltung präsentieren zeitgenössische Autorinnen und Autoren ihre Neuerscheinungen. Die Lesungen finden zum Großteil in den prächtigen Arkadenhöfen statt. Die Stimmung dort ist wirklich eine ganz besondere. Lina, das wäre doch was für dich, oder? Auch die Umgebung kann <span class="blank" id="blank10">10</span> sehen lassen. Praktisch vor den Toren der Stadt beginnt der Nationalpark Kalkalpen, Dort kann man wunderbar wandern und Rad fahren. Ihr könnt in der Stadt auch Räder ausleihen. Wir hoffen sehr, dass ihr noch keine Plane für das Wochenende habt und zu uns kommen könnt.</p>
+    <p>Viele liebe Grüße und hoffentlich bis bald!</p>
+    <p>Chiara und Mark</p>
+  </div>
+
+  <div class="choices">
+    <!-- Repeat for all 10 questions -->
+    <!-- Here's how one looks. Copy/paste for others -->
+
+    <div class="question-block" data-blank="1">
+      <div><strong>1.</strong></div>
+      <div class="row-container">
+        <div class="options">
+          <label class="option"><input type="radio" name="q1" value="dürft">dürft</label>
+          <label class="option"><input type="radio" name="q1" value="konnt">konnt</label>
+          <label class="option"><input type="radio" name="q1" value="sollt">sollt</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block" data-blank="2">
+      <div><strong>2.</strong></div>
+      <div class="row-container">
+        <div class="options">
+          <label class="option"><input type="radio" name="q2" value="an">an</label>
+          <label class="option"><input type="radio" name="q2" value="für">für</label>
+          <label class="option"><input type="radio" name="q2" value="in">in</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block" data-blank="3">
+        <div><strong>3.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q3" value="bei">bei</label>
+            <label class="option"><input type="radio" name="q3" value="unter">unter</label>
+            <label class="option"><input type="radio" name="q3" value="zu">zu</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="4">
+        <div><strong>4.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q4" value="einige">einige</label>
+            <label class="option"><input type="radio" name="q4" value="einiges">einiges</label>
+            <label class="option"><input type="radio" name="q4" value="einigen">einigen</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="5">
+        <div><strong>5.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q5" value="dem">dem</label>
+            <label class="option"><input type="radio" name="q5" value="den">den</label>
+            <label class="option"><input type="radio" name="q5" value="der">der</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="6">
+        <div><strong>6.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q6" value="ist">ist</label>
+            <label class="option"><input type="radio" name="q6" value="sind">sind</label>
+            <label class="option"><input type="radio" name="q6" value="waren">waren</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="7">
+        <div><strong>7.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q7" value="wann">wann</label>
+            <label class="option"><input type="radio" name="q7" value="wie">wie</label>
+            <label class="option"><input type="radio" name="q7" value="wo">wo</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="8">
+        <div><strong>8.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q8" value="dabei">dabei</label>
+            <label class="option"><input type="radio" name="q8" value="daneben">daneben</label>
+            <label class="option"><input type="radio" name="q8" value="darin">darin</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="9">
+        <div><strong>9.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q9" value="dies">dies</label>
+            <label class="option"><input type="radio" name="q9" value="diesem">diesem</label>
+            <label class="option"><input type="radio" name="q9" value="dieses">dieses</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-block" data-blank="10">
+        <div><strong>10.</strong></div>
+        <div class="row-container">
+          <div class="options">
+            <label class="option"><input type="radio" name="q10" value="man">man</label>
+            <label class="option"><input type="radio" name="q10" value="sich">sich</label>
+            <label class="option"><input type="radio" name="q10" value="Sie">Sie</label>
+          </div>
+        </div>
+      </div>
+     </div>
+</div>
+
+  <div class="button-wrapper">
+  <button id="checkBtn">Antworten prüfen</button>
+  <button id="resetBtn">Zurücksetzen</button>
+  <a href="../index2.html" id="homeBtn">Zurück zur Startseite</a>
+</div>
+
+
+
+<script>
+  const correctAnswers = {
+    1: "sollt",
+    2: "für",
+    3: "bei",
+    4: "einiges",
+    5: "den",
+    6: "sind",
+    7: "wo",
+    8: "dabei",
+    9: "diesem",
+    10: "sich"
+  };
+
+  document.querySelectorAll('.option input[type="radio"]').forEach(input => {
+    input.addEventListener('change', (e) => {
+      const label = e.target.closest('label');
+      const block = e.target.closest('.question-block');
+      const blankId = block.getAttribute('data-blank');
+      const blank = document.getElementById('blank' + blankId);
+
+      block.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+      label.classList.add('selected');
+      blank.textContent = e.target.value;
+    });
+  });
+
+  document.getElementById("checkBtn").addEventListener("click", () => {
+    document.querySelectorAll('.question-block').forEach(block => {
+      const blankId = block.getAttribute('data-blank');
+      const selectedInput = block.querySelector('input[type="radio"]:checked');
+      const options = block.querySelectorAll('.option');
+
+      options.forEach(opt => opt.classList.remove('correct', 'incorrect'));
+
+      if (selectedInput) {
+        const value = selectedInput.value;
+        const label = selectedInput.closest('.option');
+
+        if (value === correctAnswers[blankId]) {
+          label.classList.add('correct');
+        } else {
+          label.classList.add('incorrect');
+
+          // Show correct answer
+          options.forEach(opt => {
+            if (opt.textContent.trim() === correctAnswers[blankId]) {
+              opt.classList.add('correct');
+            }
+          });
+        }
+      }
+    });
+  });
+  document.getElementById("resetBtn").addEventListener("click", () => {
+  // Reset selected radio buttons
+  document.querySelectorAll('input[type="radio"]').forEach(input => {
+    input.checked = false;
+  });
+
+  // Reset blank text to their number
+  for (let i = 1; i <= 10; i++) {
+    const blank = document.getElementById('blank' + i);
+    if (blank) blank.textContent = i;
+  }
+
+  // Remove selection and feedback classes
+  document.querySelectorAll('.option').forEach(option => {
+    option.classList.remove('selected', 'correct', 'incorrect');
+  });
+});
+</script>
+<script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+
+</body>

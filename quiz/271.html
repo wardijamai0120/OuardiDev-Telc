@@ -1,0 +1,806 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Teil1</title>
+  <style>
+    body {
+      background-color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    .quiz-container {
+      background-color: white;
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      color: #1f3655;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #1f3655;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+    td:first-child {
+      width: 50px;
+      text-align: center;
+    }
+    input[type="radio"] {
+      transform: scale(1.3);
+      margin: 5px;
+    }
+    .btn-check {
+      margin-top: 20px;
+      padding: 10px 18px;
+      font-size: 16px;
+      background-color: #1f3655;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .correct {
+      background-color: #d4edda;
+    }
+    .wrong {
+      background-color: #f8d7da;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container" id="quiz1">
+    <h2>Arbeitsplatz für ihren Vater</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_1" value="richtig"></td>
+          <td><input type="radio" name="q1_1" value="falsch"></td>
+          <td>1. Der Sprecher versteht sich nicht gut mit seiner Mutter.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_2" value="richtig"></td>
+          <td><input type="radio" name="q1_2" value="falsch"></td>
+          <td>2. Die Sprecherin ist am liebsten mit ihren Eltern zusammen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_3" value="richtig"></td>
+          <td><input type="radio" name="q1_3" value="falsch"></td>
+          <td>3. Die Sprecherin möchte nicht immer gestört werden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_4" value="richtig"></td>
+          <td><input type="radio" name="q1_4" value="falsch"></td>
+          <td>4. Die Sprecherin wünscht sich einen Arbeitsplatz für ihren Vater.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_5" value="richtig"></td>
+          <td><input type="radio" name="q1_5" value="falsch"></td>
+          <td>5. Der Sprecher ist kein besonders guter Schüler.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('1')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz2">
+    <h2>Einkaufe im Internet</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_1" value="richtig"></td>
+          <td><input type="radio" name="q2_1" value="falsch"></td>
+          <td>1. Herr Krause kauft seine Medikamente am liebsten in der nächsten Stadt. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_2" value="richtig"></td>
+          <td><input type="radio" name="q2_2" value="falsch"></td>
+          <td>2. Frau Schmidt findet zu Hause nicht genug Ruhe, um im Internet einzukaufen. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_3" value="richtig"></td>
+          <td><input type="radio" name="q2_3" value="falsch"></td>
+          <td>3. Herr Pawliczek erledigt alle seine Einkäufe im Internet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_4" value="richtig"></td>
+          <td><input type="radio" name="q2_4" value="falsch"></td>
+          <td>4. Frau Ruttnigg ist vom Einkaufen im Internet nicht überzeugt.  </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_5" value="richtig"></td>
+          <td><input type="radio" name="q2_5" value="falsch"></td>
+          <td>5. Frau Zimmermann legt beim Einkaufen großen Wert auf persönlichen Kontakt.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('2')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz3">
+    <h2>Computer</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_1" value="richtig"></td>
+          <td><input type="radio" name="q3_1" value="falsch"></td>
+          <td>1. Der Sprecher benutzt den Computer nur am Arbeitsplatz.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_2" value="richtig"></td>
+          <td><input type="radio" name="q3_2" value="falsch"></td>
+          <td>2. Die Sprecherin hat kein großes Vertrauen zu Computern.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_3" value="richtig"></td>
+          <td><input type="radio" name="q3_3" value="falsch"></td>
+          <td>3. Die Sprecherin braucht den Computer im täglichen Leben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_4" value="richtig"></td>
+          <td><input type="radio" name="q3_4" value="falsch"></td>
+          <td>4. Die Sprecherin lehnt Computer ab.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_5" value="richtig"></td>
+          <td><input type="radio" name="q3_5" value="falsch"></td>
+          <td>5. Der Sprecher hat zu Hause keinen Computer.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('3')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz4">
+    <h2>Einzelkind</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_1" value="richtig"></td>
+          <td><input type="radio" name="q4_1" value="falsch"></td>
+          <td>1. Die Sprecherin wäre lieber ein Einzelkind. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_2" value="richtig"></td>
+          <td><input type="radio" name="q4_2" value="falsch"></td>
+          <td>2. Der Sprecher hat heute ein gutes Verhältnis zu seinem Bruder. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_3" value="richtig"></td>
+          <td><input type="radio" name="q4_3" value="falsch"></td>
+          <td>3. Die Sprecherin hat schon früh lernen müssen, dass man im Zusammenleben viel Rücksicht nehmen muss.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_4" value="richtig"></td>
+          <td><input type="radio" name="q4_4" value="falsch"></td>
+          <td>4. Die Sprecherin würde heute gern noch eine Schwester haben.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_5" value="richtig"></td>
+          <td><input type="radio" name="q4_5" value="falsch"></td>
+          <td>5. Die Sprecherin versteht sich sehr gut mit ihrem Bruder. </td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('4')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz5">
+    <h2>Sport als für Kultur </h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_1" value="richtig"></td>
+          <td><input type="radio" name="q5_1" value="falsch"></td>
+          <td>1. Der Sprecher hört besonders gern moderne Musik.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_2" value="richtig"></td>
+          <td><input type="radio" name="q5_2" value="falsch"></td>
+          <td>2. Der Sprecher interessiert sich für Sport als für Kultur. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_3" value="richtig"></td>
+          <td><input type="radio" name="q5_3" value="falsch"></td>
+          <td>3. Die Sprecherin hätte gerne mehr Zeit für die Kultur.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_4" value="richtig"></td>
+          <td><input type="radio" name="q5_4" value="falsch"></td>
+          <td>4. Die Sprecherin geht so oft sie kann ins Theater. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_5" value="richtig"></td>
+          <td><input type="radio" name="q5_5" value="falsch"></td>
+          <td>5. Die Sprecherin geht oft in Kunstausstellungen. </td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('5')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz6">
+    <h2>Bus zur Arbeit </h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_1" value="richtig"></td>
+          <td><input type="radio" name="q6_1" value="falsch"></td>
+          <td>1. Der Sprecher fährt nie mit dem Auto zur Arbeit.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_2" value="richtig"></td>
+          <td><input type="radio" name="q6_2" value="falsch"></td>
+          <td>2. Die Sprecherin könnte sich vorstellen, mit dem Bus zur Arbeit zu fahren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_3" value="richtig"></td>
+          <td><input type="radio" name="q6_3" value="falsch"></td>
+          <td>3. Die Sprecherin findet es gut, dass sie zur Arbeit ein Stück zu Fuß gehen kann.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_4" value="richtig"></td>
+          <td><input type="radio" name="q6_4" value="falsch"></td>
+          <td>4. Für die Sprecherin ist der Firmenbus die einzige Möglichkeit zur Arbeit zu kommen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_5" value="richtig"></td>
+          <td><input type="radio" name="q6_5" value="falsch"></td>
+          <td>5. Der Sprecher benutzt für den Weg zur Arbeit zurzeit verschiedene Verkehrsmittel.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('6')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz7">
+    <h2>Arbeit zu fahren </h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_1" value="richtig"></td>
+          <td><input type="radio" name="q7_1" value="falsch"></td>
+          <td>1. Die Sprecherin geht gern zu Fuß.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_2" value="richtig"></td>
+          <td><input type="radio" name="q7_2" value="falsch"></td>
+          <td>2. Die Sprecherin fährt jeden Tag mit ihrem Motorrad zur Arbeit.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_3" value="richtig"></td>
+          <td><input type="radio" name="q7_3" value="falsch"></td>
+          <td>3. Der Sprecher könnte sich vorstellen, mit dem Bus zur Arbeit zu fahren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_4" value="richtig"></td>
+          <td><input type="radio" name="q7_4" value="falsch"></td>
+          <td>4. Die Sprecherin fährt immer mit dem Fahrrad zur Arbeit.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_5" value="richtig"></td>
+          <td><input type="radio" name="q7_5" value="falsch"></td>
+          <td>5. Der Sprecher findet es in Ordnung, dass seine Frau immer das Auto hat.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('7')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz8">
+    <h2>In der Schule</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_1" value="richtig"></td>
+          <td><input type="radio" name="q8_1" value="falsch"></td>
+          <td>1. Der Sprecher möchte, dass sein Kind die eigenen Ideen realisieren kann.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_2" value="richtig"></td>
+          <td><input type="radio" name="q8_2" value="falsch"></td>
+          <td>2. Für die Sprechen ist es unwichtig, ob ihre Kinder in der Schule gut sind.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_3" value="richtig"></td>
+          <td><input type="radio" name="q8_3" value="falsch"></td>
+          <td>3. Es ist dem Sprecher wichtig, dass seine Kinder gesund leben. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_4" value="richtig"></td>
+          <td><input type="radio" name="q8_4" value="falsch"></td>
+          <td>4. Der Sprecher findet es wichtig, dass Eltern immer für ihre Kinder da sind.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_5" value="richtig"></td>
+          <td><input type="radio" name="q8_5" value="falsch"></td>
+          <td>5. Die Sprecherin glaubt, dass sie mehr mit ihrer Tochter sprechen müsste.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('8')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz9">
+    <h2>Bus zur Arbeit</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_1" value="richtig"></td>
+          <td><input type="radio" name="q9_1" value="falsch"></td>
+          <td>1. Für die Sprecherin ist der Firmenbus die einzige Möglichkeit zur Arbeit zu kommen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_2" value="richtig"></td>
+          <td><input type="radio" name="q9_2" value="falsch"></td>
+          <td>2. Der Sprecher benutzt für den Weg zur Arbeit zurzeit verschiedene Verkehrsmittel. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_3" value="richtig"></td>
+          <td><input type="radio" name="q9_3" value="falsch"></td>
+          <td>3. Die Sprecherin geht den ganzen Weg zur Arbeit zu Fuß.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_4" value="richtig"></td>
+          <td><input type="radio" name="q9_4" value="falsch"></td>
+          <td>4. Die Sprecherin könnte sich vorstellen, mit dem Bus zur Arbeit zu fahren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_5" value="richtig"></td>
+          <td><input type="radio" name="q9_5" value="falsch"></td>
+          <td>5. Der Sprecher fährt nie mit dem Auto zur Arbeit. </td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('9')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz10">
+    <h2>Urlaub</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_1" value="richtig"></td>
+          <td><input type="radio" name="q10_1" value="falsch"></td>
+          <td>1. Die Sprecherin hat die Ferien bei Verwandten verbracht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_2" value="richtig"></td>
+          <td><input type="radio" name="q10_2" value="falsch"></td>
+          <td>2. Der Sprecher hat den Urlaub mit den Eltern gemeinsam geplant. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_3" value="richtig"></td>
+          <td><input type="radio" name="q10_3" value="falsch"></td>
+          <td>3. Der Sprecher hätte gern Urlaub wie die anderen Kinder gemacht. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_4" value="richtig"></td>
+          <td><input type="radio" name="q10_4" value="falsch"></td>
+          <td>4. Die Sprecherin hat mit ihren Eltern regelmäßig Fahrradausflüge gemacht.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_5" value="richtig"></td>
+          <td><input type="radio" name="q10_5" value="falsch"></td>
+          <td>5. Dem Sprecher hat der Wanderurlaub nicht so gut gefallen. </td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('10')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz11">
+    <h2>Fremdsprache </h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_1" value="richtig"></td>
+          <td><input type="radio" name="q11_1" value="falsch"></td>
+          <td>1. Der Sprecher findet es schade, dass er im Kindergarten keine Fremdsprache lernen konnte.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_2" value="richtig"></td>
+          <td><input type="radio" name="q11_2" value="falsch"></td>
+          <td>2. Die Sprecherin meint, dass das Fremdsprachenlernen erst in der Schule beginnen sollte.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_3" value="richtig"></td>
+          <td><input type="radio" name="q11_3" value="falsch"></td>
+          <td>3. Die Sprecherin ist dagegen, dass Kinder so früh eine Fremdsprache lernen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_4" value="richtig"></td>
+          <td><input type="radio" name="q11_4" value="falsch"></td>
+          <td>4. Der Sprecher ist dagegen, dass Kinder schon früh Fremdsprache lernen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_5" value="richtig"></td>
+          <td><input type="radio" name="q11_5" value="falsch"></td>
+          <td>5. Die Sprecherin meint, dass das frühe Lernen einer Fremdsprache für viele Kinder Nachteile hat.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('11')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz12">
+    <h2>Handys</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_1" value="richtig"></td>
+          <td><input type="radio" name="q12_1" value="falsch"></td>
+          <td>1. Die Sprecherin findet Handys für Kinder nicht gut. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_2" value="richtig"></td>
+          <td><input type="radio" name="q12_2" value="falsch"></td>
+          <td>2. Der Sprecher hätte auch gern ein Handy.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_3" value="richtig"></td>
+          <td><input type="radio" name="q12_3" value="falsch"></td>
+          <td>3. Der Sprecher ruft gerne sein Partnerin mit dem Handy an.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_4" value="richtig"></td>
+          <td><input type="radio" name="q12_4" value="falsch"></td>
+          <td>4. Der Sprecher benützt das Handy für Gespräche mit Freunden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_5" value="richtig"></td>
+          <td><input type="radio" name="q12_5" value="falsch"></td>
+          <td>5. Die Sprecherin fühlt sich durch Handys gestört.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('12')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz13">
+    <h2>Radfahrad</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_1" value="richtig"></td>
+          <td><input type="radio" name="q13_1" value="falsch"></td>
+          <td>1. Der Sprecher denkt, dass Radfahrer auf der Straße den Verkehr behindern.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_2" value="richtig"></td>
+          <td><input type="radio" name="q13_2" value="falsch"></td>
+          <td>2. Die Sprecherin meint, dass Radwege unütig sind.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_3" value="richtig"></td>
+          <td><input type="radio" name="q13_3" value="falsch"></td>
+          <td>3. Die Sprecherin möchte mehr Radwegen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_4" value="richtig"></td>
+          <td><input type="radio" name="q13_4" value="falsch"></td>
+          <td>4. Für den Sprecher haben Radwege Vorteile.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q13_5" value="richtig"></td>
+          <td><input type="radio" name="q13_5" value="falsch"></td>
+          <td>5. Für den Sprecher machen Radwege das Radfahren sicherer.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('13')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz14">
+    <h2>Miroslav</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_1" value="richtig"></td>
+          <td><input type="radio" name="q14_1" value="falsch"></td>
+          <td>1. Der Mann sieht sich am liebsten lustige Filme an.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_2" value="richtig"></td>
+          <td><input type="radio" name="q14_2" value="falsch"></td>
+          <td>2. Die Frau sieht sich am liebsten politische Sendungen an.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_3" value="richtig"></td>
+          <td><input type="radio" name="q14_3" value="falsch"></td>
+          <td>3. Der Mann sieht gern Familienfilme.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_4" value="richtig"></td>
+          <td><input type="radio" name="q14_4" value="falsch"></td>
+          <td>4. Das Kind sieht sich am liebsten spannende Krimis an.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q14_5" value="richtig"></td>
+          <td><input type="radio" name="q14_5" value="falsch"></td>
+          <td>5. Die Sprecherin sieht sich am liebsten Liebes- und Familienfilme an.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('14')">Antworten prüfen</button>
+    </form>
+  </div>
+
+
+  <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+    <a href="../index1.html" style="text-decoration: none;">
+      <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+        Zurück zur Startseite
+      </div>
+  </a></div><a href="../index1.html" style="text-decoration: none;"> 
+
+
+
+  <script>
+    const correctAnswers = {
+      // Quiz 1
+      q1_1: "richtig",
+      q1_2: "falsch",
+      q1_3: "richtig",
+      q1_4: "falsch",
+      q1_5: "richtig",
+
+      // Quiz 2
+      q2_1: "falsch",
+      q2_2: "richtig",
+      q2_3: "richtig",
+      q2_4: "falsch",
+      q2_5: "falsch",
+
+      // Quiz 3
+      q3_1: "falsch",
+      q3_2: "richtig",
+      q3_3: "falsch",
+      q3_4: "richtig",
+      q3_5: "falsch",
+
+      // Quiz 4
+      q4_1: "falsch",
+      q4_2: "richtig",
+      q4_3: "richtig",
+      q4_4: "falsch",
+      q4_5: "richtig",
+
+      // Quiz 5
+      q5_1: "falsch",
+      q5_2: "richtig",
+      q5_3: "richtig",
+      q5_4: "richtig",
+      q5_5: "falsch",
+
+      // Quiz 6
+      q6_1: "richtig",
+      q6_2: "falsch",
+      q6_3: "richtig",
+      q6_4: "falsch",
+      q6_5: "falsch",
+
+      // Quiz 7
+      q7_1: "falsch",
+      q7_2: "richtig",
+      q7_3: "falsch",
+      q7_4: "falsch",
+      q7_5: "richtig",
+
+      // Quiz 8
+      q8_1: "richtig",
+      q8_2: "falsch",
+      q8_3: "richtig",
+      q8_4: "richtig",
+      q8_5: "falsch",
+
+      // Quiz 9
+      q9_1: "falsch",
+      q9_2: "falsch",
+      q9_3: "falsch",
+      q9_4: "falsch",
+      q9_5: "richtig",
+
+      // Quiz 10
+      q10_1: "falsch",
+      q10_2: "richtig",
+      q10_3: "richtig",
+      q10_4: "falsch",
+      q10_5: "richtig",
+
+      // Quiz 11
+      q11_1: "falsch",
+      q11_2: "richtig",
+      q11_3: "falsch",
+      q11_4: "richtig",
+      q11_5: "richtig",
+
+      // Quiz 12
+      q12_1: "richtig",
+      q12_2: "falsch",
+      q12_3: "falsch",
+      q12_4: "falsch",
+      q12_5: "richtig",
+
+      // Quiz 13
+      q13_1: "richtig",
+      q13_2: "falsch",
+      q13_3: "falsch",
+      q13_4: "richtig",
+      q13_5: "richtig",
+
+      // Quiz 14
+      q14_1: "richtig",
+      q14_2: "falsch",
+      q14_3: "falsch",
+      q14_4: "richtig",
+      q14_5: "richtig",
+
+    };
+
+    function checkAnswers(quizNumber) {
+      for (let i = 1; i <= 5; i++) {
+        const question = `q${quizNumber}_${i}`;
+        const inputs = document.getElementsByName(question);
+        const row = inputs[0].closest("tr");
+        row.className = "";
+        const selected = Array.from(inputs).find(input => input.checked);
+        if (selected) {
+          if (selected.value === correctAnswers[question]) {
+            row.classList.add("correct");
+          } else {
+            row.classList.add("wrong");
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+</a></body>

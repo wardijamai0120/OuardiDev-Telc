@@ -1,0 +1,716 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Teil1</title>
+  <style>
+    body {
+      background-color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    .quiz-container {
+      background-color: white;
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      color: #1f3655;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #1f3655;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+    td:first-child {
+      width: 50px;
+      text-align: center;
+    }
+    input[type="radio"] {
+      transform: scale(1.3);
+      margin: 5px;
+    }
+    .btn-check {
+      margin-top: 20px;
+      padding: 10px 18px;
+      font-size: 16px;
+      background-color: #1f3655;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .correct {
+      background-color: #d4edda;
+    }
+    .wrong {
+      background-color: #f8d7da;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container" id="quiz1">
+    <h2>Georg und Claudia</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_1" value="richtig"></td>
+          <td><input type="radio" name="q1_1" value="falsch"></td>
+          <td>1. Die Schweizer geben für Urlaub mehr Geld aus als für ihre Gesundheit.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_2" value="richtig"></td>
+          <td><input type="radio" name="q1_2" value="falsch"></td>
+          <td>2. Der Speisewagen befindet sich im hinteren Teil des Zuges.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_3" value="richtig"></td>
+          <td><input type="radio" name="q1_3" value="falsch"></td>
+          <td>3. Sie sollen um 19:30 Uhr bei Georg und Claudia sein .</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_4" value="richtig"></td>
+          <td><input type="radio" name="q1_4" value="falsch"></td>
+          <td>4. Im südlichen Österreich ist es tagsüber sonnig, später windig und regnerisch.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q1_5" value="richtig"></td>
+          <td><input type="radio" name="q1_5" value="falsch"></td>
+          <td>5. Der Sänger beginnt seine Konzertreise mit einer Vorstellung in Wien.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('1')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz2">
+    <h2>Ingolstadt</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_1" value="richtig"></td>
+          <td><input type="radio" name="q2_1" value="falsch"></td>
+          <td>1. Der Liederabend findetzu einem späteren Termin statt. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_2" value="richtig"></td>
+          <td><input type="radio" name="q2_2" value="falsch"></td>
+          <td>2. Clara kann wegen einer Prüfung die Theaterkarten nicht abholen.  </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_3" value="richtig"></td>
+          <td><input type="radio" name="q2_3" value="falsch"></td>
+          <td>3. Im Schwarzwald können die Straßen morgen glatt werden.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_4" value="richtig"></td>
+          <td><input type="radio" name="q2_4" value="falsch"></td>
+          <td>4. Im Untergeschoss gibt es Winterkleidung zum halben Preis. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q2_5" value="richtig"></td>
+          <td><input type="radio" name="q2_5" value="falsch"></td>
+          <td>5. Sie müssen in Ingolstadt die Regionalbahn nach Regensburg nehmen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('2')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz3">
+    <h2>Der Fahrer</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_1" value="richtig"></td>
+          <td><input type="radio" name="q3_1" value="falsch"></td>
+          <td>1. Das Wetter ist am Abend noch gut. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_2" value="richtig"></td>
+          <td><input type="radio" name="q3_2" value="falsch"></td>
+          <td>2. Der Gasthof Lindner ist neben einer Tankstelle.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_3" value="richtig"></td>
+          <td><input type="radio" name="q3_3" value="falsch"></td>
+          <td>3. Die Firma liefert das bestellte Sofa am Dienstag ab drei Uhr nachmittags. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_4" value="richtig"></td>
+          <td><input type="radio" name="q3_4" value="falsch"></td>
+          <td>4. Der Film Komiker läuft täglich um 20 Uhr.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q3_5" value="richtig"></td>
+          <td><input type="radio" name="q3_5" value="falsch"></td>
+          <td>5. Der Fahrer des Wagens mit dem Kennzeichen HB-D 256 soll ins Erdgeschoss kommen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('3')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz4">
+    <h2>Innenstadt</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_1" value="richtig"></td>
+          <td><input type="radio" name="q4_1" value="falsch"></td>
+          <td>1. Alle Kunden müssen an der Kasse nebenan bezahlen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_2" value="richtig"></td>
+          <td><input type="radio" name="q4_2" value="falsch"></td>
+          <td>2. Sie können mit dem Bus in die Innenstadt fahren.  </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_3" value="richtig"></td>
+          <td><input type="radio" name="q4_3" value="falsch"></td>
+          <td>3. Die Polizei informiert, dass alle Parkhäuser bei der Ausstellung besetzt sind. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_4" value="richtig"></td>
+          <td><input type="radio" name="q4_4" value="falsch"></td>
+          <td>4. Dr. Krausch ist ab dem 18. Oktober wieder in der Praxis. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q4_5" value="richtig"></td>
+          <td><input type="radio" name="q4_5" value="falsch"></td>
+          <td>5. Sie können noch eine Stunde durch alle Geschäfte laufen. </td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('4')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz5">
+    <h2>Prag</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_1" value="richtig"></td>
+          <td><input type="radio" name="q5_1" value="falsch"></td>
+          <td>1. Das Hörspiel Katzen in der Nacht wird morgen um 20:30 Uhr gesendet.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_2" value="richtig"></td>
+          <td><input type="radio" name="q5_2" value="falsch"></td>
+          <td>2. Montags bis freitags ab 8:00 Uhr kann man sich persönlich beraten lassen. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_3" value="richtig"></td>
+          <td><input type="radio" name="q5_3" value="falsch"></td>
+          <td>3. Ihr Flug nach Prag ist nicht pünktlich. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_4" value="richtig"></td>
+          <td><input type="radio" name="q5_4" value="falsch"></td>
+          <td>4. Das Flugzeug landet mit 20 Minuten Verspätung in Leipzig. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q5_5" value="richtig"></td>
+          <td><input type="radio" name="q5_5" value="falsch"></td>
+          <td>5. Im Speisewagen kann man ins Internet gehen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('5')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz6">
+    <h2>Hauptbahnhof</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_1" value="richtig"></td>
+          <td><input type="radio" name="q6_1" value="falsch"></td>
+          <td>1. Badezimmerspiegel finden Sie im Untergeschoss.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_2" value="richtig"></td>
+          <td><input type="radio" name="q6_2" value="falsch"></td>
+          <td>2. Das Hallenbad schließt heute um 21:00 Uhr. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_3" value="richtig"></td>
+          <td><input type="radio" name="q6_3" value="falsch"></td>
+          <td>3. Sie können gleich in Richtung Eilenburg umsteigen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_4" value="richtig"></td>
+          <td><input type="radio" name="q6_4" value="falsch"></td>
+          <td>4. Die Linie 2 fährt zum Hauptbahnhof. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q6_5" value="richtig"></td>
+          <td><input type="radio" name="q6_5" value="falsch"></td>
+          <td>5. Sie können mit der S1 nach Hütteldorf fahren.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('6')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz7">
+    <h2>Griechenland</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_1" value="richtig"></td>
+          <td><input type="radio" name="q7_1" value="falsch"></td>
+          <td>1. Sie können zwei Flüge nach Griechenland gewinnen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_2" value="richtig"></td>
+          <td><input type="radio" name="q7_2" value="falsch"></td>
+          <td>2. Am besten fahren Sie ab Northeim mit dem Bus.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_3" value="richtig"></td>
+          <td><input type="radio" name="q7_3" value="falsch"></td>
+          <td>3. Für Ihre Gruppe ist ein Wagen im Zug nach Aschaffenburg reserviert.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_4" value="richtig"></td>
+          <td><input type="radio" name="q7_4" value="falsch"></td>
+          <td>4. Erst morgen Abend bildet sich Nebel.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q7_5" value="richtig"></td>
+          <td><input type="radio" name="q7_5" value="falsch"></td>
+          <td>5. Auf der Internetseite kann man auch günstige Angebote für Haushaltsgerät.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('7')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz8">
+    <h2>Norddeutschland </h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_1" value="richtig"></td>
+          <td><input type="radio" name="q8_1" value="falsch"></td>
+          <td>1. Hamburg hat öfter gewonnen als Stuttgart. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_2" value="richtig"></td>
+          <td><input type="radio" name="q8_2" value="falsch"></td>
+          <td>2. Auf dem Mittleren Ring in München wird die Geschwindigkeit kontrolliert. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_3" value="richtig"></td>
+          <td><input type="radio" name="q8_3" value="falsch"></td>
+          <td>3. In Norddeutschland steigen die Temperaturen morgen auf 5 bis 7 Grad. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_4" value="richtig"></td>
+          <td><input type="radio" name="q8_4" value="falsch"></td>
+          <td>4. Nach zwei Monaten müssen Sie für die Zeitschrift bezahlen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q8_5" value="richtig"></td>
+          <td><input type="radio" name="q8_5" value="falsch"></td>
+          <td>5. Janas Geburtstagsfest findet nicht im LEO statt.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('8')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz9">
+    <h2>Füssen</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_1" value="richtig"></td>
+          <td><input type="radio" name="q9_1" value="falsch"></td>
+          <td>1. Im City-Kino werden im Untergeschoss alte Filme gezeigt.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_2" value="richtig"></td>
+          <td><input type="radio" name="q9_2" value="falsch"></td>
+          <td>2. Die Großmutter kann heute nicht kommen. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_3" value="richtig"></td>
+          <td><input type="radio" name="q9_3" value="falsch"></td>
+          <td>3. Der nächste Zug nach Füssen fährt um 10:56 Uhr</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_4" value="richtig"></td>
+          <td><input type="radio" name="q9_4" value="falsch"></td>
+          <td>4. Die Firma befindet sich in der Bellmondstraße.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q9_5" value="richtig"></td>
+          <td><input type="radio" name="q9_5" value="falsch"></td>
+          <td>5. Das Zugteam bringt Ihnen Südtiroler Käsespezialitäten an Ihren Platz. </td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('9')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz10">
+    <h2>Mannheim</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_1" value="richtig"></td>
+          <td><input type="radio" name="q10_1" value="falsch"></td>
+          <td>1. Dr. Hoffmann ist um Urlaub unter der Nummer 957 30 75 zu erreichen. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_2" value="richtig"></td>
+          <td><input type="radio" name="q10_2" value="falsch"></td>
+          <td>2. Heute Abend beginnt es zu schneien. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_3" value="richtig"></td>
+          <td><input type="radio" name="q10_3" value="falsch"></td>
+          <td>3. Sie können den Film das Leben ist schön um 18: 15 Uhr im Central sehen. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_4" value="richtig"></td>
+          <td><input type="radio" name="q10_4" value="falsch"></td>
+          <td>4. Katrin hätte am Dreiundzwanzigsten Zeit.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q10_5" value="richtig"></td>
+          <td><input type="radio" name="q10_5" value="falsch"></td>
+          <td>5. Der Zug nach Mannheim fährt um 13:14 Uhr ab. </td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('10')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz11">
+    <h2>Buchabteilung</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_1" value="richtig"></td>
+          <td><input type="radio" name="q11_1" value="falsch"></td>
+          <td>1. In der Buchabteilung ist ein berühmter Autor zu Gast.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_2" value="richtig"></td>
+          <td><input type="radio" name="q11_2" value="falsch"></td>
+          <td>2. Wegen des Nebels sollte man heute nicht nach München fahren.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_3" value="richtig"></td>
+          <td><input type="radio" name="q11_3" value="falsch"></td>
+          <td>3. Der Zug nach Wein fährt heute von einem anderen Bahnsteig ab. </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_4" value="richtig"></td>
+          <td><input type="radio" name="q11_4" value="falsch"></td>
+          <td>4. Die Firma ist mit der Straßenbahn in Richtung Königsplatz zu erreichen.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q11_5" value="richtig"></td>
+          <td><input type="radio" name="q11_5" value="falsch"></td>
+          <td>5. Ab nächsten Montag kann man wieder einen Termin vereinbaren.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('11')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  <div class="quiz-container" id="quiz12">
+    <h2>Meissner</h2>
+    <form>
+      <table>
+        <tbody><tr>
+          <th>RICHTIG</th>
+          <th>FALSCH</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_1" value="richtig"></td>
+          <td><input type="radio" name="q12_1" value="falsch"></td>
+          <td>1. Sie müssen Frau Meissner noch die Pläne für Ihr Wohnzimmer schicken </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_2" value="richtig"></td>
+          <td><input type="radio" name="q12_2" value="falsch"></td>
+          <td>2. Die Schnellbahn S7 hat den ganzen Tag über Verspätung.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_3" value="richtig"></td>
+          <td><input type="radio" name="q12_3" value="falsch"></td>
+          <td>3. Den Kunden werden heute die Computer der Firma Hypersoft besonders günstig angeboten.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_4" value="richtig"></td>
+          <td><input type="radio" name="q12_4" value="falsch"></td>
+          <td>4. Das Wetter in Füssen-Reutte ist zum Schifahren besser als in Garmisch.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="q12_5" value="richtig"></td>
+          <td><input type="radio" name="q12_5" value="falsch"></td>
+          <td>5. Der Zug um 18:16 Uhr fahrt direkt nach Münschen.</td>
+        </tr>
+      </tbody></table>
+      <button type="button" class="btn-check" onclick="checkAnswers('12')">Antworten prüfen</button>
+    </form>
+  </div>
+
+  
+
+  <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+    <a href="../index1.html" style="text-decoration: none;">
+      <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+        Zurück zur Startseite
+      </div>
+  </a></div><a href="../index1.html" style="text-decoration: none;"> 
+
+
+
+  <script>
+    const correctAnswers = {
+      // Quiz 1
+      q1_1: "falsch",
+      q1_2: "falsch",
+      q1_3: "falsch",
+      q1_4: "richtig",
+      q1_5: "richtig",
+
+      // Quiz 2
+      q2_1: "richtig",
+      q2_2: "falsch",
+      q2_3: "richtig",
+      q2_4: "falsch",
+      q2_5: "falsch",
+
+      // Quiz 3
+      q3_1: "falsch",
+      q3_2: "richtig",
+      q3_3: "falsch",
+      q3_4: "richtig",
+      q3_5: "richtig",
+
+      // Quiz 4
+      q4_1: "falsch",
+      q4_2: "richtig",
+      q4_3: "falsch",
+      q4_4: "richtig",
+      q4_5: "falsch",
+
+      // Quiz 5
+      q5_1: "falsch",
+      q5_2: "richtig",
+      q5_3: "falsch",
+      q5_4: "richtig",
+      q5_5: "falsch",
+
+      // Quiz 6
+      q6_1: "richtig",
+      q6_2: "richtig",
+      q6_3: "richtig",
+      q6_4: "falsch",
+      q6_5: "falsch",
+
+      // Quiz 7
+      q7_1: "falsch",
+      q7_2: "richtig",
+      q7_3: "richtig",
+      q7_4: "falsch",
+      q7_5: "richtig",
+
+      // Quiz 8
+      q8_1: "richtig",
+      q8_2: "falsch",
+      q8_3: "falsch",
+      q8_4: "richtig",
+      q8_5: "falsch",
+
+      // Quiz 9
+      q9_1: "falsch",
+      q9_2: "falsch",
+      q9_3: "richtig",
+      q9_4: "falsch",
+      q9_5: "falsch",
+
+      // Quiz 10
+      q10_1: "falsch",
+      q10_2: "falsch",
+      q10_3: "falsch",
+      q10_4: "richtig",
+      q10_5: "richtig",
+
+      // Quiz 11
+      q11_1: "richtig",
+      q11_2: "falsch",
+      q11_3: "falsch",
+      q11_4: "richtig",
+      q11_5: "richtig",
+
+      // Quiz 12
+      q12_1: "falsch",
+      q12_2: "falsch",
+      q12_3: "richtig",
+      q12_4: "richtig",
+      q12_5: "falsch",
+
+
+    };
+
+    function checkAnswers(quizNumber) {
+      for (let i = 1; i <= 5; i++) {
+        const question = `q${quizNumber}_${i}`;
+        const inputs = document.getElementsByName(question);
+        const row = inputs[0].closest("tr");
+        row.className = "";
+        const selected = Array.from(inputs).find(input => input.checked);
+        if (selected) {
+          if (selected.value === correctAnswers[question]) {
+            row.classList.add("correct");
+          } else {
+            row.classList.add("wrong");
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+
+</a></body>

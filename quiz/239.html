@@ -1,0 +1,266 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Sonja teil: 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h3>Die Angst vor Buchstaben abbauen</h3>
+      <p>Etwa 300.000 Menschen in der Schweiz haben zwar die Schule besucht, können aber dennoch nicht richtig lesen und schreiben. Einige holen das Versäumte später nach.</p>
+      <h3>Von Gabriela Baumgartner</h3>
+      <p>Das Qualifikationsgespräch mit dem Chef sei sehr positiv gewiesen erzählt Kurt Hunziker seiner Gruppe. Auch beim Sprechen fühle ich mich heute viele sicherer. Der 33-Jährige lächelt und blick noch etwas unsicher in die Runde. Es hat sich wirklich gelohnt.</p>
+      <h3>Immer wieder Angst.</h3>
+      <p>Neben ihm sitzt Sonja Kündig. Seit bald zwei Jahren sind die Teilnehmerinnen und Teilnehmer dieses Kurses damit beschäftigt nachzubholen, was sie alle im Laufe ihres Lebens irgendwann einmal aufgegeben hatten: Lesen und Schreiben. Einmal pro Woche besuchen sie den Kurs über, tauschen Erfahrungen aus, motivieren sich gegenseitig.</p>
+      <h3>Wahrheit lange vertuscht</h3>
+      <p>Fast zehn Jahre lang arbeitete Sonja Kündig bei einer Schweizer Grossbank. Ich verstand einfache Texte wie Witze in Zeitschriften. Schreiben aber konnte die heute 45-jährige Mutter zweier Söhne nur gerade mal ihre Adresse. Dafür hatte sie einen außergewöhnlich Sinn für Genauigkeit und ein gutes Gedächtnis für Zahlen. Problematich wurde es erst, als sie ihren Mann kennenlernte. Ich hatte furchtbare Angst, ihm die Wahrheit zu sagen. Würde er mich für dumm halten? Ihr Mitstreiter Michael Feller schwankt noch immer ständig zwischen Hoffnung und Verzweiflung. Weil seine Eltern häufig den Wohnort wechselten, hatte der 36-Jährige große Probleme in der Schule. Als ich vor vier Jahren hierher kam, konnte ich gar nichts. Ich schämte mich, lebte sehr zurückgezogen und hatte kaum Bekannte. In der Zwischenzeit hat er aufgeholt, kann sich jetzt auch mündlich besser verständigen.<br>
+         Zum ersten Mal in seinem Leben traut er sich, mitzureden und seine Meinung zu sagen. Zufrieden ist Michael Feller aber noch nicht. Beim Lesen einer Zeitung oder eines Buches hat noch immer Probleme. Manchmal verstehe ich einzelne Wörter nicht, und dann macht. Verzweifelt wirft er in solchen Situationen den Text weg. Manchmal kommt es mir vor, als würde ich einen Teufel in meinen Händen halten.</p>
+      <h3>Besseres Selbstwertgefühl</h3> 
+      <p>Lese- und Schreibschwächen drücken auf das Selbstwertgefühls, erklärt Silvia Herdeg, Kursleiterin am Verein Lesen und Schreiben für Erwachsenes. In diesen Kursen wird deshalb nicht nur stur Grammatik gelernt, Trainiert wird ein neuer Kommunikationsstil. Die Leute sind erleichtert, dass sie hier mit ihrem Problem nicht alleine sind. Mit jedem Fortschritt öffnen sie sich ein Stück weiter. Nach zwei Jahren sind viele wie verwandelt. Einige Teilnehmende haben überhaupt erst nach dem Kurs gewagt, eine anspruchsvollere Stelle zu suchen. Andere haben ihre Unabhängigkeit zurückgewonnen. Früher habe ich nie mit Kollegen über einen Zeitungsartikel diskutieren können, erklärt Christian Koller. Meine Angst war zu gross, ich könnte etwas falsch verstanden haben und mich dadurch lächerlich machen. Heute rede ich mit.</p>
+      </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1. In der Schweiz gibt es etwa 300.000 Menschen, die   </h3>
+          <label><input type="radio" name="q1" value="a"> als Kinder nicht regelmäßig zur Schule gehen konnten.</label>
+          <label><input type="radio" name="q1" value="b"> beim Lesen und Schreiben große Schwierigkeiten haben.</label>
+          <label><input type="radio" name="q1" value="c"> erst als Erwachsene Lesen und Schreiben lernen.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Sonja Kündig </h3>
+          <label><input type="radio" name="q2" value="a"> besitzt die Fähigkeit, sich Zahlen sehr gut zu merken.</label>
+          <label><input type="radio" name="q2" value="b"> hat nach dem Kurs eine Stelle bei einer Bank gefunden.</label>
+          <label><input type="radio" name="q2" value="c"> lernte ihren Mann im Kurs kennen.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Michael Feller  </h3>
+            <label><input type="radio" name="q3" value="a"> ist heute mit seinen Lernfortschritten zufrieden.</label>
+            <label><input type="radio" name="q3" value="b"> versucht jetzt, trotz Schwierigkeiten längere Taxte zu lesen.</label>
+            <label><input type="radio" name="q3" value="c"> wechselte den Wohnort, weil er Probleme in der Schule hatte.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. Die Leiterin des Kurses stellt fest, dass  </h3>
+            <label><input type="radio" name="q4" value="a"> der Kurs die Teilnehmenden selbstsicherer macht.</label>
+            <label><input type="radio" name="q4" value="b"> die Teilnehmenden keinen Grammatikunterricht brauchen.</label>
+            <label><input type="radio" name="q4" value="c"> sie selbst einen neuen Kommunikationsstil lernen muss.</label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.   Christian Koller </h3>
+            <label><input type="radio" name="q5" value="a"> diskutiert nun auch mit Kollegen über Themen aus der Zeitung.</label>
+            <label><input type="radio" name="q5" value="b"> hat noch nie einen Zeitungsartikel gelesen.</label>
+            <label><input type="radio" name="q5" value="c"> wurde früher von seinen Kollegen oft ausgelacht.</label>
+          </div>  
+
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index1.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "b",
+        q2: "a",
+        q3: "b",
+        q4: "a",
+        q5: "a"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+        
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+  
+
+
+
+</body>

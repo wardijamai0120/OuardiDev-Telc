@@ -1,0 +1,281 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="download_date" content="2026-01-29T05:38:47.394Z"/>
+  
+  <title>Traumfrau</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1f1f1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .quiz-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .question-card {
+      background: #e9f0f7;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+    }
+
+    .question-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .question-card label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .correct {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+#warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left: Text -->
+    <div class="text-section">
+
+      <h1>Traumfrau und Traummann gesucht</h1>
+      <p>
+        Den Partner für das Leben finden - für immer mehr Menschen wird dies offenbar immer schwieriger. Rund 31 Millionen Männer und Frauen in Deutschland, also mehr als ein Drittel der gesamten Bevölkerung, sind alleinstehend. Nicht dass Mann oder Frau wählerischer als in früheren Zeiten geworden wäre, es gibt scheinbar ganz einfach immer weniger Gelegenheiten, das Ziel einer Partnerschaft oder Ehe zu erreichen.
+        Die Menschen haben einfach immer weniger Zeit, sich um ihre ganz natürlichen Wünsche zu kümmern. Viele arbeiten weit entfernt von ihrem Wohnort, wechseln die Arbeitsstätte in relativ kurzen Abständen, haben für das Privatleben ungünstige Arbeitszeiten mit wenig Freizeit - abgesehen vom alljährlichen Urlaub. Dazu kommt, dass eine beträchtliche Minderheit der Deutschen nicht bereit ist, sich längerfristig oder gar "lebenslänglich" an einen bestimmten Partner zu binden. Immer mehr Menschen leben lieber mit ihren Lebensabschnittgefährten zusammen oder sie bevorzugen saisonale Kurzbeziehungen nach dem Muster ‚öfter mal 'ne(n) Neue(n)‘.
+        Und immer mehr von denen, die eine Partnerschaft anstreben, versuchen ihren Liebsten oder ihre Liebste nicht auf Partys, Kirmesfesten oder in Cafés und Kneipen zu finden, wie das bei ihren Großeltern noch üblich war, sondern sie schauen ins Internet oder in Zeitungen, um über Partnerschafts- oder Heiratsannoncen fündig zu werden. In Deutschland gibt es viele Radioprogramme, in denen täglich Dutzende ihre Heiratsabsichten kundtun. An Wochenenden gibt es sogar Fernsehsendungen, in denen Partnersuchende mit anderen Partnersuchenden quasi verkuppelt werden.
+        Doch wie muss solch eine Kontaktanzeige aussehen, damit sie auch von Erfolg gekrönt ist? Denn nicht wenige Anzeigen bringen gar keinen oder nicht den erwünschten Erfolg. Dieser Frage hat sich nun der Kommunikationsexperte Jörg Stimpfling an der Universität Stuttgart gewidmet und seit mehr als zehn Jahren Kontaktanzeigen in den verschiedensten Medien gesammelt und analysiert.
+        Das Ergebnis der umfangreichen Forschung: Viele Anzeigen sind zu oberflächlich formuliert oder bedienen sich althergebrachter Stereotypen. So beschreiben sich Frauen mit Synonymen für Schönheit oder Attraktivität, Männer bieten Sicherheit oder Status an, überholt geglaubte Klischees finden sich in den meisten Fällen. Ebenso fällt die Neigung auf, sich schöner, besser zu präsentieren, als man wirklich ist, so als biete man ein Produkt in der Konsumwerbung an. Man könnte fast meinen, viele suchen sich selbst wie ihr eigenes Zwillingsbild.
+        Jörg Stimpfling und seine Kollegen empfehlen Partner suchenden Singles daher, sich erst einmal selbst kennen zu lernen, bevor sie sich an zukünftige Partnerinnen oder Partner wenden. Nur wer über sich selbst Bescheid weiß, kann den Partner finden, der zu ihm passt. Und das Zwillingsbild im Spiegel ist leider kaum als idealer Partner geeignet.
+      </p>
+    </div>
+
+    <!-- Right: Quiz -->
+    <div class="quiz-section">
+      <form id="quizForm">
+        <div class="question-card">
+          <h3>1.  Viele Menschen in Deutschland sind unverheiratet, weil  </h3>
+          <label><input type="radio" name="q1" value="a"> die Ansprüche bei der Partnerwahl immer weiter steigen.</label>
+          <label><input type="radio" name="q1" value="b"> die Lebensumstände es erschweren, den Partner oder die Partnerin fürs Leben zu finden.</label>
+          <label><input type="radio" name="q1" value="c"> eine Mehrheit ohnehin lieber in zeitlich begrenzten Beziehungen lebt.</label>
+        </div>
+
+        <div class="question-card">
+          <h3>2. Viele Singles suchen sich heute ihre Partner oder Partnerinnen </h3>
+          <label><input type="radio" name="q2" value="a"> am Arbeitsplatz.</label>
+          <label><input type="radio" name="q2" value="b"> auf Festen.  </label>
+          <label><input type="radio" name="q2" value="c"> in den Medien.</label>
+        </div>
+
+        <div class="question-card">
+            <h3>3. Im Radio werden </h3>
+            <label><input type="radio" name="q3" value="a"> an Samstagen und Sonntagen Partner vermittelt.</label>
+            <label><input type="radio" name="q3" value="b"> jeden Tag Heiratswünsche gesendet.</label>
+            <label><input type="radio" name="q3" value="c"> täglich Hochzeitsglückwünsche gesendet.</label>
+          </div>
+
+          <div class="question-card">
+            <h3>4. In Kontaktanzeigen  </h3>
+            <label><input type="radio" name="q4" value="a"> beschreiben sich Partnersuchende oft im Rahmen konventioneller Rollenerwartungen. </label>
+            <label><input type="radio" name="q4" value="b"> suchen die meisten Männer moderne, attraktive Frauen. </label>
+            <label><input type="radio" name="q4" value="c"> werden recht häufig die passenden Partner fürs Leben gefunden. </label>
+          </div>  
+         
+          <div class="question-card">
+            <h3>5.  Wer eine Kontaktanzeige aufgibt, sollte   </h3>
+            <label><input type="radio" name="q5" value="a"> jemanden suchen mit möglichst ähnlichen Eigenschaften.</label>
+            <label><input type="radio" name="q5" value="b"> sich werbewirksam präsentieren können.</label>
+            <label><input type="radio" name="q5" value="c"> zunächst eine Selbstanalyse vornehmen.</label>
+          </div>  
+
+        <!-- Weitere Fragen... -->
+
+        <button type="button" onclick="checkAnswers()">Antworten prüfen</button>
+        <div class="result" id="result"></div>
+
+        <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+            <a href="../index2.html" style="text-decoration: none;">
+              <div style="padding: 10px 20px; font-size: 16px; background-color: lab(42.45% 44.97 -83.12); color: white; border-radius: 8px; text-align: center;">
+                Zurück zur Startseite
+              </div>
+            </a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "b",
+        q2: "c",
+        q3: "b",
+        q4: "a",
+        q5: "c"
+      };
+  
+      let score = 0;
+      let total = Object.keys(answers).length;
+  
+      for (let q in answers) {
+        const correct = answers[q];
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const questionCard = document.querySelector(`[name="${q}"]`).closest(".question-card");
+  
+        // Remove previous styles
+        questionCard.classList.remove("correct", "incorrect");
+  
+        if (selected) {
+          if (selected.value === correct) {
+            score++;
+            questionCard.classList.add("correct");
+          } else {
+            questionCard.classList.add("incorrect");
+          }
+        } else {
+          questionCard.classList.add("incorrect");
+        }
+  
+        // Highlight the correct answer in green
+        const allOptions = document.querySelectorAll(`input[name="${q}"]`);
+        allOptions.forEach(opt => {
+          if (opt.value === correct) {
+            opt.parentElement.style.fontWeight = "bold";
+            opt.parentElement.style.color = "green";
+          }
+        });
+      }
+  
+      document.getElementById("result").innerText =
+        `Du hast ${score} von ${total} Fragen richtig beantwortet.`;
+    }
+  </script>
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+  
+
+
+</body>
