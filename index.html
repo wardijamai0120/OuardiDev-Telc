@@ -455,6 +455,94 @@ body::before {
                 justify-content: center;
             }
         }
+		
+/* ===== Donation Section ===== */
+.donation-box {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.donation-box h3 {
+  margin-bottom: 10px;
+  color: #1f3655;
+  font-size: 22px;
+}
+
+.donation-box p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* زر PayPal */
+.donation-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0070ba, #003087); /* PayPal Blue */
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0, 48, 135, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.donation-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 48, 135, 0.55);
+}
+
+/* أيقونة PayPal */
+.donation-btn i {
+  font-size: 18px;
+}
+
+
+/* ===== Bank Transfer ===== */
+
+.bank-toggle {
+  margin-top: 15px;
+  padding: 8px 18px;
+  background: rgba(0, 112, 186, 0.08); /* خفيف */
+  border: 1px solid rgba(0, 112, 186, 0.25);
+  color: #003087; /* أزرق PayPal */
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.bank-toggle:hover {
+  background: rgba(0, 112, 186, 0.15);
+  transform: translateY(-1px);
+}
+
+.bank-details {
+  display: none;
+  margin-top: 15px;
+  background: #f7f9fc;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+
+.bank-details span {
+  display: block;
+  margin-bottom: 6px;
+}
+
 
 </style>
 </head>
@@ -462,13 +550,11 @@ body::before {
 <body>
 
 <!-- الشريط العلوي -->
-<div class="top-banner">
+<!--<div class="top-banner">
   <div class="banner-text">
-    إلى بغيتو يكون الهوغن بالصوت ديالو نفس لي فالامتحان أو لا ؟ |
-    لي موافق يقولها فتلغرام | 
-    غي شي دعوة معاكوم
+بالتوفيق للجميع
   </div>
-<!--  <a href="https://t.me/+Ol_rmVMqm-xmMzNk" target="_blank" class="telegram-btn">
+  <a href="https://t.me/+Ol_rmVMqm-xmMzNk" target="_blank" class="telegram-btn">
     <svg width="18" height="18" viewBox="0 0 240 240" fill="currentColor">
       <path d="M179.9 73.7L153 172.6c-2 7.1-7.3 8.9-14.8 5.6l-41-30.2-19.8 19c-2.2 2.2-4 4-8.2 4l2.9-41.4 75.4-68c3.3-2.9-.7-4.5-5.1-1.6l-93.2 58.7-40.1-12.5c-8.7-2.7-8.9-8.7 1.8-12.9l156.9-60.5c7.3-2.7 13.6 1.8 11.2 13.5z"/>
     </svg>
@@ -476,10 +562,10 @@ body::before {
   </a>-->
 </div>
 
-<!-- زر تسجيل الخروج -->
+<!-- زر تسجيل الخروج 
 <a href="index.html" class="logout-button">
   <i class="fas fa-sign-out-alt"></i> Abmelden
-</a>
+</a> -->
 
 <!-- المحتوى الرئيسي -->
 <div class="main-content">
@@ -508,6 +594,45 @@ body::before {
       </a>
     </div>
   </div>
+  
+<<div class="donation-box">
+  <h3>❤️ دعم الموقع</h3>
+  <p>
+    كل مساهمة، مهما كانت صغيرة، تحدث فرقاً كبيراً في تطوير هذا المشروع.  
+    نحن ممتنون جداً لدعمكم واهتمامكم بتحسين التعليم المجاني.
+  </p>
+
+  <!-- زر تبرع عام -->
+<a href="https://www.paypal.me/ouardidev"
+   target="_blank"
+   class="donation-btn"
+   title="PayPal Unterstützung">
+   
+  <i class="fab fa-paypal"></i>
+  Support
+</a>
+
+  <!-- زر إظهار التحويل البنكي -->
+  <button class="bank-toggle" onclick="toggleBank()">
+    💳 أو عبر تحويل بنكي
+  </button>
+
+  <!-- معلومات التحويل البنكي -->
+  <div class="bank-details" id="bankBox">
+    <span><strong>الاسم:</strong> AHMED OUARDI</span>
+    <span><strong>البنك:</strong> CIH BANK</span>
+	<span><strong>RIB:</strong> 230 270 2626047211007100 30</span>
+    <span><strong>IBAN:</strong> MA64 2302 7026 2604 7211 0071 0030</span>
+    <span><strong>BIC / SWIFT:</strong> CIHMMAC</span>
+    <span><strong>المرجع:</strong> Donation</span>
+  </div>
+
+  <div class="donation-note">
+    !التبرع اختياري 100% - المحتوى سيبقى مجانياً للجميع دائماً
+  </div>
+</div>
+
+  
 </div>
 
     <!-- Footer -->
@@ -529,6 +654,13 @@ body::before {
             </div>
         </div>
     </footer>
+
+<script>
+function toggleBank() {
+  const box = document.getElementById("bankBox");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
